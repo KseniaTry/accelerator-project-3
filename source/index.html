@@ -1,31 +1,684 @@
 <!DOCTYPE html>
 <html lang="ru" data-validate="html">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internship</title>
-    <link rel="stylesheet" href="sass/style.scss">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship</title>
+  <meta name="description" content="Сайт компании Internship. Обучение за рубежом">
+  <!-- <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+    <link rel="preload" href="fonts/montserrat/Montserrat-ExtraBold.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="fonts/montserrat/Montserrat-Bold.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="fonts/montserrat/Montserrat-SemiBold.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="fonts/montserrat/Montserrat-Medium.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="fonts/montserrat/Montserrat-Regular.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="fonts/montserrat/Montserrat-Light.woff2" type="font/woff2" as="font">
+    <link rel="manifest" href="manifest.json"> -->
+  <link rel="stylesheet" href="sass/style.scss">
+</head>
 
-  <body class="page-body">
-    <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
+<body class="page-body">
+  <main>
+    <section class="hero" data-test="hero">
+      <h1 class="visually-hidden">Internship. Обучение за рубежом</h1>
+      <header class="header">
+        <svg class="header__logo-icon" width="52" height="52" viewBox="0 0 52 52" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <rect width="52" height="52" rx="26" fill="#fff" />
+          <g clip-path="url(#a)">
+            <path
+              d="M11.92 19.8c-.85.6-1.35 1.9-.41 3.43.94 1.53 14.38 11.9 14.88 12.2.49.28.98.33 2.24-.68 1.25-1 11.74-8.88 12-9.12.44-.38.54-1.3 0-1.73 0 0-12.7 9.5-13.11 9.89-.42.38-1.06-.24-.94-1.06.12-.81.2-.9 1.82-2.16a2565.5 2565.5 0 0 1 11.18-8.48c.47-.35.48-.96-.3-1.5l-13.01-9.27c-.4-.3-.93-.55-1.73.02-.81.58-11.06 7.35-12.62 8.46Z"
+              fill="#316DC2" />
+            <path
+              d="M26.39 36.43c-.33-.19-6.23-4.71-10.51-8.24v7.35c0 5.37 15.12 8.24 20.13 1.64v-7.03a766.27 766.27 0 0 0-7.38 5.61c-1.26 1-1.75.96-2.24.67Z"
+              fill="#316DC2" />
+            <path d="M32.78 28.37s2.25 1.13 2.41 5.68l-1.09-.3-.87 1.85c-.37-4.98-2.37-5.7-2.37-5.7l1.92-1.53Z"
+              fill="#98B8E6" />
+          </g>
+          <defs>
+            <clipPath id="a">
+              <path fill="#fff" transform="translate(11 11)" d="M0 0h30v30h-30z" />
+            </clipPath>
+          </defs>
+        </svg>
+        <nav class="header__nav" aria-label="Основное меню сайта">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#about">О проекте</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#programs">Программы</a>
+              <ul class="header__nav-sublist">
+                <li>
+                  <a class="header__nav-sublist-link" href="#">Стажировки</a>
+                </li>
+                <li>
+                  <a class="header__nav-sublist-link" href="#">Волонтёрство</a>
+                </li>
+                <li>
+                  <a class="header__nav-sublist-link" href="#">Учеба</a>
+                </li>
+                <li>
+                  <a class="header__nav-sublist-link" href="#">Религия</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#grant">Как поехать</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#reviews">Отзывы</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#news">Новости</a>
+              <ul class="header__nav-sublist">
+                <li class="header__nav-sublist-item">
+                  <a class="header__nav-sublist-link" href="#">Общее</a>
+                </li>
+                <li>
+                  <a class="header__nav-sublist-link" href="#">Волонтёрство</a>
+                </li>
+                <li>
+                  <a class="header__nav-sublist-link" href="#">Стажировки</a>
+                </li>
+                <li>
+                  <a class="header__nav-sublist-link" href="#">Карьера</a>
+                </li>
+                <li>
+                  <a class="header__nav-sublist-link" href="#">Путешествия</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="header__toggle" type="button">Меню</button>
+      </header>
+      <div class="hero__swiper swiper">
+        <div class="hero__swiper-wrapper swiper-wrapper">
+          <div class="hero__slide swiper-slide">
+            <div class="hero__slide-image-wrapper">
+              <picture>
+                <source media="(min-width: 1440px)" width="1440" height="800" type="image/webp"
+                  srcset="img/hero/kavkaz/hero-kavkaz-desktop@1x.webp 1x, img/hero/kavkaz/hero-kavkaz-desktop@2x.webp 2x">
+                <source media="(min-width: 768px)" width="768" height="1034" type="image/webp"
+                  srcset="img/hero/kavkaz/hero-kavkaz-tablet@1x.webp 1x, img/hero/kavkaz/hero-kavkaz-tablet@2x.webp 2x">
+                <source width="320" height="568" type="image/webp"
+                  srcset="img/hero/kavkaz/hero-kavkaz-mobile@1x.webp 1x, img/hero/kavkaz/hero-kavkaz-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1440px)" width="1440" height="800" type="image/jpg"
+                  srcset="img/hero/kavkaz/hero-kavkaz-desktop@1x.jpg 1x, img/hero/kavkaz/hero-kavkaz-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" width="768" height="1034" type="image/jpg"
+                  srcset="img/hero/kavkaz/hero-kavkaz-tablet@1x.jpg 1x, img/hero/kavkaz/hero-kavkaz-tablet@2x.jpg 2x">
+                <img class="hero__image" src="img/hero/kavkaz/hero-kavkaz-mobile@1x.jpg" width="320" height="568"
+                  srcset="img/hero/kavkaz/hero-kavkaz-mobile@2x.jpg" alt="Фотография" loading="lazy">
+              </picture>
+            </div>
+
+            <div class="hero__slide-text-wrapper">
+              <h2 class="hero__title">Глобальный профессиональный опыт обучения за рубежом</h2>
+              <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая настоящий студенческий
+                стиль жизни!</p>
+              <a class="hero__details button button--primary" href="#">Подробнее</a>
+            </div>
+          </div>
+          <div class="hero__slide swiper-slide">
+            <div class="hero__slide-image-wrapper">
+              <picture>
+                <source media="(min-width: 1440px)" width="1440" height="800" type="image/webp"
+                  srcset="img/hero/kavkaz/hero-kavkaz-desktop@1x.webp 1x, img/hero/kavkaz/hero-kavkaz-desktop@2x.webp 2x">
+                <source media="(min-width: 768px)" width="768" height="1034" type="image/webp"
+                  srcset="img/hero/kavkaz/hero-kavkaz-tablet@1x.webp 1x, img/hero/kavkaz/hero-kavkaz-tablet@2x.webp 2x">
+                <source width="320" height="568" type="image/webp"
+                  srcset="img/hero/kavkaz/hero-kavkaz-mobile@1x.webp 1x, img/hero/kavkaz/hero-kavkaz-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1440px)" width="1440" height="800" type="image/jpg"
+                  srcset="img/hero/kavkaz/hero-kavkaz-desktop@1x.jpg 1x, img/hero/kavkaz/hero-kavkaz-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" width="768" height="1034" type="image/jpg"
+                  srcset="img/hero/kavkaz/hero-kavkaz-tablet@1x.jpg 1x, img/hero/kavkaz/hero-kavkaz-tablet@2x.jpg 2x">
+                <img class="hero__image" src="img/hero/kavkaz/hero-kavkaz-mobile@1x.jpg" width="320" height="568"
+                  srcset="img/hero/kavkaz/hero-kavkaz-mobile@2x.jpg" alt="Фотография" loading="lazy">
+              </picture>
+            </div>
+
+            <div class="hero__slide-text-wrapper">
+              <h2 class="hero__title">Волонтёрские программы – внесите свой вклад в общество</h2>
+              <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
+              <a class="hero__details button button--primary" href="#">Подробнее</a>
+            </div>
+          </div>
+          <div class="hero__slide swiper-slide">
+            <div class="hero__slide-image-wrapper">
+              <picture>
+                <source media="(min-width: 1440px)" width="1440" height="800" type="image/webp"
+                  srcset="img/hero/kavkaz/hero-kavkaz-desktop@1x.webp 1x, img/hero/kavkaz/hero-kavkaz-desktop@2x.webp 2x">
+                <source media="(min-width: 768px)" width="768" height="1034" type="image/webp"
+                  srcset="img/hero/kavkaz/hero-kavkaz-tablet@1x.webp 1x, img/hero/kavkaz/hero-kavkaz-tablet@2x.webp 2x">
+                <source width="320" height="568" type="image/webp"
+                  srcset="img/hero/kavkaz/hero-kavkaz-mobile@1x.webp 1x, img/hero/kavkaz/hero-kavkaz-mobile@2x.webp 2x">
+
+                <source media="(min-width: 1440px)" width="1440" height="800" type="image/jpg"
+                  srcset="img/hero/kavkaz/hero-kavkaz-desktop@1x.jpg 1x, img/hero/kavkaz/hero-kavkaz-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" width="768" height="1034" type="image/jpg"
+                  srcset="img/hero/kavkaz/hero-kavkaz-tablet@1x.jpg 1x, img/hero/kavkaz/hero-kavkaz-tablet@2x.jpg 2x">
+                <img class="hero__image" src="img/hero/kavkaz/hero-kavkaz-mobile@1x.jpg" width="320" height="568"
+                  srcset="img/hero/kavkaz/hero-kavkaz-mobile@2x.jpg" alt="Фотография" loading="lazy">
+              </picture>
+            </div>
+
+            <div class="hero__slide-text-wrapper">
+              <h2 class="hero__title">Программы стажировок в крупнейших компаниях мира</h2>
+              <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
+              <a class="hero__details button button--primary" href="#">Подробнее</a>
+            </div>
+          </div>
+        </div>
+        <div class="hero__button swiper-pagination"></div>
+      </div>
+    </section>
+
+    <section class="about" data-test="about">
+      <div class="about__about-wrapper">
+        <h2 class="about__title">О проекте «Стажировка»</h2>
+        <p>«Стажировка» — совместный проект правительств и волонтёрских
+          бригад.</p>
+      </div>
+      <div class="about__description-wrapper">
+        <h3>Наша цель</h3>
+        <p>Наша деятельность направлена на повышение квалификации
+          молодых специалистов на ранних и средних стадиях карьеры,
+          предоставляя им инструменты для решения сложных проблем,
+          с которыми сталкиваются в мире. Цель центра — наделить этих
+          людей способностью инициировать значимые изменения.</p>
+        <a class="about__details button button--primary" href="#">Подробнее о проекте</a>
+      </div>
+
+      <ul class="about__list">
+        <li class="about__item">
+          <h4>Более 250 программ</h4>
+          <p>учебных и рабочих, разной длительностью от 3 месяцев до 1 года</p>
+        </li>
+        <li class="about__item">
+          <h4>Более 3000 участников</h4>
+          <p>уже успешно прошли программу от «Стажировка» и остались в разных странах</p>
+        </li>
+        <li class="about__item">
+          <h4>Участники из 60 стран</h4>
+          <p>студенты со всего мира приезжают на программу «Стажировки» от 3 месяцев до 1 года</p>
+        </li>
+        <li class="about__item">
+          <h3>От 4 200 $<br>
+            до 8 400 $</h3>
+          <p>грант всем участникам для комфортного прохождения программы</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="programs" data-test="programs">
+      <h2>Программы</h2>
+      <a class="programs__details button button--primary" href="#">Все программы</a>
+      <div class="programs__swiper swiper">
+        <div class="programs__swiper-wrapper swiper-wrapper">
+          <div class="programs__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 1440px)" width="392" height="420" type="image/webp"
+                srcset="img/hero/kavkaz/hero-kavkaz-desktop@1x.webp 1x, img/hero/kavkaz/hero-kavkaz-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" width="324" height="420" type="image/webp"
+                srcset="img/hero/kavkaz/hero-kavkaz-tablet@1x.webp 1x, img/hero/kavkaz/hero-kavkaz-tablet@2x.webp 2x">
+              <source width="290" height="400" type="image/webp"
+                srcset="img/hero/kavkaz/hero-kavkaz-mobile@1x.webp 1x, img/hero/kavkaz/hero-kavkaz-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1440px)" width="392" height="420" type="image/jpg"
+                srcset="img/hero/kavkaz/hero-kavkaz-desktop@1x.jpg 1x, img/hero/kavkaz/hero-kavkaz-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" width="324" height="420" type="image/jpg"
+                srcset="img/hero/kavkaz/hero-kavkaz-tablet@1x.jpg 1x, img/hero/kavkaz/hero-kavkaz-tablet@2x.jpg 2x">
+              <img class="programs__slide-image" src="img/hero/kavkaz/hero-kavkaz-mobile@1x.jpg" width="290"
+                height="400" srcset="img/hero/kavkaz/hero-kavkaz-mobile@2x.jpg" alt="Фотография двух учащихся девушек"
+                loading="lazy">
+            </picture>
+            <h3 class="programs__slide-title">Стажировки</h3>
+            <p>Получите незаменимый опыт
+              работы в крупнейших мировых
+              компаниях.</p>
+            <a class="programs__slide-details button button--primary" href="#"><span class="visually-hidden">Подробнее о
+                стажировках</span></a>
+          </div>
+
+          <div class="programs__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 1440px)" width="392" height="420" type="image/webp"
+                srcset="img/hero/kavkaz/hero-kavkaz-desktop@1x.webp 1x, img/hero/kavkaz/hero-kavkaz-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" width="324" height="420" type="image/webp"
+                srcset="img/hero/kavkaz/hero-kavkaz-tablet@1x.webp 1x, img/hero/kavkaz/hero-kavkaz-tablet@2x.webp 2x">
+              <source width="290" height="400" type="image/webp"
+                srcset="img/hero/kavkaz/hero-kavkaz-mobile@1x.webp 1x, img/hero/kavkaz/hero-kavkaz-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1440px)" width="392" height="420" type="image/jpg"
+                srcset="img/hero/kavkaz/hero-kavkaz-desktop@1x.jpg 1x, img/hero/kavkaz/hero-kavkaz-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" width="324" height="420" type="image/jpg"
+                srcset="img/hero/kavkaz/hero-kavkaz-tablet@1x.jpg 1x, img/hero/kavkaz/hero-kavkaz-tablet@2x.jpg 2x">
+              <img class="programs__slide-image" src="img/hero/kavkaz/hero-kavkaz-mobile@1x.jpg" width="290"
+                height="400" srcset="img/hero/kavkaz/hero-kavkaz-mobile@2x.jpg" alt="Фотография мужчины волонтера"
+                loading="lazy">
+            </picture>
+
+            <h3 class="programs__slide-title">Волонтёрство</h3>
+            <p>Помогайте другим и развивайте
+              свои лидерские качества.</p>
+            <a class="programs__slide-details button button--primary" href="#"><span class="visually-hidden">Подробнее о
+                волонтерстве</span></a>
+          </div>
+
+          <div class="programs__slide swiper-slide">
+            <picture>
+              <source media="(min-width: 1440px)" width="392" height="420" type="image/webp"
+                srcset="img/hero/kavkaz/hero-kavkaz-desktop@1x.webp 1x, img/hero/kavkaz/hero-kavkaz-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" width="324" height="420" type="image/webp"
+                srcset="img/hero/kavkaz/hero-kavkaz-tablet@1x.webp 1x, img/hero/kavkaz/hero-kavkaz-tablet@2x.webp 2x">
+              <source width="290" height="400" type="image/webp"
+                srcset="img/hero/kavkaz/hero-kavkaz-mobile@1x.webp 1x, img/hero/kavkaz/hero-kavkaz-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1440px)" width="392" height="420" type="image/jpg"
+                srcset="img/hero/kavkaz/hero-kavkaz-desktop@1x.jpg 1x, img/hero/kavkaz/hero-kavkaz-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" width="324" height="420" type="image/jpg"
+                srcset="img/hero/kavkaz/hero-kavkaz-tablet@1x.jpg 1x, img/hero/kavkaz/hero-kavkaz-tablet@2x.jpg 2x">
+              <img class="programs__slide-image" src="img/hero/kavkaz/hero-kavkaz-mobile@1x.jpg" width="290"
+                height="400" srcset="img/hero/kavkaz/hero-kavkaz-mobile@2x.jpg"
+                alt="Фотография учащегося мужчины в очках" loading="lazy">
+            </picture>
+
+            <h3 class="programs__slide-title">Учёба</h3>
+            <p>Получите образование и измените
+              своё будущее.</p>
+            <a class="programs__slide-details button button--primary" href="#"><span class="visually-hidden">Подробнее
+                об учебе</span></a>
+          </div>
+
+        </div>
+        <div class="programs__buttons-container arrow">
+          <button class="programs__button programs__button--prev arrow__button arrow__button--prev swiper-button-prev"
+            type="button" aria-label="Кнопка переключения предыдущего слайда"></button>
+          <button class="programs__button programs__button--next arrow__button arrow__button--next swiper-button-next"
+            type="button" aria-label="Кнопка переключения следующего слайда"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="grant" data-test="grant">
+      <div class="grant__main-wrapper">
+        <div class="grant__text-wrapper">
+          <h2 class="grant__title">Как поехать</h2>
+          <p>Свяжитесь с координатором, чтобы узнать полную информацию.
+            Вы получите актуальные сведения о доступных программах
+            и городах, в которых можете пройти программу.</p>
+
+          <div class="grant__image-wrapper">
+            <picture>
+              <source media="(min-width: 1440px)" width="392" height="420" type="image/webp"
+                srcset="img/hero/kavkaz/hero-kavkaz-desktop@1x.webp 1x, img/hero/kavkaz/hero-kavkaz-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" width="324" height="420" type="image/webp"
+                srcset="img/hero/kavkaz/hero-kavkaz-tablet@1x.webp 1x, img/hero/kavkaz/hero-kavkaz-tablet@2x.webp 2x">
+              <source width="290" height="400" type="image/webp"
+                srcset="img/hero/kavkaz/hero-kavkaz-mobile@1x.webp 1x, img/hero/kavkaz/hero-kavkaz-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1440px)" width="392" height="420" type="image/jpg"
+                srcset="img/hero/kavkaz/hero-kavkaz-desktop@1x.jpg 1x, img/hero/kavkaz/hero-kavkaz-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" width="324" height="420" type="image/jpg"
+                srcset="img/hero/kavkaz/hero-kavkaz-tablet@1x.jpg 1x, img/hero/kavkaz/hero-kavkaz-tablet@2x.jpg 2x">
+              <img class="grant__image" src="img/hero/kavkaz/hero-kavkaz-mobile@1x.jpg" width="290" height="400"
+                srcset="img/hero/kavkaz/hero-kavkaz-mobile@2x.jpg" alt="Фотография учащегося мужчины в очках"
+                loading="lazy">
+            </picture>
+          </div>
+        </div>
+
+        <div class="grant__list-wrapper">
+          <h3 class="grant__subtitle">Чтобы получить грант на обучение, вам нужно:</h3>
+          <ol class="grant__list">
+            <li class="grant__item">
+              Быть в возрасте от 16 до 30 лет
+            </li>
+            <li class="grant__item">
+              Иметь оконченное среднее образование
+            </li>
+            <li class="grant__item">
+              Иметь документально подтверждённое отсутствие судимости и пройти консульскую проверку
+            </li>
+            <li class="grant__item">
+              За последние 2 года быть не больше 3х месяцев подряд непрерывно в одной стране
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="news" data-test="news">
+      <h2 class="news__title">Новости и материалы</h2>
+      <div class="news__tabs">
+        <nav class="news__nav">
+          <ul class="news__nav-list">
+            <li class="news__nav-item">
+              <a class="news__nav-link" href="#">Общее</a>
+            </li>
+
+            <li class="news__nav-item">
+              <a class="news__nav-link" href="#">Волонтёрство</a>
+            </li>
+
+            <li class="news__nav-item">
+              <a class="news__nav-link" href="#">Стажировки</a>
+            </li>
+
+            <li class="news__nav-item">
+              <a class="news__nav-link" href="#">Карьера</a>
+            </li>
+
+            <li class="news__nav-item">
+              <a class="news__nav-link" href="#">Путешествия</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="news__tab-content">
+        <div class="news__swiper swiper">
+          <div class="news__swiper-wrapper swiper-wrapper">
+            <div class="news__slide swiper-slide">
+              <time class="news__slide-date" datetime="2023-03-23">23/03/2023</time>
+              <h3 class="news__slide-title">Интервью с участницей программы стажировки</h3>
+              <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
+              <a class="news__slide-details button button--primary" href="#"><span
+                  class="visually-hidden">Подробнее</span></a>
+            </div>
+
+            <div class="news__slide swiper-slide">
+              <time class="news__slide-date" datetime="2023-03-20">20/03/2023</time>
+              <h3 class="news__slide-title">Путешествуем по миру</h3>
+              <p>Какие места посещают наши студенты весной</p>
+              <a class="news__slide-details button button--primary" href="#"><span
+                  class="visually-hidden">Подробнее</span></a>
+            </div>
+
+            <div class="news__slide swiper-slide">
+              <time class="news__slide-date" datetime="2023-03-17">17/03/2023</time>
+              <h3 class="news__slide-title">Новая программа волонтёрства</h3>
+              <p>Программа помощи детям длительностью 4 месяца</p>
+              <a class="news__slide-details button button--primary" href="#"><span
+                  class="visually-hidden">Подробнее</span></a>
+            </div>
+
+            <div class="news__slide swiper-slide">
+              <time class="news__slide-date" datetime="2023-03-10">10/03/2023</time>
+              <h3 class="news__slide-title">Построй свою карьеру</h3>
+              <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+              <a class="news__slide-details button button--primary" href="#"><span
+                  class="visually-hidden">Подробнее</span></a>
+            </div>
+          </div>
+          <div class="news__buttons-container arrow">
+            <button class="news__button news__button--prev arrow__button arrow__button--prev swiper-button-prev"
+              type="button" aria-label="Кнопка переключения предыдущего слайда"></button>
+            <button class="news__button news__button--next arrow__button arrow__button--next swiper-button-next"
+              type="button" aria-label="Кнопка переключения следующего слайда"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" data-test="FAQ">
+      <div class="faq__accordion">
+        <div class="faq__accordion-item">
+          <h3 class="faq__accordion-title">Кто организатор? Какие сроки у программы?</h3>
+          <button class="faq__open-button" type="button"><span class="visually-hidden">Кнопка раскрытия/ закрытия ответа
+              на вопрос</span></button>
+          <p>Организатором программы является проект «Стажировка» в сотрудничестве с образовательными учреждениями.
+            Сроки программы обмена могут варьироваться от одного семестра до года.</p>
+        </div>
+
+        <div class="faq__accordion-item">
+          <h3 class="faq__accordion-title">Что такое грант на обучение?</h3>
+          <button class="faq__open-button" type="button"><span class="visually-hidden">Кнопка раскрытия/ закрытия
+              ответа на
+              вопрос</span></button>
+          <p>Грант на обучение — это финансовая поддержка, которую предоставляет организатор программы обмена студентами
+            для оплаты учебных расходов.</p>
+        </div>
+
+        <div class="faq__accordion-item faq__accordion-item--active">
+          <h3 class="faq__accordion-title">Как определяется стоимость программы?</h3>
+          <button class="faq__open-button" type="button"><span class="visually-hidden">Кнопка раскрытия/ закрытия
+              ответа на
+              вопрос</span></button>
+          <p>Полная стоимость определяется организаторами в зависимости от направления. В большинстве случаев грант
+            «Стажировка» не покрывает полную стоимость программы, и поэтому предусматривается определённая доля личного
+            участия.</p>
+        </div>
+
+        <div class="faq__accordion-item">
+          <h3 class="faq__accordion-title">Признаётся ли учёба в рамках проекта для дальнейшего обучения?</h3>
+          <button class="faq__open-button" type="button"><span class="visually-hidden">Кнопка раскрытия/ закрытия
+              ответа на
+              вопрос</span></button>
+          <p>Студенты, участвующие в проекте, могут использовать полученные знания и навыки в своей будущей
+            профессиональной деятельности или продолжить обучение в высших учебных заведениях. Кроме того, многие
+            университеты и колледжи предоставляют кредиты за участие в программе обмена студентами.</p>
+        </div>
+
+        <div class="faq__accordion-item">
+          <h3 class="faq__accordion-title">Как выглядит полный процесс регистрации на программу «Стажировка»?</h3>
+          <button class="faq__open-button" type="button"><span class="visually-hidden">Кнопка раскрытия/ закрытия
+              ответа на
+              вопрос</span></button>
+          <p>Процесс регистрации на программу обмена включает выбор университета-партнера и программы обмена, общение с
+            координатором программы, заполнение заявления и предоставление необходимых документов, прохождение интервью,
+            оформление визы, жилья и страховки, обучение по безопасности за границей и подписание договора об участии в
+            программе. Подробнее можно узнать позвонив в центр.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews" data-test="reviews">
+      <h2 class="reviews__title">Отзывы</h2>
+      <div class="reviews__swiper swiper">
+        <div class="reviews__swiper-wrapper swiper-wrapper">
+          <div class="reviews__slide swiper-slide">
+            <div class="reviews__avatar-wrapper">
+              <picture>
+                <source width="490" height="682" type="image/webp"
+                  srcset="img/reviews/anna-orlova-avatar@1x.webp 1x, img/reviews/anna-orlova-avatar@1x.webp 2x">
+
+                <img class="reviews__avatar" src="img/reviews/anna-orlova-avatar@1x.jpg" width="490" height="682"
+                  srcset="img/reviews/anna-orlova-avatar@2x.jpg" alt="Аватар Лолы Алекс">
+              </picture>
+            </div>
+            <h3 class="reviews__slide-title">Лола Алекс</h3>
+            <dl class="reviews__details">
+              <dt class="reviews__details-category">Программа</dt>
+              <dd class="reviews__details-data">Masa Art Challenge</dd>
+
+              <dt class="reviews__details-category">Дата</dt>
+              <dd class="reviews__details-data">Осень 2022</dd>
+            </dl>
+
+            <h4 class="reviews__slide-subtitle">Я могу с уверенностью сказать, что это был один из самых незабываемых
+              опытов в жизни!</h4>
+            <blockquote>Я рекомендую программа «Стажировка» всем студентам, желающим получить незабываемые впечатления.
+              Сочетание
+              путешествий, общения и значимой работы действительно отличает её от других программ, и я чувствую огромную
+              благодарность за предоставленную мне возможность.</blockquote>
+          </div>
+
+          <div class="news__slide swiper-slide">
+            <div class="reviews__avatar-wrapper">
+              <picture>
+                <source width="490" height="682" type="image/webp"
+                  srcset="img/reviews/anna-orlova-avatar@1x.webp 1x, img/reviews/anna-orlova-avatar@1x.webp 2x">
+
+                <img class="reviews__avatar" src="img/reviews/anna-orlova-avatar@1x.jpg" width="490" height="682"
+                  srcset="img/reviews/anna-orlova-avatar@2x.jpg" alt="Аватар Давида Иванова">
+              </picture>
+            </div>
+            <h3 class="reviews__slide-title">Давид Иванов</h3>
+            <dl class="reviews__details">
+              <dt class="reviews__details-category">Программа</dt>
+              <dd class="reviews__details-data">Volunteer Chance</dd>
+
+              <dt class="reviews__details-category">Дата</dt>
+              <dd class="reviews__details-data">Лето 2022</dd>
+            </dl>
+
+            <h4 class="reviews__slide-subtitle">Благодаря опыту стажировки я узнал так много нового о себе
+              и об окружающем мире.</h4>
+            <blockquote>Каждый день был возможностью оказать ощутимое влияние на жизнь других людей. Я бы очень
+              рекомендовал эту волонтёрскую программу всем, кто ищет значимый и незабываемый опыт. Организация была
+              на высшем уровне. Для меня было честью быть частью такой удивительной инициативы.</blockquote>
+          </div>
+        </div>
+        <div class="reviews__buttons-container arrow">
+          <button class="reviews__button reviews__button--prev arrow__button arrow__button--prev swiper-button-prev"
+            type="button" aria-label="Кнопка переключения предыдущего слайда"></button>
+          <button class="reviews__button reviews__button--next arrow__button arrow__button--next swiper-button-next"
+            type="button" aria-label="Кнопка переключения следующего слайда"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts" data-test="contacts">
+      <h2 class="contacts__title">Контакты</h2>
+      <ul class="contacts__list">
+        <li class="contacts__item">
+          <h3 class="contacts__item-title">Центральный офис</h3>
+          <address class="contacts__item-description">г. Новосибирск, ул. Щетинкина 68,
+            культурный центр</address>
+        </li>
+        <li class="contacts__item">
+          <h3 class="contacts__item-title">Телефон</h3>
+          <a class="contacts__item-description" href="tel:+796387687676">+7 963 876 876 76</a>
+        </li>
+        <li class="contacts__item">
+          <h3 class="contacts__item-title">Email</h3>
+          <a class="contacts__item-description" href="mailto:info@stazh.ru">Info@stazh.ru</a>
+        </li>
+      </ul>
+
+      <picture>
+        <source media="(min-width: 1440px)" width="1240" height="486" type="image/webp"
+          srcset="img/contacts/map-desktop@1x.webp 1x, img/contacts/map-desktop@2x.webp 2x">
+        <source media="(min-width: 768px)" width="678" height="500" type="image/webp"
+          srcset="img/contacts/map-tablet@1x.webp 1x, img/contacts/map-tablet@2x.webp 2x">
+        <source width="290" height="340" type="image/webp"
+          srcset="img/contacts/map-mobile@1x.webp 1x, img/contacts/map-mobile@2x.webp 2x">
+
+        <source media="(min-width: 1440px)" width="1240" height="486" type="image/png"
+          srcset="img/contacts/map-desktop@1x.png 1x, img/contacts/map-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" width="678" height="500" type="image/png"
+          srcset="img/contacts/map-tablet@1x.png 1x, img/contacts/map-tablet@2x.png 2x">
+        <img class="contacts__map-image" src="img/contacts/map-mobile@1x.png" width="290" height="340"
+          srcset="img/contacts/map-mobile@2x.png" alt="Карта с отмеченным месторасположением офиса Lifetour"
+          loading="lazy">
+      </picture>
+    </section>
+
+    <section class="form" data-test="form">
+      <form class="form__form" action="https://echo.htmlacademy.ru/" method="post">
+        <h2 class="form__title">Напишите нам</h2>
+        <p>Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+        <label class="form__label" for="name">Имя</label>
+        <input class="form__input" type="text" id="name" name="name" required>
+
+        <label class="form__label" for="phone">Телефон</label>
+        <input class="form__input" type="tel" id="phone" name="phone" required>
+
+        <label class="form__label" for="message">Ваше сообщение</label>
+        <input class="form__input" type="text" id="message" name="message" required>
+
+        <label for="city-select">Ваш город</label>
+        <select name="city" id="city-select">
+          <option value=""></option>
+          <option value="moscow">Москва</option>
+          <option value="petersburg">Санкт-Петербург</option>
+          <option value="kazan">Казань</option>
+          <option value="perm">Пермь</option>
+          <option value="novosibirsk">Новосибирск</option>
+        </select>
+
+        <input type="checkbox" id="personalData" name="personalData">
+        <label for="personalData">Я согласен на обработку моих персональных данных</label>
+
+        <button class="form__send button button--primary" type="submit">Отправить</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer" data-test="footer">
+    <svg class="footer__logo-icon" width="52" height="52" viewBox="0 0 52 52" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <rect width="52" height="52" rx="26" fill="#fff" />
+      <g clip-path="url(#a)">
+        <path
+          d="M11.92 19.8c-.85.6-1.35 1.9-.41 3.43.94 1.53 14.38 11.9 14.88 12.2.49.28.98.33 2.24-.68 1.25-1 11.74-8.88 12-9.12.44-.38.54-1.3 0-1.73 0 0-12.7 9.5-13.11 9.89-.42.38-1.06-.24-.94-1.06.12-.81.2-.9 1.82-2.16a2565.5 2565.5 0 0 1 11.18-8.48c.47-.35.48-.96-.3-1.5l-13.01-9.27c-.4-.3-.93-.55-1.73.02-.81.58-11.06 7.35-12.62 8.46Z"
+          fill="#316DC2" />
+        <path
+          d="M26.39 36.43c-.33-.19-6.23-4.71-10.51-8.24v7.35c0 5.37 15.12 8.24 20.13 1.64v-7.03a766.27 766.27 0 0 0-7.38 5.61c-1.26 1-1.75.96-2.24.67Z"
+          fill="#316DC2" />
+        <path d="M32.78 28.37s2.25 1.13 2.41 5.68l-1.09-.3-.87 1.85c-.37-4.98-2.37-5.7-2.37-5.7l1.92-1.53Z"
+          fill="#98B8E6" />
+      </g>
+      <defs>
+        <clipPath id="a">
+          <path fill="#fff" transform="translate(11 11)" d="M0 0h30v30h-30z" />
+        </clipPath>
+      </defs>
     </svg>
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="hero">hero</div>
-    <div data-test="about">about</div>
-    <div data-test="programs">programs</div>
-    <div data-test="grant">grant</div>
-    <div data-test="news">news</div>
-    <div data-test="FAQ">FAQ</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="contacts">contacts</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
-    <script type="module" src="js/main.js"></script>
-  </body>
+
+    <nav class="footer__nav" aria-label="Основное меню сайта">
+      <ul class="footer__nav-list">
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#about">О проекте</a>
+        </li>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#programs">Программы</a>
+        </li>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#grant">Как поехать</a>
+        </li>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#reviews">Отзывы</a>
+        </li>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#news">Новости</a>
+        </li>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#contacts">Контакты</a>
+        </li>
+      </ul>
+
+      <a class="footer__policy" href="#">Политика конфиденциальности</a>
+      <p class="footer__rights">Стажировка © 2023 Все права защищены</p>
+
+      <ul class="footer__social-list social-list">
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--vk" href="https://vk.com" target="_blank"><span class="visually-hidden">Мы во
+              Vkontakte</span></a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--ok" href="https://ok.ru" target="_blank"><span class="visually-hidden">Мы в
+              Одноклассниках</span></a>
+        </li>
+        <li class="social-list__item">
+          <a class="social-list__link social-list__link--reddit" href="https://www.reddit.com/" target="_blank"><span
+              class="visually-hidden">Мы в Reddit</span></a>
+        </li>
+      </ul>
+    </nav>
+
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
 
 </html>
