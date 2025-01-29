@@ -1,0 +1,24 @@
+/* здесь используйте глобальные селекторы img, body, html и так далее */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: $basic-dark-color;
+  background-color: $extra-light-color;
+}
+
+picture,
+source {
+  display: contents;
+}
+
+img {
+  object-fit: cover;
+}
