@@ -9,12 +9,22 @@
   border-radius: 30px;
   color: $accent-color;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 14px;
   text-transform: uppercase;
   text-decoration: none;
   text-align: left;
   cursor: pointer;
+
+  @media (max-width: $mobile-width-max) {
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.24px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.28px;
+  }
 
   &::after {
     content: "";
@@ -22,10 +32,18 @@
     top: 4px;
     right: 5px;
     display: block;
-    width: 46px;
-    height: 46px;
     background-color: $accent-color;
     border-radius: 50%;
+
+    @media (max-width: $mobile-width-max) {
+      width: 34px;
+      height: 34px;
+    }
+
+    @media (min-width: $tablet-width-min) {
+      width: 46px;
+      height: 46px;
+    }
   }
 
   &::before {
@@ -33,14 +51,22 @@
     position: absolute;
     display: block;
     z-index: 1;
-    top: 23px;
-    right: 20px;
-    width: 16px;
+    width: 8px;
     height: 8px;
     mask-image: url("/__spritemap#sprite-arrow-view");
     mask-position: center;
     mask-repeat: no-repeat;
-    mask-size: 16px 8px;
+    mask-size: 8px 8px;
     background-color: $basic-light-color;
+
+    @media (max-width: $mobile-width-max) {
+      top: 17px;
+      right: 18px;
+    }
+
+    @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+      top: 23px;
+      right: 23px;
   }
+}
 }

@@ -5,7 +5,9 @@
     padding: 20px 15px;
   }
 
-  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    padding: 30px 45px;
+  }
 
   @media (min-width: $desktop-width-min) {}
 }
@@ -32,9 +34,7 @@
 
 .header__nav {
   position: absolute;
-  width: $mobile-content-width;
   z-index: 2;
-  top: 78px;
 
   font-size: 16px;
   line-height: 16px;
@@ -42,6 +42,17 @@
   color: rgba(255, 255, 255, 0.7);
   background-color: $accent-color;
   border-radius: 16px;
+
+  @media (max-width: $mobile-width-max) {
+    top: 78px;
+    width: $mobile-content-width;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    top: 88px;
+    right: 45px;
+    width: 286px;
+  }
 }
 
 .header__nav-list {
@@ -115,34 +126,63 @@
 
 .header__toggle {
   width: 136px;
-  height: 54px;
-  padding: 19px;
   font-size: 14px;
   line-height: 14px;
   letter-spacing: 0.28px;
 
+  @media (max-width: $mobile-width-max) {
+    height: 54px;
+    padding: 19px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    padding: 20px;
+  }
+
   &::after {
+    @media (max-width: $mobile-width-max) {
     top: 3px;
     right: 3px;
     width: 46px;
     height: 46px;
+    }
+
+    @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+      right: 4px;
+    }
+
   }
 
   &::before {
-    top: 22px;
     right: 19px;
     width: 16px;
     height: 8px;
     mask-image: url("/__spritemap#sprite-burger-menu-view");
     mask-size: 16px 8px;
+
+    @media (max-width: $mobile-width-max) {
+      top: 22px;
+    }
+
+    @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+      top: 23px;
+    }
   }
 }
 
 .header__toggle--opened {
   position: absolute;
-  width: $mobile-content-width;
   background-color: $accent-color;
   color: $basic-light-color;
+
+  @media (max-width: $mobile-width-max) {
+    width: $mobile-content-width;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    right: 45px;
+    width: 286px;
+  }
 
   &::after {
     background-color: $basic-light-color;

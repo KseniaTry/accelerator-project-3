@@ -7,6 +7,8 @@ const headerNav = document.querySelector('.header__nav');
 const headerButton = document.querySelector('.header__toggle');
 const navItems = document.querySelectorAll('.header__nav-item');
 const navSublistItems = document.querySelectorAll('.header__nav-item--sublist');
+const MOBILE_WIDTH_MAX = 767;
+const DESKTOP_WIDTH_MIN = 1440;
 
 const switchMenu = () => {
   headerButton.addEventListener('click', (evt) => {
@@ -108,6 +110,14 @@ heroSwiper.on('slideChange', function () {
   let activeIndex = heroSwiper.realIndex;
   const heroActiveSlide = document.querySelector(`[data-swiper-slide-index="${activeIndex}"]`)
   const textContentHeight = getAllTextContentHeight(heroActiveSlide);
-  heroPagination.style.bottom = `${textContentHeight + 20}px`;
+
+  if (window.innerWidth <= MOBILE_WIDTH_MAX) {
+  heroPagination.style.bottom = `${textContentHeight + 19}px`;
+  }
+
+  if (window.innerWidth > MOBILE_WIDTH_MAX && window.innerWidth < DESKTOP_WIDTH_MIN) {
+    heroPagination.style.bottom = `${textContentHeight + 35}px`;
+  }
+
 });
 
