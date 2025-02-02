@@ -103,7 +103,10 @@
 .hero__details {
   width: 154px;
   height: 44px;
-  padding: 13px 21px;
+  padding: 16px 21px;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.24px;
 
   &::after {
     width: 34px;

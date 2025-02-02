@@ -9,6 +9,8 @@
   border-radius: 30px;
   color: $accent-color;
   font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
   text-transform: uppercase;
   text-decoration: none;
   text-align: left;
@@ -35,7 +37,7 @@
     right: 20px;
     width: 16px;
     height: 8px;
-    mask-image: url("/__spritemap#sprite-burger-menu-view");
+    mask-image: url("/__spritemap#sprite-arrow-view");
     mask-position: center;
     mask-repeat: no-repeat;
     mask-size: 16px 8px;

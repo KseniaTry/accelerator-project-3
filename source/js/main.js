@@ -3,7 +3,54 @@ import { Navigation, Pagination } from "swiper/modules";
 import 'swiper/css';
 
 // меню
+const headerNav = document.querySelector('.header__nav');
+const headerButton = document.querySelector('.header__toggle');
+const navItems = document.querySelectorAll('.header__nav-item');
+const navSublistItems = document.querySelectorAll('.header__nav-item--sublist');
 
+const switchMenu = () => {
+  headerButton.addEventListener('click', (evt) => {
+    evt.stopPropagation();
+    headerNav.classList.toggle('header__nav--opened');
+    headerButton.classList.toggle('header__toggle--opened');
+  });
+};
+
+const closeMenuOnItemClick = () => {
+  navItems.forEach((navItem) => {
+    if (!navItem.classList.contains('header__nav-item--sublist')) {
+      navItem.addEventListener('click', () => {
+        headerNav.classList.remove('header__nav--opened');
+        headerButton.classList.remove('header__toggle--opened');
+      });
+    };
+  });
+};
+
+const closeMenuOnPageClick = () => {
+  document.body.addEventListener("click", function (event) {
+    if (event.target.closest('.header__nav') == null) {
+      headerNav.classList.remove('header__nav--opened');
+      headerButton.classList.remove('header__toggle--opened');
+    } else {
+      closeMenuOnItemClick();
+    }
+  });
+};
+
+const openSublist = () => {
+  navSublistItems.forEach((sublistItem) => {
+    sublistItem.addEventListener('click', () => {
+      sublistItem.classList.toggle('header__nav-item--sublist-opened');
+      const sublist = sublistItem.querySelector('.header__nav-sublist');
+      sublist.classList.toggle('header__nav-sublist--opened');
+    })
+  })
+}
+
+switchMenu();
+closeMenuOnPageClick();
+openSublist();
 
 // hero swiper
 const heroSlider = document.querySelector('.hero__swiper');
@@ -62,5 +109,5 @@ heroSwiper.on('slideChange', function () {
   const heroActiveSlide = document.querySelector(`[data-swiper-slide-index="${activeIndex}"]`)
   const textContentHeight = getAllTextContentHeight(heroActiveSlide);
   heroPagination.style.bottom = `${textContentHeight + 20}px`;
- });
+});
 

@@ -21,7 +21,7 @@
 </head>
 
 <body class="page-body">
-  <main>
+  <main class="page-main">
     <section class="hero" data-test="hero">
       <div class="hero__main-wrapper">
         <h1 class="visually-hidden">Internship. Обучение за рубежом</h1>
@@ -47,62 +47,61 @@
               </defs>
             </svg>
 
-            <nav class="header__nav" aria-label="Основное меню сайта">
-              <ul class="header__nav-list">
-                <li class="header__nav-item">
-                  <a class="header__nav-link" href="#about">О проекте</a>
-                </li>
-                <li class="header__nav-item">
-                  <a class="header__nav-link" href="#programs">Программы</a>
-                  <ul class="header__nav-sublist">
-                    <li>
-                      <a class="header__nav-sublist-link" href="#">Стажировки</a>
-                    </li>
-                    <li>
-                      <a class="header__nav-sublist-link" href="#">Волонтёрство</a>
-                    </li>
-                    <li>
-                      <a class="header__nav-sublist-link" href="#">Учеба</a>
-                    </li>
-                    <li>
-                      <a class="header__nav-sublist-link" href="#">Религия</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="header__nav-item">
-                  <a class="header__nav-link" href="#grant">Как поехать</a>
-                </li>
-                <li class="header__nav-item">
-                  <a class="header__nav-link" href="#reviews">Отзывы</a>
-                </li>
-                <li class="header__nav-item">
-                  <a class="header__nav-link" href="#news">Новости</a>
-                  <ul class="header__nav-sublist">
-                    <li class="header__nav-sublist-item">
-                      <a class="header__nav-sublist-link" href="#">Общее</a>
-                    </li>
-                    <li>
-                      <a class="header__nav-sublist-link" href="#">Волонтёрство</a>
-                    </li>
-                    <li>
-                      <a class="header__nav-sublist-link" href="#">Стажировки</a>
-                    </li>
-                    <li>
-                      <a class="header__nav-sublist-link" href="#">Карьера</a>
-                    </li>
-                    <li>
-                      <a class="header__nav-sublist-link" href="#">Путешествия</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="header__nav-item">
-                  <a class="header__nav-link" href="#contacts">Контакты</a>
-                </li>
-              </ul>
-            </nav>
-
-            <button class="header__toggle" type="button">Меню</button>
+            <button class="header__toggle button button--primary" type="button">Меню</button>
           </div>
+          <nav class="header__nav" aria-label="Основное меню сайта">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#about">О проекте</a>
+              </li>
+              <li class="header__nav-item header__nav-item--sublist header__nav-item--sublist-opened">
+                <a class="header__nav-link" href="#programs">Программы</a>
+                <ul class="header__nav-sublist header__nav-sublist--opened">
+                  <li>
+                    <a class="header__nav-sublist-link" href="#">Стажировки</a>
+                  </li>
+                  <li>
+                    <a class="header__nav-sublist-link" href="#">Волонтёрство</a>
+                  </li>
+                  <li>
+                    <a class="header__nav-sublist-link" href="#">Учеба</a>
+                  </li>
+                  <li>
+                    <a class="header__nav-sublist-link" href="#">Религия</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#grant">Как поехать</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#reviews">Отзывы</a>
+              </li>
+              <li class="header__nav-item header__nav-item--sublist">
+                <a class="header__nav-link" href="#news">Новости</a>
+                <ul class="header__nav-sublist">
+                  <li class="header__nav-sublist-item">
+                    <a class="header__nav-sublist-link" href="#">Общее</a>
+                  </li>
+                  <li>
+                    <a class="header__nav-sublist-link" href="#">Волонтёрство</a>
+                  </li>
+                  <li>
+                    <a class="header__nav-sublist-link" href="#">Стажировки</a>
+                  </li>
+                  <li>
+                    <a class="header__nav-sublist-link" href="#">Карьера</a>
+                  </li>
+                  <li>
+                    <a class="header__nav-sublist-link" href="#">Путешествия</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </nav>
         </header>
         <div class="hero__swiper swiper">
           <div class="hero__swiper-wrapper swiper-wrapper">
