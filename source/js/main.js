@@ -71,7 +71,6 @@ const heroSwiper = new Swiper(heroSlider, {
   },
   breakpoints: {
     1440: {
-      allowTouchMove: false,
       pagination: {
         clickable: true,
       }
@@ -115,9 +114,8 @@ heroSwiper.on('slideChange', function () {
   heroPagination.style.bottom = `${textContentHeight + 19}px`;
   }
 
-  if (window.innerWidth > MOBILE_WIDTH_MAX && window.innerWidth < DESKTOP_WIDTH_MIN) {
+  if (window.innerWidth > MOBILE_WIDTH_MAX) {
     heroPagination.style.bottom = `${textContentHeight + 35}px`;
   }
-
 });
 

@@ -3,8 +3,8 @@
 }
 
 .hero__main-wrapper {
-  margin: 0 auto;
-  width: 100%;
+  // margin: 0 auto;
+  // width: 100%;
 
   @media (max-width: $mobile-width-max) {}
 
@@ -18,7 +18,9 @@
   z-index: 10;
 }
 
-.hero__swiper {}
+.hero__swiper {
+  width: 100%;
+}
 
 .hero__swiper-wrapper {}
 
@@ -72,21 +74,11 @@
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
     padding: 60px 64px 50px 45px;
-
   }
 
-  @media (min-width: $desktop-width-min) {}
-
-  // &::after {
-  //   content: '';
-  //   display: block;
-  //   width: 6px;
-  //   position: absolute;
-  //   background-color: inherit;
-  //   left: 0;
-  //   top: 13px;
-  //   bottom: 13px;
-  // }
+  @media (min-width: $desktop-width-min) {
+    padding: 50px 100px;
+  }
 
   p {
     margin: 0;
@@ -103,7 +95,10 @@
       width: 241px;
     }
 
-    @media (min-width: $desktop-width-min) {}
+    @media (min-width: $desktop-width-min) {
+      width: 391px;
+      line-height: 26px;
+    }
   }
 
   p:last-of-type {
@@ -136,7 +131,14 @@
     border-bottom-right-radius: 30px;
   }
 
-  @media (min-width: $desktop-width-min) {}
+  @media (min-width: $desktop-width-min) {
+    padding: 40px 50px 30px 50px;
+    width: 968px;
+    font-size: 54px;
+    line-height: 62px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
 }
 
 .hero__slide-description-wrapper {
@@ -146,7 +148,7 @@
     filter: url(#gooey-filter);
   }
 
-  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+  @media (min-width: $tablet-width-min) {
     @include flex(row, space-between, flex-start);
 
     width: 593px;
@@ -154,6 +156,11 @@
     background-color: $basic-light-color;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
+  }
+
+  @media (min-width: $desktop-width-min) {
+    width: 775px;
+    padding: 0 50px 35px;
   }
 }
 
@@ -167,7 +174,9 @@
     border-bottom-right-radius: 14px;
   }
 
-  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
+  @media (min-width: $desktop-width-min) {
+  margin-top: 10px;
+  }
 }
 
 .hero__details {
@@ -177,10 +186,15 @@
     height: 44px;
   }
 
-  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+  @media (min-width: $tablet-width-min) {
     padding: 21px 31px;
     width: 198px;
     height: 56px;
+  }
+
+  @media (min-width: $desktop-width-min) {
+    width: 199px;
+    height: 58px;
   }
 }
 
@@ -199,10 +213,14 @@
     border-top-right-radius: 12px;
   }
 
-  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+  @media (min-width: $tablet-width-min) {
     padding: 11px 9px 11px 20px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+  }
+
+  @media (min-width: $desktop-width-min) {
+    padding: 14px 9px 14px 20px;
   }
 }
 
@@ -216,11 +234,10 @@
     height: 8px;
   }
 
-  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+  @media (min-width: $tablet-width-min) {
     width: 12px;
     height: 12px;
   }
-
 }
 
 .hero__bullet--active {
@@ -244,18 +261,20 @@
     left: 45px;
   }
 
-  @media (min-width: $desktop-width-min) {}
+  @media (min-width: $desktop-width-min) {
+    bottom: 362px;
+    left: 100px;
+  }
 }
 
 swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   @media (max-width: $mobile-width-max) {
-  margin: 0 6px;
+    margin: 0 6px;
   }
 
-  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+  @media (min-width: $tablet-width-min) {
     margin: 0;
     margin-right: 12px;
   }
-
 }
