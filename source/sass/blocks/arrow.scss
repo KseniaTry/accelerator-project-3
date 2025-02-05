@@ -1,0 +1,63 @@
+.arrow {
+  width: 71px;
+  height: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow__button {
+  margin: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid transparent;
+  mask-repeat: no-repeat;
+
+  &::after {
+    font-size: 22px;
+    mask-size: 9px 9px;
+    mask-position: center;
+    background-color: $accent-color;
+    mask-repeat: no-repeat;
+  }
+
+  // &:hover {
+  //   border: 1px solid #1c3374;
+  //   background-color: $basic-light-color;
+  // }
+
+  // &:focus {
+  //   background-color: $basic-light-color;
+  // }
+
+  // &:hover::after,
+  // &:focus::after {
+  //   background-color: #1c3374;
+  // }
+
+  // &:active {
+  //   background-color: #1c3374;
+  // }
+
+  // &:disabled {
+  //   background-color: $disabled-color;
+  // }
+}
+
+.arrow__button--prev::after {
+  mask-image: url("/__spritemap#sprite-slider-arrow-left-view");
+}
+
+.arrow__button--next::after {
+  mask-image: url("/__spritemap#sprite-slider-arrow-left-view");
+  transform: rotate(180deg);
+}
+
+.arrow .swiper-button-prev.swiper-button-disabled,
+.arrow .swiper-button-next.swiper-button-disabled {
+  opacity: 100%;
+
+  &::after {
+    background-color: $disabled-color;
+  }
+}

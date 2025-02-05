@@ -1,5 +1,5 @@
 import Swiper from "swiper";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Scrollbar } from "swiper/modules";
 import 'swiper/css';
 
 // меню
@@ -62,6 +62,7 @@ const heroSwiper = new Swiper(heroSlider, {
   modules: [Pagination],
   slidesPerView: 'auto',
   loop: true,
+  centeredSlides: true,
   allowTouchMove: true,
   pagination: {
     el: '.hero__pagination',
@@ -119,3 +120,38 @@ heroSwiper.on('slideChange', function () {
   }
 });
 
+
+// programs swiper
+const programsSlider = document.querySelector('.programs__swiper');
+
+const programsSwiper = new Swiper(programsSlider, {
+  slideClass: 'programs__slide',
+  modules: [Navigation, Pagination],
+  navigation: {
+    prevEl: '.programs__button--prev',
+    nextEl: '.programs__button--next',
+    clickable: true,
+  },
+  scrollbar: {
+    el: ".programs__scrollbar",
+},
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      allowTouchMove: true, // возможность переключения тачем
+    },
+    768: {
+      slidesPerView: 'auto',
+      spaceBetween: 18,
+      allowTouchMove: true,
+    },
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      allowTouchMove: false,
+    },
+  }
+});
+
+
+programsSwiper.init();
