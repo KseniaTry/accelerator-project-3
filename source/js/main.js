@@ -123,35 +123,60 @@ heroSwiper.on('slideChange', function () {
 
 // programs swiper
 const programsSlider = document.querySelector('.programs__swiper');
+const programsButtons = document.querySelectorAll('.programs__button');
+const programsScrollbar = document.querySelector('.programs__scrollbar');
 
 const programsSwiper = new Swiper(programsSlider, {
   slideClass: 'programs__slide',
-  modules: [Navigation, Pagination],
+  modules: [Navigation, Scrollbar],
   navigation: {
     prevEl: '.programs__button--prev',
     nextEl: '.programs__button--next',
     clickable: true,
   },
   scrollbar: {
-    el: ".programs__scrollbar",
-},
+    el: '.programs__scrollbar',
+    draggable: true,
+  },
   breakpoints: {
     320: {
       slidesPerView: 1,
       allowTouchMove: true, // возможность переключения тачем
+      scrollbar: {
+        enabled: false,
+      },
     },
     768: {
-      slidesPerView: 'auto',
-      spaceBetween: 18,
+      slidesPerView: 2.127,
+      spaceBetween: 30,
       allowTouchMove: true,
+      scrollbar: {
+        dragSize: 326,
+      },
     },
     1440: {
       slidesPerView: 3,
-      spaceBetween: 30,
+      spaceBetween: 32,
       allowTouchMove: false,
+      scrollbar: {
+        dragSize: 394,
+      },
     },
-  }
+  },
 });
 
-
 programsSwiper.init();
+
+if (window.innerWidth >= DESKTOP_WIDTH_MIN) {
+ programsButtons.forEach((button) => {
+  button.classList.remove('swiper-button-lock');
+
+  if (button.classList.contains('programs__button--next')) {
+button.disabled = false;
+button.classList.remove('swiper-button-disabled');
+  }
+ })
+
+ programsScrollbar.classList.remove('swiper-scrollbar-lock');
+ programsScrollbar.style.display = 'block';
+}
