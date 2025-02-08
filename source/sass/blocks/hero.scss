@@ -241,7 +241,7 @@
   background-color: $accent-color;
 }
 
-.swiper-pagination-bullets.swiper-pagination-horizontal {
+.hero__pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
   width: fit-content;
   top: auto;
 
@@ -261,7 +261,7 @@
   }
 }
 
-swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.hero__pagination .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   @media (max-width: $mobile-width-max) {
     margin: 0 6px;

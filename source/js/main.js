@@ -1,5 +1,5 @@
 import Swiper from "swiper";
-import { Navigation, Pagination, Scrollbar } from "swiper/modules";
+import { Navigation, Pagination, Scrollbar, Grid } from "swiper/modules";
 import 'swiper/css';
 
 // меню
@@ -112,7 +112,7 @@ heroSwiper.on('slideChange', function () {
   const textContentHeight = getAllTextContentHeight(heroActiveSlide);
 
   if (window.innerWidth <= MOBILE_WIDTH_MAX) {
-  heroPagination.style.bottom = `${textContentHeight + 19}px`;
+    heroPagination.style.bottom = `${textContentHeight + 19}px`;
   }
 
   if (window.innerWidth > MOBILE_WIDTH_MAX) {
@@ -168,15 +168,149 @@ const programsSwiper = new Swiper(programsSlider, {
 programsSwiper.init();
 
 if (window.innerWidth >= DESKTOP_WIDTH_MIN) {
- programsButtons.forEach((button) => {
-  button.classList.remove('swiper-button-lock');
+  programsButtons.forEach((button) => {
+    button.classList.remove('swiper-button-lock');
 
-  if (button.classList.contains('programs__button--next')) {
-button.disabled = false;
-button.classList.remove('swiper-button-disabled');
-  }
- })
+    if (button.classList.contains('programs__button--next')) {
+      button.disabled = false;
+      button.classList.remove('swiper-button-disabled');
+    }
+  })
 
- programsScrollbar.classList.remove('swiper-scrollbar-lock');
- programsScrollbar.style.display = 'block';
+  programsScrollbar.classList.remove('swiper-scrollbar-lock');
+  programsScrollbar.style.display = 'block';
 }
+
+// news swiper
+const newsSlider = document.querySelector('.news__swiper');
+
+const newsSwiper = new Swiper(newsSlider, {
+  slideClass: 'news__slide',
+  hashNavigation: true,
+  direction: 'horizontal',
+  modules: [Navigation, Pagination, Grid],
+  allowTouchMove: true,
+  pagination: {
+    el: '.news__pagination',
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + '</span>';
+    },
+    dynamicBullets: true,
+    dynamicMainBullets: 4,
+  },
+  navigation: {
+    prevEl: '.news__button--prev',
+    nextEl: '.news__button--next',
+    clickable: true,
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 61,
+      grid: {
+        rows: 2,
+      },
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 5,
+      // grid: {
+      //   rows: 1,
+      //   fill: 'fill',
+      // },
+    },
+  },
+});
+
+newsSwiper.init();
+
+// переключение табов
+const newsNavList = document.querySelector('.news__nav-list');
+
+newsNavList.addEventListener('click', evt => {
+  if (evt.target.tagName !== 'A') return;
+  const nextActiveItem = evt.target.closest('.news__nav-item');
+  const currentActiveItem = document.querySelector('.news__nav-item--active');
+  currentActiveItem.classList.remove('news__nav-item--active');
+  nextActiveItem.classList.add('news__nav-item--active');
+})
+
+
+// Вторую же, судя по всему, придется делать почти руками:
+// воспользуйтесь API Swiper'а, например методом mySwiper.slideTo(index, speed, runCallbacks)
+// повесив его на каждый свой буллет.
+// Количество слайдов можете тоже посчитать при помощи API mySwiper.slides.length.
+
+// const newsPagitation = document.querySelector('.news__pagination');
+
+// let newsSlidesLength = newsSwiper.slides.length;
+
+// for (let i = 1; i <= newsSlidesLength; i++) {
+//   newsPagitation.insertAdjacentHTML('beforeend', `<li class="news__pagination-item"><a class="news__pagination-link" data-page="${i}" href="#">${i}</a></li>`);
+// }
+
+// const newsPaginationItems = newsPagitation.querySelectorAll('news__pagination-link');
+// const MIN = 1;
+// const MAX = newsSlidesLength;
+
+// //
+// const addActivePaginationItem = () => {
+//   const currentActiveItem = document.querySelector('.news__pagination-item--active');
+
+//   // удаляем предыдущее выделение пагиниции синим
+//   if (currentActiveItem !== null) {
+//     currentActiveItem.classList.remove('news__pagination-item--active');
+//   }
+
+//   // добавляем новое выделение пагинации синим (= активному слайду)
+//   const activeSlideIndex = newsSlider.querySelector('.swiper-slide-active').dataset.hash;
+//   const activePaginationLink = document.querySelector(`[data-page="${activeSlideIndex}"]`);
+//   const activePaginationItem = activePaginationLink.closest('.news__pagination-item');
+//   activePaginationItem.classList.add('news__pagination-item--active');
+// }
+
+// addActivePaginationItem();
+
+// const isEven = number => number % 2 === 0;
+
+// newsPagitation.addEventListener('click', evt => {
+//   if (evt.target.tagName !== 'A') return;
+//   const targetItemIndex = evt.target.dataset.page;
+//   console.log(targetItemIndex);
+
+//   if (!isEven(targetItemIndex)) {
+//     newsSwiper.slideTo(targetItemIndex - 2);
+//   }
+
+//   console.log('real index ' + newsSwiper.realIndex);
+
+//   console.log('hash data ' + targetItemIndex);
+//   updatePagitation(targetItemIndex);
+//   addActivePaginationItem();
+// })
+
+
+// const updatePagitation = (targetItemIndex) => {
+//   console.log('real index ' + newsSwiper.realIndex);
+
+// }
+
+
+// const page = +evt.target.dataset.page;
+// console.log(page);
+// updateValues(page);
+// })
+
+// function updateValues(page) {
+//   newsPaginationItems.forEach((item, i) => {
+//     item.innerText = clamp(page + i - 2, i);
+//     item.dataset.page = clamp(page + i - 2, i);
+//   })
+// }
+
+// function clamp(value, i) {
+//   return Math.max(MIN + i, Math.min(value, MAX - 3 + i))
+// }
+
+
