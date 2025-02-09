@@ -19,6 +19,7 @@
   }
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    position: relative; // для пагинации swiper
     width: $tablet-content-width;
   }
 
@@ -40,6 +41,7 @@
   }
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    margin-bottom: 30px;
     font-size: 34px;
     line-height: 50px;
   }
@@ -51,8 +53,10 @@
 .news__tabs {}
 
 .news__nav {
-  padding-left: 15px;
-  width: 320px;
+  @media (max-width: $mobile-width-max) {
+    padding-left: 15px;
+    width: 320px;
+  }
 }
 
 .news__nav-list {
@@ -63,7 +67,16 @@
 
   overflow-x: auto;
   scrollbar-width: none;
-  margin-bottom: 24px;
+
+  @media (max-width: $mobile-width-max) {
+    gap: 11px;
+    margin-bottom: 24px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    gap: 10px;
+    margin-bottom: 30px;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -72,21 +85,37 @@
 }
 
 .news__nav-item {
-  padding: 7px 15px;
+  @media (max-width: $mobile-width-max) {
+    padding: 7px 15px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    padding: 12px 21px;
+  }
+
+  @media (min-width: $desktop-width-min) {}
 }
 
 .news__nav-item--active {
   border: 2px solid $accent-color;
   border-radius: 20px;
-  padding: 7px 15px;
 }
 
 .news__nav-link {
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 12px;
-  line-height: 12px;
-  letter-spacing: 0.24px;
+
+  @media (max-width: $mobile-width-max) {
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.24px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.28px;
+  }
 }
 
 .news__nav-item .news__nav-link {
@@ -97,16 +126,22 @@
   color: $accent-color;
 }
 
+// контент
 .news__tab-content {}
 
 // свайпер
 .news__swiper.swiper {
-  width: 320px;
-  padding: 0 15px;
-  height: 640px; // 590
-}
+  @media (max-width: $mobile-width-max) {
+    width: 320px;
+    padding: 0 15px;
+    height: 640px;
+  }
 
-.news__swiper-wrapper {}
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    height: 730px;
+    margin-bottom: 30px;
+  }
+}
 
 .news__slide-main-wrapper {
   position: relative; // для текстового блока
@@ -121,11 +156,19 @@
 // }
 
 .news__slide.swiper-slide {
-  height: 240px;
+  @media (max-width: $mobile-width-max) {
+    height: 240px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    // width: 324px;
+  }
 }
 
 .news__slide.swiper-slide-active {
-  height: 330px;
+  @media (max-width: $mobile-width-max) {
+    height: 330px;
+  }
 }
 
 .news__slide-image {
@@ -162,8 +205,15 @@
 
   &::after {
     margin-top: -16px;
-    margin-left: 263px;
     mask-image: url("/__spritemap#sprite-corner-16x16-view");
+
+    @media (max-width: $mobile-width-max) {
+      margin-left: 263px;
+    }
+
+    @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+      margin-left: 240px;
+    }
   }
 }
 
@@ -173,15 +223,14 @@
   background-color: $extra-light-color;
   color: $accent-color;
 
-  @media (max-width: $mobile-width-max) {
-    display: block;
-    padding: 12px 12px 6px 0;
-    width: 78px;
-    border-top-right-radius: 12px;
-    font-size: 12px;
-    line-height: 12px;
-    letter-spacing: 0.12px;
-  }
+  display: block;
+  padding: 12px 12px 6px 0;
+  width: 78px;
+  border-top-right-radius: 12px;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.12px;
+
 }
 
 .news__slide-title {
@@ -189,33 +238,42 @@
   font-weight: 400;
   background-color: $extra-light-color;
   color: $accent-color;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
 
   @media (max-width: $mobile-width-max) {
     padding: 10px 18px 4px 0;
     width: 200px;
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
     font-size: 16px;
     line-height: 18px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    padding: 10px 18px 6px 0;
+    width: 207px;
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 
 .news__slide-description-wrapper {
-  background-color: $extra-light-color;
-
   @include flex(row, space-between, center);
   flex-wrap: wrap;
+
+  border-top-right-radius: 12px;
+  background-color: $extra-light-color;
 
   @media (max-width: $mobile-width-max) {
     padding: 12px 10px 10px 0;
     width: 263px;
-    border-top-right-radius: 12px;
   }
 
-  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    padding: 12px 18px 15px 0;
+    width: 240px;
+  }
 
   @media (min-width: $desktop-width-min) {}
-
 
   p {
     margin: 0;
@@ -224,6 +282,12 @@
       width: 212px;
       font-size: 12px;
       line-height: 14px;
+    }
+
+    @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+      width: 176px;
+      font-size: 14px;
+      line-height: 20px;
     }
   }
 }
@@ -237,26 +301,44 @@
 }
 
 .news__pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: -13px;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media (max-width: $mobile-width-max) {
+    bottom: -13px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    bottom: -78px;
+  }
 }
 
 .news__pagination .swiper-pagination-bullet {
   display: block;
   margin: 0;
-  width: 26px;
-  height: 26px;
   padding: 6px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 14px;
   text-decoration: none;
   text-align: center;
   color: #316dc2;
   border-radius: 50%;
   background-color: transparent;
   opacity: 100%;
+
+  @media (max-width: $mobile-width-max) {
+    width: 26px;
+    height: 26px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    width: 32px;
+    height: 32px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .news__pagination .swiper-pagination-bullet-active {
@@ -270,58 +352,36 @@
   // margin-right: 16px;
 }
 
-// пагинация (количество слайдов)
-// .news__pagination {
-//   @include reset-list;
-
-//   margin: 0 auto;
-//   width: 152px;
-//   overflow: hidden;
-
-//   @include flex(row, flex-start, center);
-//   gap: 16px;
-// }
-
-// .news__pagination-item {
-//   width: 26px;
-//   height: 26px;
-//   border-radius: 50%;
-// }
-
-// .news__pagination-item--active {
-//   background-color: $accent-color;
-// }
-
-// .news__pagination-item--active .news__pagination-link {
-//   color: $basic-light-color;
-// }
-
-// .news__pagination-link {
-//   display: block;
-//   width: 26px;
-//   height: 26px;
-//   padding: 6px;
-//   font-weight: 500;
-//   font-size: 14px;
-//   line-height: 14px;
-//   text-decoration: none;
-//   text-align: center;
-//   color: #316dc2;
-//   border-radius: 50%;
-// }
-
 // навигация swiper стрелки
 .news .swiper-button-prev,
 .news .swiper-button-next {
   top: auto;
-  bottom: 2px;
-  // left: 0;
+
+  @media (max-width: $mobile-width-max) {
+    bottom: 2px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    bottom: -57px;
+  }
 }
 
 .news .swiper-button-prev {
-  left: 15px;
+  @media (max-width: $mobile-width-max) {
+    left: 15px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    left: 0;
+  }
 }
 
 .news .swiper-button-next {
-  right: 15px;
+  @media (max-width: $mobile-width-max) {
+    right: 15px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    right: 0;
+  }
 }

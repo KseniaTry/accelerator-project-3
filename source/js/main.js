@@ -213,12 +213,15 @@ const newsSwiper = new Swiper(newsSlider, {
       },
     },
     768: {
-      slidesPerView: 4,
-      spaceBetween: 5,
-      // grid: {
-      //   rows: 1,
-      //   fill: 'fill',
-      // },
+      slidesPerView: 2,
+      spaceBetween: 30,
+      grid: {
+        rows: 2,
+      },
+    },
+    1440: {
+      slidesPerView: 3,
+      spaceBetween: 30,
     },
   },
 });
@@ -227,6 +230,7 @@ newsSwiper.init();
 
 // переключение табов
 const newsNavList = document.querySelector('.news__nav-list');
+const newsSlides = document.querySelectorAll('.news__slide');
 
 newsNavList.addEventListener('click', evt => {
   if (evt.target.tagName !== 'A') return;
@@ -235,6 +239,51 @@ newsNavList.addEventListener('click', evt => {
   currentActiveItem.classList.remove('news__nav-item--active');
   nextActiveItem.classList.add('news__nav-item--active');
 })
+
+// изменение раскладки swiper grid
+if (window.innerWidth >= 768) {
+  newsSlides.forEach((slide, index) => {
+    switch (index) {
+      case 0:
+        slide.style.order = 1;
+        break;
+      case 1:
+        slide.style.order = 3;
+        slide.style.marginTop = '0';
+        break;
+      case 2:
+        slide.style.order = 2;
+        slide.style.marginTop = '30px';
+        break;
+      case 3:
+        slide.style.order = 4;
+        slide.style.marginRight = '30px';
+        break;
+      default:
+        slide.style.order = index + 1;
+        break;
+    }
+  });
+};
+
+
+// if (window.innerWidth >= 768) {
+//   let activeIndex = newsSwiper.realIndex;
+//   // const currentNextSlide = document.querySelector('.swiper-slide-next');
+//   // console.log(currentNextSlide);
+//   // currentNextSlide.classList.remove('swiper-slide-next');
+
+//   newsSlides.forEach((slide, index) => {
+//       if (index === activeIndex + 1) {
+//         console.log(slide);
+//         slide.classList.add('swiper-slide-next');
+//       };
+
+//       if (index === activeIndex + 2) {
+//         slide.classList.remove('swiper-slide-next');
+//       }
+//     });
+// }
 
 
 // Вторую же, судя по всему, придется делать почти руками:
