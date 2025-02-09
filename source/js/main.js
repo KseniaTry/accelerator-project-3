@@ -362,4 +362,11 @@ if (window.innerWidth >= 768 && window.innerWidth < 1440) {
 //   return Math.max(MIN + i, Math.min(value, MAX - 3 + i))
 // }
 
+// Блок FAQ
+const faqItems = document.querySelectorAll('.faq__accordion-item');
 
+faqItems.forEach((item) => {
+  item.addEventListener('click', () => {
+    item.classList.toggle('faq__accordion-item--active');
+  })
+})
