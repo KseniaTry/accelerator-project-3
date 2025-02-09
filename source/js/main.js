@@ -220,8 +220,8 @@ const newsSwiper = new Swiper(newsSlider, {
       },
     },
     1440: {
-      slidesPerView: 3,
-      spaceBetween: 30,
+      slidesPerView: 'auto',
+      spaceBetween: 32,
     },
   },
 });
@@ -241,7 +241,7 @@ newsNavList.addEventListener('click', evt => {
 })
 
 // изменение раскладки swiper grid
-if (window.innerWidth >= 768) {
+if (window.innerWidth >= 768 && window.innerWidth < 1440) {
   newsSlides.forEach((slide, index) => {
     switch (index) {
       case 0:
