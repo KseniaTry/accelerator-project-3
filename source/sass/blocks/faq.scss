@@ -7,7 +7,9 @@
     padding: 50px 45px;
   }
 
-  @media (min-width: $desktop-width-min) {}
+  @media (min-width: $desktop-width-min) {
+    padding: 71px 206px;
+  }
 }
 
 .faq__main-wrapper {
@@ -22,7 +24,7 @@
   }
 
   @media (min-width: $desktop-width-min) {
-    width: $desktop-content-width;
+    width: 1028px;
   }
 }
 
@@ -44,7 +46,11 @@
     line-height: 50px;
   }
 
-  @media (min-width: $desktop-width-min) {}
+  @media (min-width: $desktop-width-min) {
+    margin-bottom: 71px;
+    font-size: 50px;
+    line-height: 50px;
+  }
 }
 
 .faq__accordion {
@@ -72,8 +78,10 @@
     padding: 29px 30px 31px 30px;
   }
 
-  @media (min-width: $desktop-width-min) {}
-
+  @media (min-width: $desktop-width-min) {
+    width: 1028px;
+    padding: 40px;
+  }
 
   p {
     display: none;
@@ -90,11 +98,14 @@
       line-height: 20px;
     }
 
-    @media (min-width: $desktop-width-min) {}
+    @media (min-width: $desktop-width-min) {
+      font-size: 16px;
+      line-height: 26px;
+    }
   }
 
   br {
-    @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    @media (min-width: $tablet-width-min) {
       display: none;
     }
   }
@@ -127,7 +138,11 @@
     line-height: 26px;
   }
 
-  @media (min-width: $desktop-width-min) {}
+  @media (min-width: $desktop-width-min) {
+    width: 850px;
+    font-size: 28px;
+    line-height: 34px;
+  }
 }
 
 .faq__open-button {
@@ -138,7 +153,7 @@
   border: 1px solid $accent-color;
   border-radius: 50%;
 
-  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+  @media (min-width: $tablet-width-min) {
     align-self: flex-start;
   }
 
