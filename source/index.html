@@ -993,39 +993,43 @@
     </section>
 
     <section class="contacts" data-test="contacts">
-      <h2 class="contacts__title">Контакты</h2>
-      <ul class="contacts__list">
-        <li class="contacts__item">
-          <h3 class="contacts__item-title">Центральный офис</h3>
-          <address class="contacts__item-description">г. Новосибирск, ул. Щетинкина 68,
-            культурный центр</address>
-        </li>
-        <li class="contacts__item">
-          <h3 class="contacts__item-title">Телефон</h3>
-          <a class="contacts__item-description" href="tel:+796387687676">+7 963 876 876 76</a>
-        </li>
-        <li class="contacts__item">
-          <h3 class="contacts__item-title">Email</h3>
-          <a class="contacts__item-description" href="mailto:info@stazh.ru">Info@stazh.ru</a>
-        </li>
-      </ul>
+      <div class="contacts__main-wrapper">
+        <h2 class="contacts__title">Контакты</h2>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <h3 class="contacts__item-title">Центральный офис</h3>
+            <address class="contacts__item-description">г. Новосибирск, ул. Щетинкина 68,<br>
+              культурный центр</address>
+          </li>
+          <li class="contacts__item">
+            <h3 class="contacts__item-title">Телефон</h3>
+            <a class="contacts__item-description" href="tel:+796387687676">+7 963 876 876 76</a>
+          </li>
+          <li class="contacts__item">
+            <h3 class="contacts__item-title">Email</h3>
+            <a class="contacts__item-description" href="mailto:info@stazh.ru">Info@stazh.ru</a>
+          </li>
+        </ul>
 
-      <picture>
-        <source media="(min-width: 1440px)" width="1240" height="486" type="image/webp"
-          srcset="img/contacts/map-desktop@1x.webp 1x, img/contacts/map-desktop@2x.webp 2x">
-        <source media="(min-width: 768px)" width="678" height="500" type="image/webp"
-          srcset="img/contacts/map-tablet@1x.webp 1x, img/contacts/map-tablet@2x.webp 2x">
-        <source width="290" height="340" type="image/webp"
-          srcset="img/contacts/map-mobile@1x.webp 1x, img/contacts/map-mobile@2x.webp 2x">
+<div class="contacts__map-wrapper">
+        <picture>
+          <source media="(min-width: 1440px)" width="1240" height="486" type="image/webp"
+            srcset="img/contacts/map-desktop@1x.webp 1x, img/contacts/map-desktop@2x.webp 2x">
+          <source media="(min-width: 768px)" width="678" height="500" type="image/webp"
+            srcset="img/contacts/map-tablet@1x.webp 1x, img/contacts/map-tablet@2x.webp 2x">
+          <source width="290" height="240" type="image/webp"
+            srcset="img/contacts/map-mobile@1x.webp 1x, img/contacts/map-mobile@2x.webp 2x">
 
-        <source media="(min-width: 1440px)" width="1240" height="486" type="image/png"
-          srcset="img/contacts/map-desktop@1x.png 1x, img/contacts/map-desktop@2x.png 2x">
-        <source media="(min-width: 768px)" width="678" height="500" type="image/png"
-          srcset="img/contacts/map-tablet@1x.png 1x, img/contacts/map-tablet@2x.png 2x">
-        <img class="contacts__map-image" src="img/contacts/map-mobile@1x.png" width="290" height="340"
-          srcset="img/contacts/map-mobile@2x.png" alt="Карта с отмеченным месторасположением офиса Lifetour"
-          loading="lazy">
-      </picture>
+          <source media="(min-width: 1440px)" width="1240" height="486" type="image/png"
+            srcset="img/contacts/map-desktop@1x.png 1x, img/contacts/map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" width="678" height="500" type="image/png"
+            srcset="img/contacts/map-tablet@2x.png 1x, img/contacts/map-tablet@2x.png 2x">
+          <img class="contacts__map-image" src="img/contacts/map-mobile@1x.png" width="290" height="240"
+            srcset="img/contacts/map-mobile@2x.png" alt="Карта с отмеченным месторасположением офиса Lifetour"
+            loading="lazy">
+        </picture>
+</div>
+      </div>
     </section>
 
     <section class="form" data-test="form">
