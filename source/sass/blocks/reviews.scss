@@ -1,0 +1,259 @@
+.reviews {
+  @media (max-width: $mobile-width-max) {
+    padding: 55px 15px 50px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    padding: 50px 0;
+  }
+
+  @media (min-width: $desktop-width-min) {}
+}
+
+.reviews__main-wrapper {
+  margin: 0 auto;
+
+  @media (max-width: $mobile-width-max) {
+    position: relative; // для кнопок навигации слайдера
+    width: $mobile-content-width;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    position: relative;
+    margin-left: 45px;
+    width: calc($tablet-width-min - 45px);
+  }
+
+  @media (min-width: $desktop-width-min) {
+    width: $desktop-width-min;
+  }
+}
+
+.reviews__title {
+  margin: 0;
+  color: $accent-color;
+  font-weight: 400;
+
+  @media (max-width: $mobile-width-max) {
+    margin-bottom: 35px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    margin-bottom: 40px;
+    font-size: 34px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop-width-min) {}
+}
+
+.reviews__swiper {
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    margin-bottom: 62px;
+  }
+}
+
+.reviews__swiper-wrapper {}
+
+.reviews__slide.swiper-slide {
+  @media (max-width: $mobile-width-max) {
+    height: 472px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    height: 417px;
+  }
+}
+
+.reviews__slide-content-wrapper {
+  border: 2px solid $accent-color;
+  border-radius: 16px;
+
+  @include flex(row, space-between, center);
+  flex-wrap: wrap;
+  gap: 10px;
+
+  @media (max-width: $mobile-width-max) {
+    padding: 30px 15px;
+    height: 472px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    padding: 40px 50px;
+    height: 417px;
+  }
+
+  blockquote {
+    margin: 0;
+
+    @media (max-width: $mobile-width-max) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
+
+.reviews__author-wrapper {
+  @include flex(row, space-between, center);
+
+  @media (max-width: $mobile-width-max) {
+    gap: 10px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    gap: 15px;
+  }
+}
+
+.reviews__avatar-wrapper {
+  border-radius: 50%;
+
+  @media (max-width: $mobile-width-max) {
+    margin-bottom: 5px;
+    width: 60px;
+    height: 60px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.reviews__avatar {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.reviews__slide-title {
+  margin: 0;
+  color: $accent-color;
+  font-weight: 400;
+
+  @media (max-width: $mobile-width-max) {
+    width: 40px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    width: 54px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width-min) {}
+
+}
+
+.reviews__details {
+  display: grid;
+  grid-template-columns: repeat(2, max-width);
+  column-gap: 25px;
+  margin: 0;
+
+  @media (max-width: $mobile-width-max) {
+    row-gap: 8px;
+    margin-bottom: 15px;
+    width: 200px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    row-gap: 10px;
+    width: 230px;
+  }
+}
+
+.reviews__details-category--program {
+  grid-column: 1 / 2;
+}
+
+.reviews__details-category--date {
+  grid-column: 2 /3;
+  grid-row: 1 / 2;
+}
+
+.reviews__details-category {
+  color: $accent-color;
+  text-transform: uppercase;
+
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.12px;
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
+
+  @media (min-width: $desktop-width-min) {}
+
+}
+
+.reviews__details-info {
+  margin-left: 0;
+
+  @media (max-width: $mobile-width-max) {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.reviews__slide-subtitle {
+  margin: 0;
+  font-weight: 400;
+  color: $accent-color;
+
+  @media (max-width: $mobile-width-max) {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    margin-bottom: -5px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+// кнопки навигации
+.reviews__buttons-wrapper {
+  position: absolute;
+
+  @media (max-width: $mobile-width-max) {
+    top: 0;
+    right: 0;
+    width: 52px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    bottom: -60px;
+    right: 45px;
+    width: 54px;
+  }
+}
+
+.reviews__buttons-wrapper .swiper-button-prev,
+.reviews__buttons-wrapper .swiper-button-next {
+  position: static;
+}
+
+// скроллбар
+.reviews__scrollbar {}
+
+
+.reviews__scrollbar.swiper-horizontal>.swiper-scrollbar,
+.reviews__scrollbar.swiper-scrollbar.swiper-scrollbar-horizontal {
+  bottom: -51px;
+}
