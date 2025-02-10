@@ -389,7 +389,7 @@ const reviewsSwiper = new Swiper(reviewsSlider, {
   breakpoints: {
     320: {
       slidesPerView: 1,
-      allowTouchMove: true, // возможность переключения тачем
+      allowTouchMove: true,
       scrollbar: {
         enabled: false,
       },
@@ -413,4 +413,4 @@ const reviewsSwiper = new Swiper(reviewsSlider, {
   },
 });
 
-programsSwiper.init();
+reviewsSwiper.init();
