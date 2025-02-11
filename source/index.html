@@ -1011,31 +1011,32 @@
           </li>
         </ul>
 
-<div class="contacts__map-wrapper">
-        <picture>
-          <source media="(min-width: 1440px)" width="1240" height="486" type="image/webp"
-            srcset="img/contacts/map-desktop@1x.webp 1x, img/contacts/map-desktop@2x.webp 2x">
-          <source media="(min-width: 768px)" width="678" height="500" type="image/webp"
-            srcset="img/contacts/map-tablet@1x.webp 1x, img/contacts/map-tablet@2x.webp 2x">
-          <source width="290" height="240" type="image/webp"
-            srcset="img/contacts/map-mobile@1x.webp 1x, img/contacts/map-mobile@2x.webp 2x">
+        <div class="contacts__map-wrapper">
+          <picture>
+            <source media="(min-width: 1440px)" width="1240" height="486" type="image/webp"
+              srcset="img/contacts/map-desktop@1x.webp 1x, img/contacts/map-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" width="678" height="500" type="image/webp"
+              srcset="img/contacts/map-tablet@1x.webp 1x, img/contacts/map-tablet@2x.webp 2x">
+            <source width="290" height="240" type="image/webp"
+              srcset="img/contacts/map-mobile@1x.webp 1x, img/contacts/map-mobile@2x.webp 2x">
 
-          <source media="(min-width: 1440px)" width="1240" height="486" type="image/png"
-            srcset="img/contacts/map-desktop@1x.png 1x, img/contacts/map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" width="678" height="500" type="image/png"
-            srcset="img/contacts/map-tablet@2x.png 1x, img/contacts/map-tablet@2x.png 2x">
-          <img class="contacts__map-image" src="img/contacts/map-mobile@1x.png" width="290" height="240"
-            srcset="img/contacts/map-mobile@2x.png" alt="Карта с отмеченным месторасположением офиса Lifetour"
-            loading="lazy">
-        </picture>
-</div>
+            <source media="(min-width: 1440px)" width="1240" height="486" type="image/png"
+              srcset="img/contacts/map-desktop@1x.png 1x, img/contacts/map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" width="678" height="500" type="image/png"
+              srcset="img/contacts/map-tablet@2x.png 1x, img/contacts/map-tablet@2x.png 2x">
+            <img class="contacts__map-image" src="img/contacts/map-mobile@1x.png" width="290" height="240"
+              srcset="img/contacts/map-mobile@2x.png" alt="Карта с отмеченным месторасположением офиса Lifetour"
+              loading="lazy">
+          </picture>
+        </div>
       </div>
     </section>
 
     <section class="form" data-test="form">
+      <div class="form__main-wrapper">
       <form class="form__form" action="https://echo.htmlacademy.ru/" method="post">
         <h2 class="form__title">Напишите нам</h2>
-        <p>Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+        <p class="form__description">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
         <label class="form__label" for="name">Имя</label>
         <input class="form__input" type="text" id="name" name="name" required>
 
@@ -1043,23 +1044,28 @@
         <input class="form__input" type="tel" id="phone" name="phone" required>
 
         <label class="form__label" for="message">Ваше сообщение</label>
-        <input class="form__input" type="text" id="message" name="message" required>
+        <textarea class="form__input form__input--message" id="message" name="message" required></textarea>
 
-        <label for="city-select">Ваш город</label>
-        <select name="city" id="city-select">
-          <option value=""></option>
-          <option value="moscow">Москва</option>
-          <option value="petersburg">Санкт-Петербург</option>
-          <option value="kazan">Казань</option>
-          <option value="perm">Пермь</option>
-          <option value="novosibirsk">Новосибирск</option>
+        <label class="form__label" for="city-select">Выберите город</label>
+        <!-- <div class="form__input form__custom-select"> -->
+        <select class="form__input form__input--city" name="city" id="city-select">
+          <option hidden selected value=""></option>
+          <!-- <option value=""></option> -->
+          <option class="form__option" value="moscow">Москва</option>
+          <option class="form__option" value="petersburg">Санкт-Петербург</option>
+          <option class="form__option" value="kazan">Казань</option>
+          <option class="form__option" value="perm">Пермь</option>
+          <option class="form__option" value="novosibirsk">Новосибирск</option>
         </select>
+      <!-- </div> -->
 
-        <input type="checkbox" id="personal-data" name="personalData">
-        <label for="personal-data">Я согласен на обработку моих персональных данных</label>
+        <input class="form__input-checkbox" type="checkbox" id="personal-data" name="personalData">
+        <label class="form__label form__label--checkbox" for="personal-data">Я согласен на обработку моих
+          персональных<br> данных</label>
 
-        <button class="form__send button button--primary" type="submit">Отправить</button>
+        <button class="form__send button button--secondary-light" type="submit">Отправить</button>
       </form>
+    </div>
     </section>
   </main>
 

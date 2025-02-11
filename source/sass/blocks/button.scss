@@ -79,3 +79,17 @@
 .button--secondary {
   background-color: transparent;
 }
+
+.button--secondary-light {
+  background-color: transparent;
+  border-color: $basic-light-color;
+  color: $basic-light-color;
+
+  &::after {
+    background-color: $basic-light-color;
+  }
+
+  &::before {
+    background-color: $accent-color;
+  }
+}

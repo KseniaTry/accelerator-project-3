@@ -1,0 +1,190 @@
+.form {
+  @media (max-width: $mobile-width-max) {
+    padding: 40px 0;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
+
+  @media (min-width: $desktop-width-min) {}
+}
+
+.form__main-wrapper {
+  @media (max-width: $mobile-width-max) {
+    padding: 43px 10px 40px;
+    background-image:
+      image-set(url("../../img/form/form-background-mobile@1x.webp") type("image/webp") 1x,
+        url("../../img/form/form-background-mobile@2x.webp") type("image/webp") 2x,
+        url("../../img/form/form-background-mobile@1x.jpg") type("image/jpg") 1x,
+        url("../../img/form/form-background-mobile@2x.jpg") type("image/jpg") 2x);
+    background-repeat: no-repeat;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
+
+  @media (min-width: $desktop-width-min) {}
+}
+
+.form__form {
+  background-color: $accent-color;
+  border-radius: 16px;
+  color: $basic-light-color;
+
+  @include flex(column, flex-start, flex-start);
+
+  @media (max-width: $mobile-width-max) {
+    padding: 15px 15px 27px;
+    gap: 10px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
+
+  @media (min-width: $desktop-width-min) {}
+}
+
+.form__title {
+  margin: 0;
+  font-weight: 400;
+
+  @media (max-width: $mobile-width-max) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
+
+  @media (min-width: $desktop-width-min) {}
+}
+
+.form__description {
+  margin: 0;
+  color: $extra-light-color;
+
+  @media (max-width: $mobile-width-max) {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
+
+  @media (min-width: $desktop-width-min) {}
+}
+
+.form__label {
+  color: $extra-light-color;
+
+  @media (max-width: $mobile-width-max) {
+    margin-bottom: 2px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
+
+  @media (min-width: $desktop-width-min) {}
+}
+
+.form__input {
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  color: $basic-light-color;
+
+  @media (max-width: $mobile-width-max) {
+    margin-bottom: 10px;
+    padding: 17px;
+    width: 100%;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
+
+  @media (min-width: $desktop-width-min) {}
+}
+
+.form__input--message {
+  @media (max-width: $mobile-width-max) {
+    height: 94px;
+  }
+}
+
+// кастомный select
+.form__option {
+  @media (max-width: $mobile-width-max) {}
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
+
+  @media (min-width: $desktop-width-min) {}
+}
+
+.form__input--city {
+width: 260px;
+padding: 16px 17px;
+// display: none;
+}
+
+
+
+.form__custom-select {
+  // display: none;
+// width: 260px;
+// padding: 16px 17px;
+
+// &::after {
+
+// }
+}
+
+
+// кастомный checkbox
+.form__label--checkbox {
+  position: relative;
+  margin-left: 30px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 11px;
+    left: -30px;
+    width: 20px;
+    height: 20px;
+    background-color: $basic-light-color;
+    border: 1px solid $basic-light-color;
+    border-radius: 2px;
+  }
+
+  &::after {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 6px;
+    left: -33px;
+    width: 10px;
+    height: 10px;
+    mask-image: url("/__spritemap#sprite-checked-icon-view");
+    background-color: $accent-color;
+    mask-size: 10px 8px;
+    mask-repeat: no-repeat;
+  }
+}
+
+.form__input-checkbox {
+  display: none;
+}
+
+.form__input-checkbox:checked+.form__label--checkbox::after {
+  display: block;
+}
+
+// кнопка "отправить"
+.form__send {
+  @media (max-width: $mobile-width-max) {
+    margin-top: 8px;
+    width: 260px;
+    padding-left: 74px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
+
+  @media (min-width: $desktop-width-min) {}
+}
