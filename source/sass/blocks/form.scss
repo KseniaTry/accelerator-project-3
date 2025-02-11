@@ -14,9 +14,12 @@
 
 .form__main-wrapper {
   background-repeat: no-repeat;
+  background-size: cover;
 
   @media (max-width: $mobile-width-max) {
-    padding: 43px 10px 40px;
+    padding: 43px 0 40px;
+    width: 100%;
+    background-size: cover;
     background-image:
       image-set(url("../../img/form/form-background-mobile@1x.webp") type("image/webp") 1x,
         url("../../img/form/form-background-mobile@2x.webp") type("image/webp") 2x,
@@ -25,6 +28,8 @@
   }
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    margin: 0 auto;
+    width: 652px;
     border-radius: 16px;
     background-image:
       image-set(url("../../img/form/form-background-tablet@1x.webp") type("image/webp") 1x,
@@ -34,6 +39,8 @@
   }
 
   @media (min-width: $desktop-width-min) {
+    margin: 0 auto;
+    width: $desktop-content-width;
     border-radius: 16px;
     background-image:
       image-set(url("../../img/form/form-background-desktop@1x.webp") type("image/webp") 1x,
@@ -52,7 +59,9 @@
   gap: 10px;
 
   @media (max-width: $mobile-width-max) {
+    margin: 0 auto;
     padding: 15px 15px 27px;
+    width: 300px;
   }
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
@@ -194,6 +203,10 @@
     line-height: 12px;
   }
 
+  @media (min-width: $desktop-width-min) {
+    margin-top: 2px;
+  }
+
   br {
     @media (min-width: $tablet-width-min) {
       display: none;
@@ -225,8 +238,7 @@
     content: "";
     display: none;
     position: absolute;
-    top: 6px;
-    left: -33px;
+    left: -25px;
     width: 10px;
     height: 10px;
     mask-image: url("/__spritemap#sprite-checked-icon-view");
@@ -234,9 +246,12 @@
     mask-size: 10px 8px;
     mask-repeat: no-repeat;
 
+    @media (max-width: $mobile-width-max) {
+      top: 17px;
+    }
+
     @media (min-width: $tablet-width-min) {
       top: 2px;
-      left: -25px;
     }
   }
 }
@@ -264,7 +279,7 @@
   }
 
   @media (min-width: $desktop-width-min) {
-    margin-top: 32px;
+    margin-top: 30px;
     width: 100%;
     padding-left: 107px;
   }
