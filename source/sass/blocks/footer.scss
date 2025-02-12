@@ -1,0 +1,106 @@
+.footer {
+  @media (max-width: $mobile-width-max) {
+    padding: 40px 15px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
+
+  @media (min-width: $desktop-width-min) {}
+}
+
+.footer__main-wrapper {
+  margin: 0 auto;
+
+  @media (max-width: $mobile-width-max) {
+    @include flex(column, center, center);
+    flex-wrap: wrap;
+    width: $mobile-content-width;
+    gap: 20px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
+
+  @media (min-width: $desktop-width-min) {}
+}
+
+.footer__logo-icon {}
+
+.footer__nav {
+  @media (max-width: $mobile-width-max) {}
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
+
+  @media (min-width: $desktop-width-min) {}
+}
+
+.footer__nav-list {
+  @include reset-list;
+  @include flex(row, center, center);
+  flex-wrap: wrap;
+
+  @media (max-width: $mobile-width-max) {
+    gap: 30px;
+    row-gap: 20px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
+
+  @media (min-width: $desktop-width-min) {}
+}
+
+.footer__nav-item {
+}
+
+.footer__nav-link {
+  text-decoration: none;
+  color: $basic-dark-color;
+
+  @media (max-width: $mobile-width-max) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.footer__rights-wrapper {
+  @include flex(column center, center);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer__policy {
+  margin: 0;
+  text-decoration: none;
+  color: $basic-dark-color;
+  padding-bottom: 2px;
+  border-bottom: 1px solid $basic-dark-color;
+
+  @media (max-width: $mobile-width-max) {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
+
+  @media (min-width: $desktop-width-min) {}
+}
+
+.footer__rights {
+  margin: 0;
+  opacity: 60%;
+
+  @media (max-width: $mobile-width-max) {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
+
+  @media (min-width: $desktop-width-min) {}
+}
+
+.footer__social-list {
+  @media (max-width: $mobile-width-max) {
+    margin-top: -5px;
+  }
+}
