@@ -3,7 +3,9 @@
     padding: 40px 15px;
   }
 
-  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    padding: 40px 45px;
+  }
 
   @media (min-width: $desktop-width-min) {}
 }
@@ -18,7 +20,12 @@
     gap: 20px;
   }
 
-  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    width: $tablet-content-width;
+    @include flex(row, space-between, center);
+    flex-wrap: wrap;
+    row-gap: 25px;
+  }
 
   @media (min-width: $desktop-width-min) {}
 }
@@ -28,7 +35,10 @@
 .footer__nav {
   @media (max-width: $mobile-width-max) {}
 
-  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    width: 529px;
+    margin-top: 1px;
+  }
 
   @media (min-width: $desktop-width-min) {}
 }
@@ -43,15 +53,19 @@
     row-gap: 20px;
   }
 
-  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    gap: 15px;
+  }
 
   @media (min-width: $desktop-width-min) {}
 }
 
 .footer__nav-item {
+
 }
 
 .footer__nav-link {
+  display: inline-block;
   text-decoration: none;
   color: $basic-dark-color;
 
@@ -59,19 +73,29 @@
     font-size: 14px;
     line-height: 20px;
   }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+  font-size: 16px;
+  line-height: 20px;
+  }
+
 }
 
 .footer__rights-wrapper {
-  @include flex(column center, center);
+  @include flex(column, center, center);
   flex-wrap: wrap;
   gap: 10px;
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    align-items: flex-start;
+  }
 }
 
 .footer__policy {
   margin: 0;
+  padding-bottom: 2px;
   text-decoration: none;
   color: $basic-dark-color;
-  padding-bottom: 2px;
   border-bottom: 1px solid $basic-dark-color;
 
   @media (max-width: $mobile-width-max) {
@@ -79,7 +103,11 @@
     line-height: 14px;
   }
 
-  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    margin-top: 1px;
+    font-size: 12px;
+    line-height: 12px;
+  }
 
   @media (min-width: $desktop-width-min) {}
 }
@@ -94,7 +122,10 @@
   }
 
 
-  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    font-size: 12px;
+    line-height: 12px;
+  }
 
   @media (min-width: $desktop-width-min) {}
 }
