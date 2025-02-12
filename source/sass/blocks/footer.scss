@@ -7,7 +7,9 @@
     padding: 40px 45px;
   }
 
-  @media (min-width: $desktop-width-min) {}
+  @media (min-width: $desktop-width-min) {
+    padding: 60px 100px 40px;
+  }
 }
 
 .footer__main-wrapper {
@@ -20,27 +22,30 @@
     gap: 20px;
   }
 
-  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
-    width: $tablet-content-width;
+  @media (min-width: $tablet-width-min) {
     @include flex(row, space-between, center);
     flex-wrap: wrap;
     row-gap: 25px;
+    width: $tablet-content-width;
   }
 
-  @media (min-width: $desktop-width-min) {}
+  @media (min-width: $desktop-width-min) {
+    width: $desktop-content-width;
+  }
 }
 
 .footer__logo-icon {}
 
 .footer__nav {
-  @media (max-width: $mobile-width-max) {}
-
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
     width: 529px;
     margin-top: 1px;
   }
 
-  @media (min-width: $desktop-width-min) {}
+  @media (min-width: $desktop-width-min) {
+    width: 936px;
+    margin-top: 1px;
+  }
 }
 
 .footer__nav-list {
@@ -57,12 +62,14 @@
     gap: 15px;
   }
 
-  @media (min-width: $desktop-width-min) {}
+  @media (min-width: $desktop-width-min) {
+    justify-content: flex-start;
+    gap: 30px;
+    row-gap: 15px;
+  }
 }
 
-.footer__nav-item {
-
-}
+.footer__nav-item {}
 
 .footer__nav-link {
   display: inline-block;
@@ -75,8 +82,13 @@
   }
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
-  font-size: 16px;
-  line-height: 20px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width-min) {
+    font-size: 16px;
+    line-height: 26px;
   }
 
 }
@@ -88,6 +100,12 @@
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
     align-items: flex-start;
+  }
+
+  @media (min-width: $desktop-width-min) {
+    width: 100%;
+    @include flex(row, space-between, center);
+    order: 4;
   }
 }
 
@@ -109,7 +127,11 @@
     line-height: 12px;
   }
 
-  @media (min-width: $desktop-width-min) {}
+  @media (min-width: $desktop-width-min) {
+    font-size: 14px;
+    line-height: 18px;
+    order: 2;
+  }
 }
 
 .footer__rights {
@@ -121,17 +143,24 @@
     line-height: 14px;
   }
 
-
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
     font-size: 12px;
     line-height: 12px;
   }
 
-  @media (min-width: $desktop-width-min) {}
+  @media (min-width: $desktop-width-min) {
+    font-size: 14px;
+    line-height: 18px;
+    order: 1;
+  }
 }
 
 .footer__social-list {
   @media (max-width: $mobile-width-max) {
     margin-top: -5px;
+  }
+
+  @media (min-width: $desktop-width-min) {
+    order: 3;
   }
 }
