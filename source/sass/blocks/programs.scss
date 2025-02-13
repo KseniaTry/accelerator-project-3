@@ -244,31 +244,6 @@
   }
 }
 
-.programs__slide-details {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  background-color: $accent-color;
-  border-radius: 50%;
-
-  &::before {
-    content: "";
-    position: absolute;
-
-    @include centring-positioned-element;
-
-    display: block;
-    z-index: 1;
-    width: 8px;
-    height: 8px;
-    mask-image: url("/__spritemap#sprite-arrow-view");
-    mask-position: center;
-    mask-repeat: no-repeat;
-    mask-size: 8px 8px;
-    background-color: $basic-light-color;
-  }
-}
-
 // пагинация слайдера
 .programs__buttons-wrapper {
   position: absolute;
