@@ -3,30 +3,22 @@
   width: 100%;
 }
 
-.hero__main-wrapper {
-  // margin: 0 auto;
-  width: 100%;
-
-  @media (max-width: $mobile-width-max) {}
-
-  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
-
-  @media (min-width: $desktop-width-min) {}
-}
-
 .hero__header {
   position: absolute;
   z-index: 10;
+  width: 100%;
 }
 
 .hero__swiper {
   width: 100%;
 }
 
-.hero__swiper-wrapper {}
+.hero__swiper-wrapper {
+  width: 100%;
+}
 
-.hero__slide {
-  position: relative;
+.hero__slide-image-wrapper {
+  position: absolute;
   width: 100%;
 
   @media (max-width: $mobile-width-max) {
@@ -35,6 +27,10 @@
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
     height: 1024px;
+  }
+
+  @media (min-width: $desktop-width-min) {
+    height: 800px;
   }
 }
 
@@ -46,23 +42,19 @@
   width: 100%;
   height: 100%;
   background-color: rgba(49, 109, 194, 0.2);
-  z-index: 2;
+  z-index: 0;
 }
 
 .hero__image {
   display: block;
+  width: 100%;
 }
 
 .hero__slide-text-wrapper {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-
   @include flex(column, flex-end, flex-start);
 
-  padding: 15px 15px 10px 15px;
-  height: 445px;
-  z-index: 3;
+  margin: 0 auto;
+  width: max-content;
   border-radius: 13px;
   box-decoration-break: clone;
   filter: url(#gooey-filter);
@@ -70,15 +62,19 @@
   overflow-x: hidden;
 
   @media (max-width: $mobile-width-max) {
-    padding: 15px 15px 10px 15px;
+    padding: 115px 15px 20px;
+    height: 568px;
   }
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
-    padding: 60px 64px 50px 45px;
+    padding: 130px 64px 60px 45px;
+    height: 1024px;
   }
 
   @media (min-width: $desktop-width-min) {
-    padding: 50px 100px;
+    padding: 150px 0 60px;
+    width: $desktop-content-width;
+    height: 800px;
   }
 
   p {
@@ -176,7 +172,7 @@
   }
 
   @media (min-width: $desktop-width-min) {
-  margin-top: 10px;
+    margin-top: 10px;
   }
 }
 
@@ -246,12 +242,12 @@
   top: auto;
 
   @media (max-width: $mobile-width-max) {
-    bottom: 339px;
+    bottom: 338px;
     left: 15px;
   }
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
-    bottom: 336px;
+    bottom: 337px;
     left: 45px;
   }
 

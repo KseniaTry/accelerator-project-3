@@ -35,9 +35,8 @@
 .header__logo-icon {}
 
 .header__nav {
-  position: absolute;
-  z-index: 2;
-
+  margin: 0 auto;
+  margin-top: 4px;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
@@ -46,18 +45,12 @@
   border-radius: 16px;
 
   @media (max-width: $mobile-width-max) {
-    top: 78px;
     width: $mobile-content-width;
   }
 
   @media (min-width: $tablet-width-min) {
-    top: 88px;
-    right: 45px;
+    margin-right: 0;
     width: 286px;
-  }
-
-  @media (min-width: $desktop-width-min) {
-    right: 100px;
   }
 }
 
@@ -92,7 +85,7 @@
   right: -23px;
   width: 11px;
   height: 5px;
-  mask-image: url("/__spritemap#sprite-arrow-up-view");
+  mask-image: url("/__spritemap#sprite-arrow-down-view");
   mask-position: center;
   mask-repeat: no-repeat;
   mask-size: 12px 12px;
@@ -103,7 +96,7 @@
   color: $basic-light-color;
 
   &::after {
-    mask-image: url("/__spritemap#sprite-arrow-down-view");
+    transform: rotate(180deg);
   }
 }
 
