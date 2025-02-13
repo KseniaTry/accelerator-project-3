@@ -1,58 +1,12 @@
 import Swiper from "swiper";
 import { Navigation, Pagination, Scrollbar, Grid } from "swiper/modules";
 import 'swiper/css';
+import { initMenu } from "./menu";
 
-// меню
-const headerNav = document.querySelector('.header__nav');
-const headerButton = document.querySelector('.header__toggle');
-const navItems = document.querySelectorAll('.header__nav-item');
-const navSublistItems = document.querySelectorAll('.header__nav-item--sublist');
 const MOBILE_WIDTH_MAX = 767;
 const DESKTOP_WIDTH_MIN = 1440;
 
-const switchMenu = () => {
-  headerButton.addEventListener('click', (evt) => {
-    evt.stopPropagation();
-    headerNav.classList.toggle('header__nav--opened');
-    headerButton.classList.toggle('header__toggle--opened');
-  });
-};
-
-const closeMenuOnItemClick = () => {
-  navItems.forEach((navItem) => {
-    if (!navItem.classList.contains('header__nav-item--sublist')) {
-      navItem.addEventListener('click', () => {
-        headerNav.classList.remove('header__nav--opened');
-        headerButton.classList.remove('header__toggle--opened');
-      });
-    };
-  });
-};
-
-const closeMenuOnPageClick = () => {
-  document.body.addEventListener("click", function (event) {
-    if (event.target.closest('.header__nav') == null) {
-      headerNav.classList.remove('header__nav--opened');
-      headerButton.classList.remove('header__toggle--opened');
-    } else {
-      closeMenuOnItemClick();
-    }
-  });
-};
-
-const openSublist = () => {
-  navSublistItems.forEach((sublistItem) => {
-    sublistItem.addEventListener('click', () => {
-      sublistItem.classList.toggle('header__nav-item--sublist-opened');
-      const sublist = sublistItem.querySelector('.header__nav-sublist');
-      sublist.classList.toggle('header__nav-sublist--opened');
-    })
-  })
-}
-
-switchMenu();
-closeMenuOnPageClick();
-openSublist();
+initMenu();
 
 // hero swiper
 const heroSlider = document.querySelector('.hero__swiper');
@@ -120,6 +74,32 @@ heroSwiper.on('slideChange', function () {
   }
 });
 
+// модальное окно
+const aboutButton = document.querySelector('.about__details');
+const modal = document.querySelector('.modal__wrapper');
+const closeModalButton = document.querySelector('.modal__close');
+const pageBody = document.querySelector('.page-body');
+
+const openModal = () => {
+  aboutButton.addEventListener('click', () => {
+    modal.classList.remove('modal__wrapper--closed');
+    window.scrollTo(0, 0);
+    pageBody.classList.add('page-body--window-opened');
+    pageBody.classList.add('overlay');
+  });
+};
+
+openModal();
+
+const closeModal = () => {
+  closeModalButton.addEventListener('click', () => {
+    modal.classList.add('modal__wrapper--closed');
+    pageBody.classList.remove('page-body--window-opened');
+    pageBody.classList.remove('overlay');
+  });
+};
+
+closeModal();
 
 // programs swiper
 const programsSlider = document.querySelector('.programs__swiper');

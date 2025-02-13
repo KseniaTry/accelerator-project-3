@@ -54,9 +54,9 @@
               <li class="header__nav-item">
                 <a class="header__nav-link" href="#about">О проекте</a>
               </li>
-              <li class="header__nav-item header__nav-item--sublist header__nav-item--sublist-opened">
+              <li class="header__nav-item header__nav-item--sublist">
                 <a class="header__nav-link" href="#programs">Программы</a>
-                <ul class="header__nav-sublist header__nav-sublist--opened">
+                <ul class="header__nav-sublist">
                   <li>
                     <a class="header__nav-sublist-link" href="#">Стажировки</a>
                   </li>
@@ -130,7 +130,7 @@
                   <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая настоящий
                     студенческий стиль жизни!</p>
                   <div class="hero__button-wrapper">
-                    <a class="hero__details button button--primary" href="#">Подробнее</a>
+                    <button class="hero__details button button--primary" href="#">Подробнее</button>
                   </div>
                 </div>
               </div>
@@ -211,7 +211,7 @@
           <p>Наша деятельность направлена на повышение квалификации молодых специалистов на ранних и средних стадиях
             карьеры, предоставляя им инструменты для решения сложных проблем, с которыми сталкиваются в мире. Цель
             центра — наделить этих людей способностью инициировать значимые изменения.</p>
-          <a class="about__details button button--secondary" href="#">Подробнее о проекте</a>
+          <button class="about__details button button--secondary" type="button">Подробнее о проекте</button>
         </div>
 
         <ul class="about__list">
@@ -1034,90 +1034,90 @@
 
     <section class="form" data-test="form">
       <div class="form__main-wrapper">
-      <form class="form__form" action="https://echo.htmlacademy.ru/" method="post">
-        <h2 class="form__title">Напишите нам</h2>
-        <p class="form__description">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
-        <label class="form__label" for="name">Имя</label>
-        <input class="form__input" type="text" id="name" name="name" required>
+        <form class="form__form" action="https://echo.htmlacademy.ru/" method="post">
+          <h2 class="form__title">Напишите нам</h2>
+          <p class="form__description">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+          <label class="form__label" for="name">Имя</label>
+          <input class="form__input" type="text" id="name" name="name" required>
 
-        <label class="form__label" for="phone">Телефон</label>
-        <input class="form__input" type="tel" id="phone" name="phone" required>
+          <label class="form__label" for="phone">Телефон</label>
+          <input class="form__input" type="tel" id="phone" name="phone" required>
 
-        <label class="form__label" for="message">Ваше сообщение</label>
-        <textarea class="form__input form__input--message" id="message" name="message" required></textarea>
+          <label class="form__label" for="message">Ваше сообщение</label>
+          <textarea class="form__input form__input--message" id="message" name="message" required></textarea>
 
-        <label class="form__label" for="city-select">Выберите город</label>
-        <!-- <div class="form__input form__custom-select"> -->
-        <select class="form__input form__input--city" name="city" id="city-select">
-          <option hidden selected value=""></option>
-          <!-- <option value=""></option> -->
-          <option class="form__option" value="moscow">Москва</option>
-          <option class="form__option" value="petersburg">Санкт-Петербург</option>
-          <option class="form__option" value="kazan">Казань</option>
-          <option class="form__option" value="perm">Пермь</option>
-          <option class="form__option" value="novosibirsk">Новосибирск</option>
-        </select>
-      <!-- </div> -->
+          <label class="form__label" for="city-select">Выберите город</label>
+          <!-- <div class="form__input form__custom-select"> -->
+          <select class="form__input form__input--city" name="city" id="city-select">
+            <option hidden selected value=""></option>
+            <!-- <option value=""></option> -->
+            <option class="form__option" value="moscow">Москва</option>
+            <option class="form__option" value="petersburg">Санкт-Петербург</option>
+            <option class="form__option" value="kazan">Казань</option>
+            <option class="form__option" value="perm">Пермь</option>
+            <option class="form__option" value="novosibirsk">Новосибирск</option>
+          </select>
+          <!-- </div> -->
 
-        <input class="form__input-checkbox" type="checkbox" id="personal-data" name="personalData">
-        <label class="form__label form__label--checkbox" for="personal-data">Я согласен на обработку моих
-          персональных<br> данных</label>
+          <input class="form__input-checkbox" type="checkbox" id="personal-data" name="personalData">
+          <label class="form__label form__label--checkbox" for="personal-data">Я согласен на обработку моих
+            персональных<br> данных</label>
 
-        <button class="form__send button button--secondary-light" type="submit">Отправить</button>
-      </form>
-    </div>
+          <button class="form__send button button--secondary-light" type="submit">Отправить</button>
+        </form>
+      </div>
     </section>
   </main>
 
   <footer class="footer" data-test="footer">
     <div class="footer__main-wrapper">
-    <svg class="footer__logo-icon" width="52" height="52" viewBox="0 0 52 52" fill="none"
-      xmlns="http://www.w3.org/2000/svg">
-      <rect width="52" height="52" rx="26" fill="#fff" />
-      <g clip-path="url(#b)">
-        <path
-          d="M11.92 19.8c-.85.6-1.35 1.9-.41 3.43.94 1.53 14.38 11.9 14.88 12.2.49.28.98.33 2.24-.68 1.25-1 11.74-8.88 12-9.12.44-.38.54-1.3 0-1.73 0 0-12.7 9.5-13.11 9.89-.42.38-1.06-.24-.94-1.06.12-.81.2-.9 1.82-2.16a2565.5 2565.5 0 0 1 11.18-8.48c.47-.35.48-.96-.3-1.5l-13.01-9.27c-.4-.3-.93-.55-1.73.02-.81.58-11.06 7.35-12.62 8.46Z"
-          fill="#316DC2" />
-        <path
-          d="M26.39 36.43c-.33-.19-6.23-4.71-10.51-8.24v7.35c0 5.37 15.12 8.24 20.13 1.64v-7.03a766.27 766.27 0 0 0-7.38 5.61c-1.26 1-1.75.96-2.24.67Z"
-          fill="#316DC2" />
-        <path d="M32.78 28.37s2.25 1.13 2.41 5.68l-1.09-.3-.87 1.85c-.37-4.98-2.37-5.7-2.37-5.7l1.92-1.53Z"
-          fill="#98B8E6" />
-      </g>
-      <defs>
-        <clipPath id="b">
-          <path fill="#fff" transform="translate(11 11)" d="M0 0h30v30h-30z" />
-        </clipPath>
-      </defs>
-    </svg>
+      <svg class="footer__logo-icon" width="52" height="52" viewBox="0 0 52 52" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <rect width="52" height="52" rx="26" fill="#fff" />
+        <g clip-path="url(#b)">
+          <path
+            d="M11.92 19.8c-.85.6-1.35 1.9-.41 3.43.94 1.53 14.38 11.9 14.88 12.2.49.28.98.33 2.24-.68 1.25-1 11.74-8.88 12-9.12.44-.38.54-1.3 0-1.73 0 0-12.7 9.5-13.11 9.89-.42.38-1.06-.24-.94-1.06.12-.81.2-.9 1.82-2.16a2565.5 2565.5 0 0 1 11.18-8.48c.47-.35.48-.96-.3-1.5l-13.01-9.27c-.4-.3-.93-.55-1.73.02-.81.58-11.06 7.35-12.62 8.46Z"
+            fill="#316DC2" />
+          <path
+            d="M26.39 36.43c-.33-.19-6.23-4.71-10.51-8.24v7.35c0 5.37 15.12 8.24 20.13 1.64v-7.03a766.27 766.27 0 0 0-7.38 5.61c-1.26 1-1.75.96-2.24.67Z"
+            fill="#316DC2" />
+          <path d="M32.78 28.37s2.25 1.13 2.41 5.68l-1.09-.3-.87 1.85c-.37-4.98-2.37-5.7-2.37-5.7l1.92-1.53Z"
+            fill="#98B8E6" />
+        </g>
+        <defs>
+          <clipPath id="b">
+            <path fill="#fff" transform="translate(11 11)" d="M0 0h30v30h-30z" />
+          </clipPath>
+        </defs>
+      </svg>
 
-    <nav class="footer__nav" aria-label="Сокращенное меню сайта">
-      <ul class="footer__nav-list">
-        <li class="footer__nav-item">
-          <a class="footer__nav-link" href="#about">О проекте</a>
-        </li>
-        <li class="footer__nav-item">
-          <a class="footer__nav-link" href="#programs">Программы</a>
-        </li>
-        <li class="footer__nav-item">
-          <a class="footer__nav-link" href="#grant">Как поехать</a>
-        </li>
-        <li class="footer__nav-item">
-          <a class="footer__nav-link" href="#reviews">Отзывы</a>
-        </li>
-        <li class="footer__nav-item">
-          <a class="footer__nav-link" href="#news">Новости</a>
-        </li>
-        <li class="footer__nav-item">
-          <a class="footer__nav-link" href="#contacts">Контакты</a>
-        </li>
-      </ul>
-    </nav>
+      <nav class="footer__nav" aria-label="Сокращенное меню сайта">
+        <ul class="footer__nav-list">
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="#about">О проекте</a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="#programs">Программы</a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="#grant">Как поехать</a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="#reviews">Отзывы</a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="#news">Новости</a>
+          </li>
+          <li class="footer__nav-item">
+            <a class="footer__nav-link" href="#contacts">Контакты</a>
+          </li>
+        </ul>
+      </nav>
 
       <div class="footer__rights-wrapper">
-      <a class="footer__policy" href="#">Политика конфиденциальности</a>
-      <p class="footer__rights">Стажировка © 2023 Все права защищены</p>
-    </div>
+        <a class="footer__policy" href="#">Политика конфиденциальности</a>
+        <p class="footer__rights">Стажировка © 2023 Все права защищены</p>
+      </div>
 
       <ul class="footer__social-list social-list">
         <li class="social-list__item">
@@ -1134,8 +1134,43 @@
         </li>
       </ul>
 
-  </div>
+    </div>
   </footer>
+
+  <div class="modal__wrapper modal__wrapper--closed">
+    <section class="modal">
+        <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
+          <button class="modal__close"><span class="visually-hidden">Открыть меню</span></button>
+          <h2 class="modal__title">Напишите нам</h2>
+          <p class="modal__description">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+          <label class="modal__label" for="name-modal">Имя</label>
+          <input class="modal__input" type="text" id="name-modal" name="name" required>
+
+          <label class="modal__label" for="phone-modal">Телефон</label>
+          <input class="modal__input" type="tel" id="phone-modal" name="phone-modal" required>
+
+          <label class="modal__label" for="city-modal-select">Выберите город</label>
+          <!-- <div class="form__input form__custom-select"> -->
+          <select class="modal__input modal__input--city" name="city-modal" id="city-modal-select">
+            <option hidden selected value=""></option>
+            <!-- <option value=""></option> -->
+            <option class="modal__option" value="moscow">Москва</option>
+            <option class="modal__option" value="petersburg">Санкт-Петербург</option>
+            <option class="modal__option" value="kazan">Казань</option>
+            <option class="modal__option" value="perm">Пермь</option>
+            <option class="modal__option" value="novosibirsk">Новосибирск</option>
+          </select>
+          <!-- </div> -->
+
+          <input class="modal__input-checkbox" type="checkbox" id="personal-data-modal" name="personalData">
+          <label class="modal__label modal__label--checkbox" for="personal-data-modal">Я согласен на обработку моих
+            персональных данных</label>
+
+          <button class="modal__send button button--secondary" type="submit">Отправить</button>
+        </form>
+    </section>
+  </div>
+
 
   <svg style="display: none">
     <defs>

@@ -1,0 +1,281 @@
+.modal__wrapper {
+  position: absolute;
+  z-index: 20;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+  @media (max-width: $mobile-width-max) {
+    top: 23px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    top: 204px;
+  }
+
+  @media (min-width: $desktop-width-min) {
+    top: 90px;
+  }
+}
+
+.modal__wrapper--closed {
+  display: none;
+}
+
+.modal {
+  margin: 0 auto;
+}
+
+.modal__form {
+  position: relative;
+  background-color: $basic-light-color;
+  border-radius: 16px;
+  color: $basic-dark-color;
+
+  @include flex(column, flex-start, flex-start);
+
+  @media (max-width: $mobile-width-max) {
+    padding: 36px 15px;
+    width: $mobile-content-width;
+    gap: 8px;
+  }
+
+  @media (min-width: $tablet-width-min) {
+    padding: 55px 80px 60px 80px;
+    width: 510px;
+    gap: 12px;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 16px;
+  height: 16px;
+  mask-image: url("/__spritemap#sprite-close-menu-view");
+  background-color: $accent-color;
+
+  @media (max-width: $mobile-width-max) {
+    top: 20px;
+    right: 20px;
+    width: 16px;
+    height: 16px;
+  }
+
+  @media (min-width: $tablet-width-min) {
+    top: 30px;
+    right: 30px;
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.modal__title {
+  margin: 0;
+  font-weight: 400;
+  align-self: center;
+  color: $accent-color;
+
+  @media (max-width: $mobile-width-max) {
+    margin-bottom: 1px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    margin-bottom: 4px;
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @media (min-width: $desktop-width-min) {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+.modal__description {
+  margin: 0;
+  color: $basic-dark-color;
+  align-self: center;
+  text-align: center;
+  margin-bottom: 17px;
+
+  @media (max-width: $mobile-width-max) {
+    width: 220px;
+    font-size: 14px;
+    line-height: 20px;
+    white-space: break-spaces;
+  }
+
+  @media (min-width: $tablet-width-min) {
+    width: 350px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width-min) {
+    line-height: 26px;
+  }
+}
+
+.modal__label {
+  margin-bottom: 2px;
+  color: rgba(72, 72, 72, 0.8);
+
+  @media (max-width: $mobile-width-max) {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width-min) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.modal__input {
+  padding: 17px;
+  width: 100%;
+  color: $basic-light-color;
+  border-radius: 8px;
+  border: 1px solid rgba(72, 72, 72, 0.3);
+  background-color: transparent;
+
+  @media (max-width: $mobile-width-max) {
+    margin-bottom: 7px;
+    height: 42px;
+  }
+
+  @media (min-width: $tablet-width-min) {
+    margin-bottom: 8px;
+    height: 48px;
+  }
+}
+
+// кастомный select
+.modal__option {
+  @media (max-width: $mobile-width-max) {}
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
+
+  @media (min-width: $desktop-width-min) {}
+}
+
+.form__input--city {
+  height: 52px;
+  padding: 16px 17px;
+}
+
+// кастомный checkbox
+.modal__label--checkbox {
+  position: relative;
+  margin: 0;
+  margin-left: 30px;
+
+  @media (max-width: $mobile-width-max) {
+    margin-top: 2px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  @media (min-width: $tablet-width-min) {
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -30px;
+    width: 20px;
+    height: 20px;
+    background-color: $accent-color;
+    border: 1px solid $accent-color;
+    border-radius: 2px;
+
+    @media (max-width: $mobile-width-max) {
+      top: 3px;
+    }
+
+    @media (min-width: $tablet-width-min) {
+      top: -4px;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: none;
+    position: absolute;
+    left: -25px;
+    width: 10px;
+    height: 10px;
+    mask-image: url("/__spritemap#sprite-checked-icon-view");
+    background-color: $basic-light-color;
+    mask-size: 10px 8px;
+    mask-repeat: no-repeat;
+
+    @media (max-width: $mobile-width-max) {
+      top: 9px;
+    }
+
+    @media (min-width: $tablet-width-min) {
+      top: 2px;
+    }
+  }
+}
+
+.modal__input-checkbox {
+  display: none;
+}
+
+.modal__input-checkbox:checked+.modal__label--checkbox::after {
+  display: block;
+}
+
+// кнопка "отправить"
+.modal__send {
+
+  @media (max-width: $mobile-width-max) {
+    margin-top: 17px;
+    padding: 14px 21px 14px 74px;
+    width: 260px;
+    height: 42px;
+  }
+
+  @media (min-width: $tablet-width-min) {
+    margin-top: 22px;
+    width: 194px;
+    height: 54px;
+    align-self: center;
+  }
+
+  &::after {
+    top: 3px;
+  }
+
+  &::before {
+    width: 10px;
+    height: 10px;
+    mask-size: 10px 10px;
+
+    @media (max-width: $mobile-width-max) {
+      top: 15px;
+      right: 16px;
+    }
+
+    @media (min-width: $tablet-width-min) {
+      top: 21px;
+      right: 21px;
+    }
+  }
+}
