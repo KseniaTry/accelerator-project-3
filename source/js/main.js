@@ -103,8 +103,24 @@ closeModal();
 
 // programs swiper
 const programsSlider = document.querySelector('.programs__swiper');
-const programsButtons = document.querySelectorAll('.programs__button');
-const programsScrollbar = document.querySelector('.programs__scrollbar');
+const programsSwiperWrapper = document.querySelector('.programs__swiper-wrapper');
+const programsSlides = document.querySelectorAll('.programs__slide');
+
+// клонирование слайдов на десктопе
+const cloneSlidesOnDesktop = () => {
+  if (window.innerWidth >= DESKTOP_WIDTH_MIN) {
+    if (programsSlides.length <= 4) {
+      programsSlides.forEach((slide) => {
+        slide.classList.remove('swiper-slide-active');
+        slide.classList.remove('swiper-slide-next');
+        const slideClone = slide.cloneNode(true);
+        programsSwiperWrapper.appendChild(slideClone);
+      })
+    }
+  }
+}
+
+cloneSlidesOnDesktop();
 
 const programsSwiper = new Swiper(programsSlider, {
   slideClass: 'programs__slide',
@@ -131,7 +147,7 @@ const programsSwiper = new Swiper(programsSlider, {
       spaceBetween: 30,
       allowTouchMove: true,
       scrollbar: {
-        dragSize: 326,
+        dragSize: 'auto',
       },
     },
     1440: {
@@ -139,7 +155,7 @@ const programsSwiper = new Swiper(programsSlider, {
       spaceBetween: 32,
       allowTouchMove: false,
       scrollbar: {
-        dragSize: 394,
+        dragSize: 'auto',
       },
     },
   },
@@ -147,19 +163,7 @@ const programsSwiper = new Swiper(programsSlider, {
 
 programsSwiper.init();
 
-if (window.innerWidth >= DESKTOP_WIDTH_MIN) {
-  programsButtons.forEach((button) => {
-    button.classList.remove('swiper-button-lock');
 
-    if (button.classList.contains('programs__button--next')) {
-      button.disabled = false;
-      button.classList.remove('swiper-button-disabled');
-    }
-  })
-
-  programsScrollbar.classList.remove('swiper-scrollbar-lock');
-  programsScrollbar.style.display = 'block';
-}
 
 // news swiper
 const newsSlider = document.querySelector('.news__swiper');
