@@ -104,48 +104,49 @@
 .news__nav-item {
   text-align: center;
 
-  @media (max-width: $mobile-width-max) {
-    padding: 7px 15px;
-  }
-
-  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
-    padding: 12px 21px;
-  }
-
   @media (min-width: $desktop-width-min) {
     width: 120px;
-    padding: 12px 0px;
   }
-}
-
-.news__nav-item--active {
-  border: 2px solid $accent-color;
-  border-radius: 20px;
 }
 
 .news__nav-link {
   text-decoration: none;
   text-transform: uppercase;
+  display: block;
+  color: rgba(49, 109, 194, 0.6);
 
   @media (max-width: $mobile-width-max) {
+    padding: 10px 15px;
     font-size: 12px;
     line-height: 12px;
     letter-spacing: 0.24px;
   }
 
   @media (min-width: $tablet-width-min) {
+    padding: 14px 21px;
     font-size: 14px;
     line-height: 14px;
     letter-spacing: 0.28px;
   }
-}
 
-.news__nav-item .news__nav-link {
-  color: rgba(49, 109, 194, 0.6);
+  @media (min-width: $desktop-width-min) {
+    padding: 14px 0px;
+  }
 }
 
 .news__nav-item--active .news__nav-link {
+  border: 2px solid $accent-color;
+  border-radius: 20px;
   color: $accent-color;
+}
+
+.news__nav-link:hover {
+  color: rgba(49, 109, 194, 0.6);
+  border-color: transparent;
+}
+
+.news__nav-link:focus {
+  background-color: $basic-light-color;
 }
 
 // ТАБ КОНТЕНТ, СВАЙПЕР
@@ -258,8 +259,6 @@
 
   &::after {
     margin-top: -16px;
-    // margin-right: -16px;
-    // margin-left: auto;
     mask-image: url("/__spritemap#sprite-corner-16x16-view");
 
     @media (max-width: $mobile-width-max) {
@@ -395,8 +394,6 @@
 // пагинация
 .news__pagination.swiper-pagination {
   @include flex(row, flex-start, center);
-
-  // gap: 16px;
 }
 
 .news__pagination.swiper-pagination-bullets.swiper-pagination-horizontal {

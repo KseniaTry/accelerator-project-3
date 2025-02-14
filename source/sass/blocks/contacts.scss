@@ -135,6 +135,22 @@
   }
 }
 
+.contacts__item-description--phone,
+.contacts__item-description--email {
+  &:hover {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  &:focus {
+    color: $basic-dark-color;
+    border-bottom: 1px solid $basic-dark-color;
+  }
+
+  &:active {
+    border-bottom: 1px solid $basic-light-color;
+  }
+}
+
 .contacts__map-wrapper {
   position: relative;
   border-radius: 16px;
