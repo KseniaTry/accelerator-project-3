@@ -221,6 +221,7 @@
   background-color: transparent;
   border: 2px solid $accent-color;
   opacity: 100%;
+  cursor: pointer;
 
   @media (max-width: $mobile-width-max) {
     width: 8px;
@@ -231,10 +232,19 @@
     width: 12px;
     height: 12px;
   }
+
+  &:hover {
+    border: 2px solid $basic-light-color;
+    background-color: $accent-color;
+  }
+
+  &:focus {
+    background-color: $accent-color;
+  }
 }
 
 .hero__bullet--active {
-  background-color: $accent-color;
+  background-color: #275699;
 }
 
 .hero__pagination.swiper-pagination-bullets.swiper-pagination-horizontal {

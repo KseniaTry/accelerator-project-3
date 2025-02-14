@@ -15,6 +15,7 @@ const heroSwiper = new Swiper(heroSlider, {
   slideClass: 'hero__slide',
   modules: [Pagination],
   slidesPerView: 'auto',
+  autoHeight: true,
   loop: true,
   centeredSlides: true,
   allowTouchMove: true,

@@ -145,6 +145,7 @@
   }
 }
 
+// кнопка открытия вкладки
 .faq__open-button {
   position: relative;
   width: 40px;
@@ -177,18 +178,32 @@
   }
 }
 
-.faq__accordion-item--active {
-  background-color: $accent-color;
+// состояния кнопки при закрытой вкладке
+.faq__open-button:hover,
+.faq__open-button:focus {
+  border-color: $accent-color;
+  background-color: transparent;
 
-  p {
-    display: block;
+  &::after,
+  &::before {
+    background-color: $accent-color;
   }
 }
 
-.faq__accordion-item--active .faq__accordion-title {
-  color: $basic-light-color;
+.faq__open-button:active {
+  background-color: #275699;
 }
 
+.faq__open-button:disabled {
+  background-color: $disabled-color;
+  border-color: $disabled-color;
+
+  &::after {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+// состояние кнопки при открытой вкладке
 .faq__accordion-item--active .faq__open-button {
   background-color: $basic-light-color;
 
@@ -199,4 +214,31 @@
   &::before {
     display: none;
   }
+}
+
+.faq__accordion-item--active .faq__open-button:hover,
+.faq__accordion-item--active .faq__open-button:focus {
+  border-color: $basic-light-color;
+  background-color: transparent;
+
+  &::after {
+    background-color: $basic-light-color;
+  }
+}
+
+.faq__accordion-item--active .faq__open-button:active::after {
+  background-color: #275699;
+}
+
+// прочие стили при открытой вкладке
+.faq__accordion-item--active {
+  background-color: $accent-color;
+
+  p {
+    display: block;
+  }
+}
+
+.faq__accordion-item--active .faq__accordion-title {
+  color: $basic-light-color;
 }

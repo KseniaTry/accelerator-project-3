@@ -18,6 +18,7 @@
   width: 22px;
   height: 22px;
   border: 1px solid transparent;
+  border-radius: 50%;
   mask-repeat: no-repeat;
 
   &::after {
@@ -28,23 +29,15 @@
     mask-repeat: no-repeat;
   }
 
-  // &:hover {
-  //   border: 1px solid #1c3374;
-  //   background-color: $basic-light-color;
-  // }
+  &:hover::after,
+  &:active::after {
+    background-color: rgba(49, 109, 194, 0.7);
+  }
 
-  // &:focus {
-  //   background-color: $basic-light-color;
-  // }
-
-  // &:hover::after,
-  // &:focus::after {
-  //   background-color: #1c3374;
-  // }
-
-  // &:active {
-  //   background-color: #1c3374;
-  // }
+  &:focus,
+  &:active {
+    background-color: $basic-light-color;
+  }
 
   &:disabled {
     color: $disabled-color;

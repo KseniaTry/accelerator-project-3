@@ -11,10 +11,9 @@
   &::before {
     content: "";
     position: absolute;
-
-    @include centring-positioned-element;
-
     display: block;
+    top: 11px;
+    left: 11px;
     z-index: 1;
     width: 8px;
     height: 8px;
@@ -24,4 +23,31 @@
     mask-size: 8px 8px;
     background-color: $basic-light-color;
   }
+}
+
+.button-arrow:hover,
+.button-arrow:active {
+  background-color: $basic-light-color;
+
+  &::before {
+    background-color: $accent-color;
+    transform: rotate(45deg);
+  }
+}
+
+.button-arrow:active::before {
+  background-color: rgba(49, 109, 194, 0.7);
+}
+
+.button-arrow:disabled,
+.button-arrow-disabled {
+  background-color: $disabled-color;
+
+  &::before {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+.button-arrow:focus::before {
+  transform: rotate(45deg);
 }
