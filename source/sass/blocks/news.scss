@@ -394,22 +394,35 @@
 // пагинация
 .news__pagination.swiper-pagination {
   @include flex(row, flex-start, center);
-}
-
-.news__pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
-  left: 50%;
-  transform: translate(-50%, -50%);
+width: 200px;
 
   @media (max-width: $mobile-width-max) {
-    bottom: -13px;
+  gap: 4px;
   }
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
-    bottom: -78px;
+    gap: 9px;
   }
 
   @media (min-width: $desktop-width-min) {
-    bottom: -89px;
+    gap: 8px;
+  }
+}
+
+.news__pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  @media (max-width: $mobile-width-max) {
+    left: 24%;
+    bottom: 0;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    left: 36%;
+    bottom: -62px;
+  }
+
+  @media (min-width: $desktop-width-min) {
+    left: 525px;
+    bottom: -73px;
   }
 }
 
@@ -419,7 +432,7 @@
   padding: 6px;
   text-decoration: none;
   text-align: center;
-  color: #316dc2;
+  color: rgba(49, 109, 194, 0.5);
   border-radius: 50%;
   background-color: transparent;
   opacity: 100%;
