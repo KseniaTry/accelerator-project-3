@@ -394,10 +394,10 @@
 // пагинация
 .news__pagination.swiper-pagination {
   @include flex(row, flex-start, center);
-width: 200px;
+  width: 200px;
 
   @media (max-width: $mobile-width-max) {
-  gap: 4px;
+    gap: 4px;
   }
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
@@ -429,10 +429,10 @@ width: 200px;
 .news__pagination .swiper-pagination-bullet {
   display: block;
   margin: 0;
-  padding: 6px;
   text-decoration: none;
   text-align: center;
   color: rgba(49, 109, 194, 0.5);
+  border: 2px solid transparent;
   border-radius: 50%;
   background-color: transparent;
   opacity: 100%;
@@ -452,10 +452,26 @@ width: 200px;
     font-size: 16px;
     line-height: 20px;
   }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    border-color: $accent-color;
+  }
+
+  &:focus {
+    background-color: $basic-light-color;
+  }
+
+  &:active {
+    background-color: #275699;
+    border-color: #275699;
+  }
 }
 
 .news__pagination .swiper-pagination-bullet-active {
   background-color: $accent-color;
+  border-color: $accent-color;
   color: $basic-light-color;
 }
 
