@@ -147,6 +147,23 @@
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: transparent;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:disabled {
+    border-color: $basic-light-color;
+  }
+
+  &:disabled {
+    opacity: 40%;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &:user-invalid {
+    border-color: #ff5e66;
+    background-color: rgba(255, 94, 102, 0.2);
+  }
 }
 
 .form__input--message {
@@ -164,33 +181,78 @@
 }
 
 // кастомный select
-.form__option {
-  @media (max-width: $mobile-width-max) {}
+.form__custom-select-wrapper {
+  @media (max-width: $mobile-width-max) {
+    width: 260px;
+  }
 
-  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {}
-
-  @media (min-width: $desktop-width-min) {}
+  // &::after {
+  //   content: "";
+  //   display: block;
+  //   position: absolute;
+  //   top: 22px;
+  //   right: 20px;
+  //   width: 16px;
+  //   height: 8px;
+  //   mask-image: url("/__spritemap#sprite-arrow-down-view");
+  //   background-color: $basic-light-color;
+  //   mask-repeat: no-repeat;
+  //   mask-size: 16px 8px;
+  // }
 }
+
+// .form__custom-select-wrapper--opened::after {
+//   transform: rotate(180deg);
+// }
 
 .form__input--city {
   height: 52px;
   padding: 16px 17px;
-
-  @media (max-width: $mobile-width-max) {
-    width: 260px;
-  }
 }
 
-.form__custom-select {
-  // display: none;
-  // width: 260px;
-  // padding: 16px 17px;
+// .form__custom-select {
+//   display: none;
+//   position: absolute;
+//   top: 55px;
+//   z-index: 5;
+//   width: 100%;
+//   border-radius: 8px;
+//   background-color: $basic-light-color;
+//   cursor: default;
+// }
 
-  // &::after {
+// .form__custom-select--opened {
+//   display: block;
+// }
 
-  // }
-}
+// .form__custom-option {
+//   padding: 17px 20px;
+//   font-size: 14px;
+//   line-height: 14px;
+//   color: $basic-dark-color;
+//   background-color: $basic-light-color;
+//   cursor: default;
 
+//   &:hover {
+//     color: $accent-color;
+//   }
+
+//   &:active,
+//   &:focus {
+//     background-color: $accent-color;
+//     color: $basic-light-color;
+//   }
+
+//   &:first-child {
+//     border-top-left-radius: 8px;
+//     border-top-right-radius: 8px;
+//   }
+
+//   &:last-child {
+//     border-bottom-left-radius: 8px;
+//     border-bottom-right-radius: 8px;
+//   }
+// }
 
 // кастомный checkbox
 .form__label--checkbox {

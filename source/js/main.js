@@ -1,12 +1,36 @@
 import Swiper from "swiper";
-import { Navigation, Pagination, Scrollbar, Grid } from "swiper/modules";
+import { Navigation, Pagination, Scrollbar} from "swiper/modules";
 import 'swiper/css';
 import { initMenu } from "./menu";
+import { switchNewsTabs, initNewsSwiper } from "./news";
+import "./form";
+import { createCustomSelect } from "./custom-select";
 
 const MOBILE_WIDTH_MAX = 767;
 const DESKTOP_WIDTH_MIN = 1440;
 
+// меню
 initMenu();
+
+// блок news
+switchNewsTabs();
+initNewsSwiper();
+
+// кастомный селект главной формы
+const customSelectWrapper = document.querySelector('.form__custom-select-wrapper');
+const cityInput = document.getElementById('city');
+const customSelect = document.querySelector('.form__custom-select');
+const customSelectWrapperClass = '.form__custom-select-wrapper';
+
+createCustomSelect(cityInput, customSelectWrapper, customSelect, customSelectWrapperClass);
+
+// кастомный селект модального окна
+const modalCustomSelectWrapper = document.querySelector('.modal__custom-select-wrapper');
+const modalCityInput = document.getElementById('city-modal');
+const modalCustomSelect = document.querySelector('.modal__custom-select');
+const modalCustomSelectWrapperClass = '.modal__custom-select-wrapper';
+
+createCustomSelect(modalCityInput, modalCustomSelectWrapper, modalCustomSelect, modalCustomSelectWrapperClass);
 
 // hero swiper
 const heroSlider = document.querySelector('.hero__swiper');
@@ -163,171 +187,6 @@ const programsSwiper = new Swiper(programsSlider, {
 });
 
 programsSwiper.init();
-
-// news swiper
-const newsSlider = document.querySelector('.news__swiper');
-
-const newsSwiper = new Swiper(newsSlider, {
-  slideClass: 'news__slide',
-  hashNavigation: true,
-  direction: 'horizontal',
-  modules: [Navigation, Pagination, Grid],
-  allowTouchMove: true,
-  pagination: {
-    el: '.news__pagination',
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<button class="news__pagination-bullet ' + className + '" data-index=' + (index + 1) + '>' + (index + 1) + '</button>';
-    },
-  },
-  navigation: {
-    prevEl: '.news__button--prev',
-    nextEl: '.news__button--next',
-    clickable: true,
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 61,
-      grid: {
-        rows: 2,
-      },
-    },
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 30,
-      grid: {
-        rows: 2,
-      },
-    },
-    1440: {
-      slidesPerView: 'auto',
-      spaceBetween: 32,
-    },
-  },
-  // on: {
-  //   init: function () {
-  //     hideBulletsOnInit();
-  //   },
-  // },
-});
-
-newsSwiper.init();
-
-// переключение табов
-const newsNavList = document.querySelector('.news__nav-list');
-const newsSlides = document.querySelectorAll('.news__slide');
-
-newsNavList.addEventListener('click', evt => {
-  if (evt.target.tagName !== 'A') return;
-  const nextActiveItem = evt.target.closest('.news__nav-item');
-  const currentActiveItem = document.querySelector('.news__nav-item--active');
-  currentActiveItem.classList.remove('news__nav-item--active');
-  nextActiveItem.classList.add('news__nav-item--active');
-})
-
-// изменение раскладки swiper grid на tablet
-if (window.innerWidth >= 768 && window.innerWidth < 1440) {
-  newsSlides.forEach((slide, index) => {
-    switch (index) {
-      case 0:
-        slide.style.order = 1;
-        break;
-      case 1:
-        slide.style.order = 3;
-        slide.style.marginTop = '0';
-        break;
-      case 2:
-        slide.style.order = 2;
-        slide.style.marginTop = '30px';
-        break;
-      case 3:
-        slide.style.order = 4;
-        slide.style.marginRight = '30px';
-        break;
-      default:
-        slide.style.order = index + 1;
-        break;
-    }
-  });
-};
-
-// кастомная пагинация
-const paginationBullets = document.querySelectorAll('.news__pagination-bullet');
-const VISIBLE_BULLETS_COUNT = 4;
-
-const hideBulletsOnInit = () => {
-  for (let i = VISIBLE_BULLETS_COUNT + 1; i <= paginationBullets.length; i++) {
-    const paginationBullet = document.querySelector(`[data-index="${i}"]`);
-    paginationBullet.style.display = 'none';
-  }
-};
-
-hideBulletsOnInit();
-
-const createIndexArrow = (minIndex, maxIndex) => {
-  var indexArrow = [];
-
-  for (var i = minIndex; i <= maxIndex; i++) {
-    indexArrow.push(i);
-  }
-
-  return indexArrow;
-}
-
-const createVisibleBulletsArray = (activeBulletIndex) => {
-  var visibleBullets = [];
-
-  if (activeBulletIndex < VISIBLE_BULLETS_COUNT) {
-    for (let i = 1; i <= VISIBLE_BULLETS_COUNT; i++) {
-      visibleBullets.push(i);
-    }
-  } else if (activeBulletIndex === paginationBullets.length) {
-    for (let i = activeBulletIndex - 3; i <= paginationBullets.length; i++) {
-      visibleBullets.push(i);
-    }
-  } else {
-    for (let i = activeBulletIndex - 2; i <= activeBulletIndex + 1; i++) {
-      visibleBullets.push(i);
-    }
-  }
-
-  return visibleBullets;
-}
-
-const createHiddenBulletsArray = (visibleBullets, allBullets) => {
-  const filteredBullets = allBullets.filter((bullet) => !visibleBullets.includes(bullet));
-  return filteredBullets;
-}
-
-const modifyPagination = () => {
-  let activeBulletIndex = newsSwiper.realIndex + 1;
-  const visibleBullets = createVisibleBulletsArray(activeBulletIndex);
-  const allBullets = createIndexArrow(1, paginationBullets.length);
-  const hiddenBullets = createHiddenBulletsArray(visibleBullets, allBullets);
-
-  const resetBulletSettings = () => {
-    visibleBullets.forEach((bullet) => {
-      const paginationBullet = document.querySelector(`[data-index="${bullet}"]`);
-      paginationBullet.style.display = 'block';
-    })
-  }
-
-  resetBulletSettings();
-
-  const hideBullets = () => {
-    hiddenBullets.forEach((bullet) => {
-      const paginationBullet = document.querySelector(`[data-index="${bullet}"]`);
-      paginationBullet.style.display = 'none';
-    });
-  }
-
-  hideBullets();
-};
-
-newsSwiper.on('slideChange', modifyPagination);
-window.addEventListener('resize', hideBulletsOnInit);
-window.addEventListener('resize', modifyPagination);
 
 // Блок FAQ
 const faqItems = document.querySelectorAll('.faq__accordion-item');

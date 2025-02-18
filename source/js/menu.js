@@ -39,8 +39,8 @@ const closeMenuOnItemClick = () => {
 // }
 
 const closeMenuOnPageClick = () => {
-  document.body.addEventListener("click", function (event) {
-    if (event.target.closest('.header__nav') == null) {
+  document.body.addEventListener("click", (evt) => {
+    if (evt.target.closest('.header__nav') == null) {
       headerNav.classList.remove('header__nav--opened');
       headerButton.classList.remove('header__toggle--opened');
     } else {
