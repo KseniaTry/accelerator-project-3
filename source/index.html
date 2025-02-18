@@ -1129,19 +1129,26 @@
         <form class="form__form" action="https://echo.htmlacademy.ru/" method="post">
           <h2 class="form__title">Напишите нам</h2>
           <p class="form__description">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
-          <label class="form__label" for="name">Имя</label>
-          <input class="form__input" type="text" id="name" name="name" required>
 
-          <label class="form__label" for="phone">Телефон</label>
-          <input class="form__input" type="tel" id="phone" name="phone" minlength="11" maxlength="25" required>
+          <div class="form__input-wrapper">
+            <label class="form__label" for="name">Имя</label>
+            <input class="form__input" type="text" id="name" name="name" required>
+          </div>
 
-          <label class="form__label" for="message">Ваше сообщение</label>
-          <textarea class="form__input form__input--message" id="message" name="message" required></textarea>
+          <div class="form__input-wrapper">
+            <label class="form__label" for="phone">Телефон</label>
+            <input class="form__input" type="tel" id="phone" name="phone" minlength="11" maxlength="25" required>
+          </div>
 
-          <label class="form__label" for="city">Выберите город</label>
-          <div class="form__custom-select-wrapper custom-select">
+          <div class="form__input-wrapper">
+            <label class="form__label" for="message">Ваше сообщение</label>
+            <textarea class="form__input form__input--message" id="message" name="message" required></textarea>
+          </div>
+
+          <div class="form__input-wrapper form__custom-select-wrapper custom-select">
             <input class="form__input form__input--city custom-select__input" type="text" id="city" name="city" readonly
               required>
+            <label class="form__label" for="city">Выберите город</label>
             <div class="form__custom-select custom-select__select">
               <div class="form__custom-option custom-select__option"></div>
               <div class="form__custom-option custom-select__option">Москва</div>
@@ -1152,9 +1159,11 @@
             </div>
           </div>
 
-          <input class="form__input-checkbox" type="checkbox" id="personal-data" name="personalData">
-          <label class="form__label form__label--checkbox" for="personal-data">Я согласен на обработку моих
+          <div class="form__checkbox-wrapper custom-checkbox">
+          <input class="form__input-checkbox custom-checkbox__input" type="checkbox" id="personal-data" name="personalData">
+          <label class="form__label form__label--checkbox custom-checkbox__label" for="personal-data">Я согласен на обработку моих
             персональных<br> данных</label>
+          </div>
 
           <button class="form__send button button--secondary-light" type="submit">Отправить</button>
         </form>
@@ -1234,15 +1243,16 @@
     <section class="modal">
       <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
         <button class="modal__close"><span class="visually-hidden">Открыть меню</span></button>
+
         <h2 class="modal__title">Напишите нам</h2>
         <p class="modal__description">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+
         <div class="modal__input-wrapper">
           <label class="modal__label" for="name-modal">Имя</label>
           <input class="modal__input" type="text" id="name-modal" name="name-modal" required>
         </div>
 
         <div class="modal__input-wrapper">
-
           <input class="modal__input" type="tel" id="phone-modal" name="phone-modal" minlength="11" maxlength="25"
             required>
           <label class="modal__label" for="phone-modal">Телефон</label>
@@ -1262,9 +1272,11 @@
           </div>
         </div>
 
-        <div class="modal__checkbox-wrapper">
-          <input class="modal__input-checkbox" type="checkbox" id="personal-data-modal" name="personalData">
-          <label class="modal__label modal__label--checkbox" for="personal-data-modal">Я согласен на обработку моих
+        <div class="modal__checkbox-wrapper custom-checkbox">
+          <input class="modal__input-checkbox custom-checkbox__input" type="checkbox" id="personal-data-modal"
+            name="personalData">
+          <label class="modal__label modal__label--checkbox custom-checkbox__label" for="personal-data-modal">Я согласен
+            на обработку моих
             персональных данных</label>
         </div>
 

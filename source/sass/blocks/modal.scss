@@ -84,12 +84,13 @@
   }
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
-    margin-bottom: 4px;
+    margin-bottom: -3px;
     font-size: 28px;
     line-height: 28px;
   }
 
   @media (min-width: $desktop-width-min) {
+    margin-bottom: -8px;
     font-size: 32px;
     line-height: 36px;
   }
@@ -122,10 +123,18 @@
 }
 
 // инпуты
-.modal__input-wrapper { // обертка нужна для
+.modal__input-wrapper {
+  // обертка нужна для стилизации состояния disabled
   @include flex(column, flex-start, flex-start);
   width: 100%;
-  gap: 8px;
+
+  @media (max-width: $mobile-width-max) {
+    gap: 8px;
+  }
+
+  @media (min-width: $tablet-width-min) {
+    gap: 12px;
+  }
 }
 
 .modal__label {
@@ -162,7 +171,7 @@
   }
 
   @media (min-width: $tablet-width-min) {
-    height: 48px;
+    height: 50px;
   }
 
   &:hover,
@@ -182,20 +191,50 @@
   }
 }
 
-.modal__input:disabled ~ .modal__label {
-    color: rgba(169, 175, 183, 0.6);
+.modal__input:disabled~.modal__label {
+  color: rgba(169, 175, 183, 0.6);
 }
 
 // кастомный select
-.modal__custom-select::after {
-  top: 40px;
+.modal__custom-select {
+  @media (max-width: $mobile-width-max) {
+    top: 70px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    top: 80px;
+  }
+
+  @media (min-width: $desktop-width-min) {
+    top: 85px;
+  }
+}
+
+.modal__custom-select-wrapper::after {
+  @media (max-width: $mobile-width-max) {
+    top: 40px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    top: 54px;
+  }
+
+  @media (min-width: $desktop-width-min) {
+    top: 52px;
+  }
 }
 
 // кастомный checkbox
 .modal__checkbox-wrapper {
   @include flex(row, flex-start, center);
 
-  margin-bottom: 10px;
+  @media (max-width: $mobile-width-max) {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $tablet-width-min) {
+    margin-top: 5px;
+  }
 }
 
 .modal__label--checkbox {
@@ -229,7 +268,7 @@
     }
 
     @media (min-width: $tablet-width-min) {
-      top: -4px;
+      top: -5px;
     }
   }
 
@@ -272,7 +311,7 @@
   }
 
   @media (min-width: $tablet-width-min) {
-    margin-top: 22px;
+    margin-top: 13px;
     width: 194px;
     height: 54px;
     align-self: center;

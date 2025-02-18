@@ -1,0 +1,59 @@
+.form__label--checkbox {
+  position: relative;
+  margin-left: 30px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 11px;
+    left: -30px;
+    width: 20px;
+    height: 20px;
+    background-color: $basic-light-color;
+    border: 1px solid $basic-light-color;
+    border-radius: 2px;
+
+    @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+      top: -4px;
+    }
+
+    @media (min-width: $desktop-width-min) {
+      top: -3px;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: none;
+    position: absolute;
+    left: -25px;
+    width: 10px;
+    height: 10px;
+    mask-image: url("/__spritemap#sprite-checked-icon-view");
+    background-color: $accent-color;
+    mask-size: 10px 8px;
+    mask-repeat: no-repeat;
+
+    @media (max-width: $mobile-width-max) {
+      top: 17px;
+    }
+
+    @media (min-width: $tablet-width-min) {
+      top: 2px;
+    }
+  }
+}
+
+.custom-checkbox__input {
+  display: none;
+}
+
+.custom-checkbox__input:hover .custom-checkbox__label::before,
+.custom-checkbox__input:focus .custom-checkbox__label::before {
+
+}
+
+.form__input-checkbox:checked+.form__label--checkbox::after {
+  display: block;
+}

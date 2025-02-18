@@ -140,10 +140,10 @@
 
   &::after {
     @media (max-width: $mobile-width-max) {
-    top: 3px;
-    right: 3px;
-    width: 46px;
-    height: 46px;
+      top: 3px;
+      right: 3px;
+      width: 46px;
+      height: 46px;
     }
 
     @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
@@ -165,6 +165,10 @@
     @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
       top: 23px;
     }
+  }
+
+  &:hover::before {
+    transform: rotate(0deg);
   }
 }
 
