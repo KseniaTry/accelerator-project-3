@@ -3,8 +3,6 @@ const headerButton = document.querySelector('.header__toggle');
 const navItems = document.querySelectorAll('.header__nav-item');
 const navSublistItems = document.querySelectorAll('.header__nav-item--sublist');
 const pageBody = document.querySelector('.page-body');
-const MOBILE_WIDTH_MAX = 767;
-const DESKTOP_WIDTH_MIN = 1440;
 
 const switchMenu = () => {
   headerButton.addEventListener('click', (evt) => {
