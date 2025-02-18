@@ -1,6 +1,24 @@
-.form__label--checkbox {
+.custom-checkbox {
+  @include flex(row, flex-start, center);
+}
+
+.custom-checkbox__label {
   position: relative;
   margin-left: 30px;
+
+  @media (max-width: $mobile-width-max) {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  @media (min-width: $tablet-width-min) {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  // @media (min-width: $desktop-width-min) {
+  //   margin-top: 2px;
+  // }
 
   &::before {
     content: "";
@@ -54,6 +72,6 @@
 
 }
 
-.form__input-checkbox:checked+.form__label--checkbox::after {
+.custom-checkbox__input:checked+.custom-checkbox__label::after {
   display: block;
 }

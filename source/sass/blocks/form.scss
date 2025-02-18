@@ -56,7 +56,7 @@
   color: $basic-light-color;
 
   @include flex(column, flex-start, flex-start);
-  gap: 10px;
+  gap: 20px;
 
   @media (max-width: $mobile-width-max) {
     margin: 0 auto;
@@ -65,7 +65,7 @@
   }
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
-    padding: 40px 40px 36px;
+    padding: 41px 40px 36px;
     width: 442px;
   }
 
@@ -80,18 +80,19 @@
   font-weight: 400;
 
   @media (max-width: $mobile-width-max) {
+    margin-bottom: -10px;
     font-size: 18px;
     line-height: 22px;
   }
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
-    margin-bottom: 21px;
+    margin-bottom: 10px;
     font-size: 28px;
     line-height: 28px;
   }
 
   @media (min-width: $desktop-width-min) {
-    margin-bottom: 24px;
+    margin-bottom: 13px;
     font-size: 32px;
     line-height: 36px;
   }
@@ -102,13 +103,12 @@
   color: $extra-light-color;
 
   @media (max-width: $mobile-width-max) {
-    margin-bottom: 10px;
     font-size: 14px;
     line-height: 20px;
   }
 
   @media (min-width: $tablet-width-min) {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 16px;
     line-height: 20px;
   }
@@ -118,16 +118,15 @@
   }
 }
 
-
 // инпуты
 .form__input-wrapper {
   // обертка нужна для стилизации состояния disabled
   @include flex(column, flex-start, flex-start);
+  gap: 12px;
   width: 100%;
 }
 
 .form__label {
-  margin-bottom: 2px;
   color: rgba(240, 239, 233, 0.8);
   order: 1;
 
@@ -148,7 +147,6 @@
 }
 
 .form__input {
-  margin-bottom: 10px;
   padding: 17px;
   width: 100%;
   height: 50px;
@@ -197,6 +195,13 @@
   }
 }
 
+.form__input-wrapper::after {
+  @media (max-width: $mobile-width-max) {
+    top: 49px;
+    right: 21px;
+  }
+}
+
 .form__input--city {
   height: 52px;
   padding: 16px 17px;
@@ -204,22 +209,14 @@
 
 // кастомный checkbox
 .form__label--checkbox {
-  position: relative;
-  margin-left: 30px;
-
-  @media (max-width: $mobile-width-max) {
-    font-size: 12px;
-    line-height: 14px;
-  }
-
   @media (min-width: $tablet-width-min) {
-    margin-top: 4px;
+    margin-top: 5px;
     font-size: 12px;
     line-height: 12px;
   }
 
   @media (min-width: $desktop-width-min) {
-    margin-top: 2px;
+    margin-top: 0;
   }
 
   br {
@@ -227,74 +224,23 @@
       display: none;
     }
   }
-
-  // &::before {
-  //   content: "";
-  //   display: block;
-  //   position: absolute;
-  //   top: 11px;
-  //   left: -30px;
-  //   width: 20px;
-  //   height: 20px;
-  //   background-color: $basic-light-color;
-  //   border: 1px solid $basic-light-color;
-  //   border-radius: 2px;
-
-  //   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
-  //     top: -4px;
-  //   }
-
-  //   @media (min-width: $desktop-width-min) {
-  //     top: -3px;
-  //   }
-  // }
-
-  // &::after {
-  //   content: "";
-  //   display: none;
-  //   position: absolute;
-  //   left: -25px;
-  //   width: 10px;
-  //   height: 10px;
-  //   mask-image: url("/__spritemap#sprite-checked-icon-view");
-  //   background-color: $accent-color;
-  //   mask-size: 10px 8px;
-  //   mask-repeat: no-repeat;
-
-  //   @media (max-width: $mobile-width-max) {
-  //     top: 17px;
-  //   }
-
-  //   @media (min-width: $tablet-width-min) {
-  //     top: 2px;
-  //   }
-  // }
 }
-
-// .form__input-checkbox {
-//   display: none;
-// }
-
-// .form__input-checkbox:checked+.form__label--checkbox::after {
-//   display: block;
-// }
 
 // кнопка "отправить"
 .form__send {
   @media (max-width: $mobile-width-max) {
-    margin-top: 8px;
     width: 260px;
     padding-left: 74px;
   }
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
-    margin-top: 32px;
+    margin-top: 23px;
     width: 352px;
     padding-left: 108px;
   }
 
   @media (min-width: $desktop-width-min) {
-    margin-top: 30px;
+    margin-top: 25px;
     width: 100%;
     padding-left: 107px;
   }
