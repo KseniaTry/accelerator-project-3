@@ -36,7 +36,7 @@
   @include flex(column, flex-start, flex-start);
 
   @media (max-width: $mobile-width-max) {
-    padding: 36px 15px;
+    padding: 36px 15px 40px 15px;
     width: $mobile-content-width;
     gap: 15px;
   }
@@ -79,7 +79,6 @@
   color: $accent-color;
 
   @media (max-width: $mobile-width-max) {
-    margin-bottom: 1px;
     font-size: 18px;
     line-height: 22px;
   }
@@ -104,6 +103,7 @@
   margin-bottom: 10px;
 
   @media (max-width: $mobile-width-max) {
+    margin-top: -5px;
     width: 220px;
     font-size: 14px;
     line-height: 20px;
@@ -121,10 +121,11 @@
   }
 }
 
+// инпуты
 .modal__input-wrapper { // обертка нужна для
   @include flex(column, flex-start, flex-start);
   width: 100%;
-  gap: 12px;
+  gap: 8px;
 }
 
 .modal__label {
@@ -150,19 +151,17 @@
 .modal__input {
   padding: 17px;
   width: 100%;
-  color: $basic-light-color;
+  color: $basic-dark-color;
   border-radius: 8px;
   border: 1px solid rgba(72, 72, 72, 0.3);
   background-color: transparent;
   order: 2;
 
   @media (max-width: $mobile-width-max) {
-    margin-bottom: 7px;
-    height: 42px;
+    height: 44px;
   }
 
   @media (min-width: $tablet-width-min) {
-    margin-bottom: 8px;
     height: 48px;
   }
 
@@ -176,10 +175,20 @@
     border-color: rgba(169, 175, 183, 0.5);
     background-color: rgba(169, 175, 183, 0.2);
   }
+
+  &:user-invalid {
+    background-color: rgba(255, 94, 102, 0.2);
+    border-color: rgba(255, 94, 102);
+  }
 }
 
 .modal__input:disabled ~ .modal__label {
     color: rgba(169, 175, 183, 0.6);
+}
+
+// кастомный select
+.modal__custom-select::after {
+  top: 40px;
 }
 
 // кастомный checkbox
@@ -195,13 +204,11 @@
   margin-left: 30px;
 
   @media (max-width: $mobile-width-max) {
-    margin-top: 2px;
     font-size: 12px;
     line-height: 14px;
   }
 
   @media (min-width: $tablet-width-min) {
-    margin-top: 5px;
     font-size: 12px;
     line-height: 12px;
   }

@@ -1,10 +1,9 @@
 import Swiper from "swiper";
 import { Navigation, Pagination, Grid } from "swiper/modules";
 import 'swiper/css';
+import { MOBILE_WIDTH_MAX, DESKTOP_WIDTH_MIN } from "../const";
 
 const newsSlider = document.querySelector('.news__swiper');
-const MOBILE_WIDTH_MAX = 767;
-const DESKTOP_WIDTH_MIN = 1440;
 
 const newsSwiper = new Swiper(newsSlider, {
   slideClass: 'news__slide',

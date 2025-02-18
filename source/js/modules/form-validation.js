@@ -1,7 +1,6 @@
-const mainForm = document.querySelector('.form__form');
-const phoneInput = document.getElementById('phone');
-const nameInput = document.getElementById('name');
-const inputs = document.querySelectorAll('.form__input');
+// const mainForm = document.querySelector('.form__form');
+// const phoneInput = document.getElementById('phone');
+// const nameInput = document.getElementById('name');
 
 const REGEX_PHONE = /^[+]?[0-9\s\-()]*$/;
 const REGEX_TEXT = /^[А-Яа-яёA-Za-z]*$/;
@@ -13,8 +12,7 @@ const resetForm = (form) => {
   });
 };
 
-resetForm(mainForm);
-
+// валидация поля "имя"
 const validateName = (nameInput) => {
   nameInput.addEventListener('input', () => {
     // проверка соответствия введенного значения регулярному выражению
@@ -26,6 +24,7 @@ const validateName = (nameInput) => {
   });
 };
 
+// валидация поля "телефон"
 const validatePhone = (phoneInput) => {
   phoneInput.addEventListener('input', (evt) => {
     const phoneValue = evt.target.value;
@@ -51,5 +50,9 @@ const validatePhone = (phoneInput) => {
   });
 }
 
-validateName(nameInput);
-validatePhone(phoneInput);
+const validateForm = (nameInput, phoneInput) => {
+  validateName(nameInput);
+  validatePhone(phoneInput);
+}
+
+export { resetForm, validateForm };

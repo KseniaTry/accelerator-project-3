@@ -6,7 +6,7 @@
     content: "";
     display: block;
     position: absolute;
-    top: 22px;
+    top: 60%; // 22px
     right: 20px;
     width: 16px;
     height: 8px;
@@ -21,8 +21,24 @@
   transform: rotate(180deg);
 }
 
+.custom-select--secondary::after {
+  background-color: $basic-dark-color;
+}
+
 .custom-select__input {
   cursor: default;
+}
+
+.custom-select--secondary .custom-select__input {
+  color: $basic-dark-color;
+}
+
+.custom-select--opened.custom-select--secondary .custom-select__input {
+  border-color: $basic-dark-color;
+}
+
+.custom-select--secondary .custom-select__input:disabled ~ .custom-select__label {
+  color: rgba(169, 175, 183, 0.6);
 }
 
 .custom-select__select {
@@ -31,9 +47,14 @@
   top: 55px;
   z-index: 5;
   width: 100%;
+  border: 1px solid $basic-light-color;
   border-radius: 8px;
   background-color: $basic-light-color;
   cursor: default;
+}
+
+.custom-select--secondary .custom-select__select {
+  border-color: $basic-dark-color;
 }
 
 .custom-select__select--opened {
