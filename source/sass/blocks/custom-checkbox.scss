@@ -72,15 +72,16 @@
 }
 
 // состояния чекбокса, если проставлена галочка
-// .custom-checkbox__input:checked:hover+.custom-checkbox__label::after,
-// .custom-checkbox__input:checked:focus+.custom-checkbox__label::after,
-// .custom-checkbox__input:checked:disabled+.custom-checkbox__label::after {
-//   background-color: $basic-light-color;
-// }
+.custom-checkbox__input:checked:hover+.custom-checkbox__label::after,
+.custom-checkbox__input:checked:focus+.custom-checkbox__label::after,
+.custom-checkbox__input:checked:disabled+.custom-checkbox__label::after {
+  background-color: $basic-light-color;
+}
 
-// .custom-checkbox__input:checked:disabled {
-//   background-color: #A9AFB7;
-// }
+.custom-checkbox__input:checked:disabled+.custom-checkbox__label::before {
+  background-color: $disabled-color;
+  border-color: $disabled-color;
+}
 
 
 .custom-checkbox__input:checked+.custom-checkbox__label::after {
