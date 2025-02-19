@@ -100,7 +100,7 @@
   }
 
   &:active {
-    color: #275699;
+    color: $extra-dark-color;
   }
 }
 
@@ -155,8 +155,8 @@
   }
 
   &:active {
-    color: #275699;
-    border-color: #275699;
+    color: $extra-dark-color;
+    border-color: $extra-dark-color;
   }
 }
 

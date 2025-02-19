@@ -191,7 +191,7 @@
 }
 
 .faq__open-button:active {
-  background-color: #275699;
+  background-color: $extra-dark-color;
 }
 
 .faq__open-button:disabled {
@@ -227,7 +227,7 @@
 }
 
 .faq__accordion-item--active .faq__open-button:active::after {
-  background-color: #275699;
+  background-color: $extra-dark-color;
 }
 
 // прочие стили при открытой вкладке
@@ -241,4 +241,42 @@
 
 .faq__accordion-item--active .faq__accordion-title {
   color: $basic-light-color;
+}
+
+// состояния аккордеона
+.faq__accordion-item:hover,
+.faq__accordion-item:focus {
+  background-color: $basic-light-color;
+}
+
+.faq__accordion-item:active .faq__accordion-title {
+  color:$extra-dark-color;
+}
+
+.faq__accordion-item--active:active {
+  background-color: $extra-dark-color;
+}
+
+.faq__accordion-item--active:active .faq__accordion-title {
+  color: $basic-light-color;
+}
+
+.faq__accordion-item--active:hover,
+.faq__accordion-item--active:focus {
+  background-color: $accent-color;
+}
+
+.faq__accordion-item--active:hover .faq__accordion-title,
+.faq__accordion-item--active:hover p {
+  color: $basic-light-color;
+}
+
+.faq__accordion-item--active:hover .faq__open-button,
+.faq__accordion-item--active:focus .faq__open-button {
+  border-color: $basic-light-color;
+  background-color: transparent;
+
+  &::after {
+    background-color: $basic-light-color;
+  }
 }
