@@ -43,60 +43,61 @@
           </svg>
 
           <button class="header__toggle button button--primary" type="button">Меню</button>
+          <nav class="header__nav" aria-label="Основное меню сайта">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#about">О проекте</a>
+              </li>
+              <li class="header__nav-item header__nav-item--sublist">
+                <a class="header__nav-link" href="#">Программы</a>
+                <ul class="header__nav-sublist">
+                  <li>
+                    <a class="header__nav-sublist-link" href="#">Стажировки</a>
+                  </li>
+                  <li>
+                    <a class="header__nav-sublist-link" href="#">Волонтёрство</a>
+                  </li>
+                  <li>
+                    <a class="header__nav-sublist-link" href="#">Учеба</a>
+                  </li>
+                  <li>
+                    <a class="header__nav-sublist-link" href="#">Религия</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#grant">Как поехать</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#reviews">Отзывы</a>
+              </li>
+              <li class="header__nav-item header__nav-item--sublist">
+                <a class="header__nav-link" href="#">Новости</a>
+                <ul class="header__nav-sublist">
+                  <li class="header__nav-sublist-item">
+                    <a class="header__nav-sublist-link" href="#">Общее</a>
+                  </li>
+                  <li>
+                    <a class="header__nav-sublist-link" href="#">Волонтёрство</a>
+                  </li>
+                  <li>
+                    <a class="header__nav-sublist-link" href="#">Стажировки</a>
+                  </li>
+                  <li>
+                    <a class="header__nav-sublist-link" href="#">Карьера</a>
+                  </li>
+                  <li>
+                    <a class="header__nav-sublist-link" href="#">Путешествия</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav class="header__nav" aria-label="Основное меню сайта">
-          <ul class="header__nav-list">
-            <li class="header__nav-item">
-              <a class="header__nav-link" href="#about">О проекте</a>
-            </li>
-            <li class="header__nav-item header__nav-item--sublist">
-              <a class="header__nav-link" href="#programs">Программы</a>
-              <ul class="header__nav-sublist">
-                <li>
-                  <a class="header__nav-sublist-link" href="#">Стажировки</a>
-                </li>
-                <li>
-                  <a class="header__nav-sublist-link" href="#">Волонтёрство</a>
-                </li>
-                <li>
-                  <a class="header__nav-sublist-link" href="#">Учеба</a>
-                </li>
-                <li>
-                  <a class="header__nav-sublist-link" href="#">Религия</a>
-                </li>
-              </ul>
-            </li>
-            <li class="header__nav-item">
-              <a class="header__nav-link" href="#grant">Как поехать</a>
-            </li>
-            <li class="header__nav-item">
-              <a class="header__nav-link" href="#reviews">Отзывы</a>
-            </li>
-            <li class="header__nav-item header__nav-item--sublist">
-              <a class="header__nav-link" href="#news">Новости</a>
-              <ul class="header__nav-sublist">
-                <li class="header__nav-sublist-item">
-                  <a class="header__nav-sublist-link" href="#">Общее</a>
-                </li>
-                <li>
-                  <a class="header__nav-sublist-link" href="#">Волонтёрство</a>
-                </li>
-                <li>
-                  <a class="header__nav-sublist-link" href="#">Стажировки</a>
-                </li>
-                <li>
-                  <a class="header__nav-sublist-link" href="#">Карьера</a>
-                </li>
-                <li>
-                  <a class="header__nav-sublist-link" href="#">Путешествия</a>
-                </li>
-              </ul>
-            </li>
-            <li class="header__nav-item">
-              <a class="header__nav-link" href="#contacts">Контакты</a>
-            </li>
-          </ul>
-        </nav>
+
       </header>
       <div class="hero__swiper swiper">
         <div class="hero__swiper-wrapper swiper-wrapper">
@@ -195,7 +196,7 @@
 
     </section>
 
-    <section class="about" data-test="about">
+    <section class="about" id="about" data-test="about">
       <div class="about__main-wrapper">
         <div class="about__about-wrapper">
           <h2 class="about__title">О проекте «Стажировка»</h2>
@@ -231,7 +232,7 @@
       </div>
     </section>
 
-    <section class="programs" data-test="programs">
+    <section class="programs" id="programs" data-test="programs">
       <div class="programs__main-wrapper">
         <h2 class="programs__title">Программы</h2>
         <a class="programs__details button button--secondary" href="#">Все программы</a>
@@ -362,7 +363,7 @@
       </div>
     </section>
 
-    <section class="grant" data-test="grant">
+    <section class="grant" id="grant" data-test="grant">
       <div class="grant__main-wrapper">
         <div class="grant__text-wrapper">
           <h2 class="grant__title">Как поехать</h2>
@@ -410,7 +411,7 @@
       </div>
     </section>
 
-    <section class="news" data-test="news">
+    <section class="news" id="news" data-test="news">
       <div class="news__main-wrapper">
         <h2 class="news__title">Новости и материалы</h2>
         <div class="news__tabs">
@@ -960,7 +961,7 @@
       </div>
     </section>
 
-    <section class="reviews" data-test="reviews">
+    <section class="reviews" id="reviews" data-test="reviews">
       <div class="reviews__main-wrapper">
         <h2 class="reviews__title">Отзывы</h2>
         <div class="reviews__swiper swiper">
@@ -1078,7 +1079,7 @@
       </div>
     </section>
 
-    <section class="contacts" data-test="contacts">
+    <section class="contacts" id="contacts" data-test="contacts">
       <div class="contacts__main-wrapper">
         <h2 class="contacts__title">Контакты</h2>
         <ul class="contacts__list">

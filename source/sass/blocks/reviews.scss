@@ -21,8 +21,8 @@
   }
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
-    margin-left: 45px;
-    width: calc($tablet-width-min - 45px);
+    padding-left: 45px;
+    width: $tablet-width-min;
   }
 
   @media (min-width: $desktop-width-min) {

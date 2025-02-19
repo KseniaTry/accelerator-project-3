@@ -15,6 +15,7 @@
 }
 
 .header__main-wrapper {
+  position: relative; // для открытой навигации
   @include flex(row, space-between, center);
 
   margin: 0 auto;
@@ -35,8 +36,8 @@
 .header__logo-icon {}
 
 .header__nav {
-  margin: 0 auto;
-  margin-top: 4px;
+  position: absolute;
+  top: 58px;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
@@ -49,7 +50,7 @@
   }
 
   @media (min-width: $tablet-width-min) {
-    margin-right: 0;
+    right: 0;
     width: 286px;
   }
 }
@@ -175,21 +176,16 @@
 }
 
 .header__toggle--opened {
-  position: absolute;
   background-color: $accent-color;
   color: $basic-light-color;
 
   @media (max-width: $mobile-width-max) {
+    position: absolute;
     width: $mobile-content-width;
   }
 
   @media (min-width: $tablet-width-min) {
-    right: 45px;
     width: 286px;
-  }
-
-  @media (min-width: $desktop-width-min) {
-    right: 100px;
   }
 
   &::after {

@@ -41,6 +41,8 @@ const closeMenuOnPageClick = () => {
     if (evt.target.closest('.header__nav') == null) {
       headerNav.classList.remove('header__nav--opened');
       headerButton.classList.remove('header__toggle--opened');
+      pageBody.classList.remove('page-body--window-opened');
+      pageBody.classList.remove('overlay');
     } else {
       closeMenuOnItemClick();
       // closeMenuOnSublistItemClick();
