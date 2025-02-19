@@ -71,6 +71,17 @@
   border-color: #FF5E66;
 }
 
+// если чекбокс на белом фоне
+.custom-checkbox__input--secondary:hover+.custom-checkbox__label::before,
+.custom-checkbox__input--secondary:focus+.custom-checkbox__label::before {
+  border-color: $accent-color;
+}
+
+.custom-checkbox__input--secondary:disabled+.custom-checkbox__label::before {
+  border-color: $accent-color;
+  background-color: rgba(49, 109, 194, 0.5);
+}
+
 // состояния чекбокса, если проставлена галочка
 .custom-checkbox__input:checked:hover+.custom-checkbox__label::after,
 .custom-checkbox__input:checked:focus+.custom-checkbox__label::after,
@@ -83,7 +94,12 @@
   border-color: $disabled-color;
 }
 
-
 .custom-checkbox__input:checked+.custom-checkbox__label::after {
   display: block;
+}
+
+// если чекбокс на белом фоне + проставлена галочка
+.custom-checkbox__input--secondary:checked:hover+.custom-checkbox__label::after,
+.custom-checkbox__input--secondary:checked:focus+.custom-checkbox__label::after {
+  background-color: $accent-color;
 }

@@ -9,9 +9,9 @@
   <link rel="icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
-  <link rel="preload" href="fonts/Manrope-Light.woff2" type="font/woff2" as="font">
-  <link rel="preload" href="fonts/Manrope-Medium.woff2" type="font/woff2" as="font">
-  <link rel="preload" href="fonts/Manrope-Regular.woff2" type="font/woff2" as="font">
+  <link rel="preload" as="font" type="font/woff2" href="fonts/Manrope-Light.woff2">
+  <link rel="preload" as="font" type="font/woff2" href="fonts/Manrope-Medium.woff2">
+  <link rel="preload" as="font" type="font/woff2" href="fonts/Manrope-Regular.woff2">
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="sass/style.scss">
 </head>
@@ -1272,7 +1272,7 @@
         </div>
 
         <div class="modal__checkbox-wrapper custom-checkbox">
-          <input class="modal__input-checkbox custom-checkbox__input" type="checkbox" id="personal-data-modal"
+          <input class="modal__input-checkbox custom-checkbox__input custom-checkbox__input--secondary" type="checkbox" id="personal-data-modal"
             name="personalData">
           <label class="modal__label modal__label--checkbox custom-checkbox__label" for="personal-data-modal">Я согласен
             на обработку моих

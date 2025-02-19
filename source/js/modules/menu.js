@@ -41,7 +41,7 @@ const closeMenuOnSublistItemClick = () => {
 }
 
 const closeMenuOnPageClick = () => {
-  document.body.addEventListener("click", (evt) => {
+  document.body.addEventListener('click', (evt) => {
     if (evt.target.closest('.header__nav') == null) {
       closeMenu();
     } else {

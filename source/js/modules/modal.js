@@ -1,4 +1,3 @@
-
 // модальное окно
 const aboutButton = document.querySelector('.about__details');
 const modal = document.querySelector('.modal__wrapper');
@@ -22,9 +21,18 @@ const closeModal = () => {
   });
 };
 
+const closeModalOnPageClick = () => {
+  document.body.addEventListener('click', (evt) => {
+    if (evt.target.closest('.modal__form') == null) {
+      closeModal();
+    }
+  });
+};
+
 const initModal = () => {
   openModal();
   closeModal();
+  closeModalOnPageClick();
 }
 
 export { initModal };
