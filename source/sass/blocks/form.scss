@@ -195,6 +195,16 @@
   }
 }
 
+.form__custom-select {
+  @media (max-width: $mobile-width-max) {
+    top: 82px;
+  }
+
+  @media (min-width: $tablet-width-min) {
+  top: 88px;
+  }
+}
+
 .form__input-wrapper::after {
   @media (max-width: $mobile-width-max) {
     top: 49px;

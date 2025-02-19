@@ -215,6 +215,21 @@
   @media (min-width: $desktop-width-min) {
     padding: 14px 9px 14px 20px;
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -15px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    mask-image: url(/__spritemap#sprite-corner-16x16-view);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: 16px 16px;
+    background-color: $basic-light-color;
+  }
 }
 
 .hero__bullet {
