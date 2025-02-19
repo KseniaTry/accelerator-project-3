@@ -167,7 +167,9 @@
     }
   }
 
-  &:hover::before {
+  &:hover::before,
+  &:active::before,
+  &:focus::before {
     transform: rotate(0deg);
   }
 }
@@ -189,7 +191,6 @@
   @media (min-width: $desktop-width-min) {
     right: 100px;
   }
-
 
   &::after {
     background-color: $basic-light-color;
