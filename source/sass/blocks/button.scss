@@ -13,7 +13,7 @@
 
   @media (max-width: $mobile-width-max) {
     padding: 16px 21px;
-    height: 44px;
+    min-height: 44px;
     font-size: 12px;
     line-height: 12px;
     letter-spacing: 0.24px;
@@ -21,7 +21,7 @@
 
   @media (min-width: $tablet-width-min) {
     padding: 20px 31px;
-    height: 56px;
+    min-height: 56px;
     font-size: 14px;
     line-height: 14px;
     letter-spacing: 0.28px;

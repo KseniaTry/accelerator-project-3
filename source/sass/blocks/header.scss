@@ -131,7 +131,7 @@
   letter-spacing: 0.28px;
 
   @media (max-width: $mobile-width-max) {
-    height: 54px;
+    min-height: 54px;
     padding: 19px;
   }
 

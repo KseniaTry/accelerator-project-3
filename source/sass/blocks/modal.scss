@@ -201,11 +201,7 @@
     top: 70px;
   }
 
-  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
-    top: 80px;
-  }
-
-  @media (min-width: $desktop-width-min) {
+  @media (min-width: $tablet-width-min) {
     top: 85px;
   }
 }
@@ -255,14 +251,6 @@
     background-color: $basic-light-color;
   }
 }
-
-// .modal__input-checkbox {
-//   display: none;
-// }
-
-// .modal__input-checkbox:checked+.modal__label--checkbox::after {
-//   display: block;
-// }
 
 // кнопка "отправить"
 .modal__send {
