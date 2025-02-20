@@ -3,7 +3,6 @@ import { Pagination } from "swiper/modules";
 import 'swiper/css';
 import { DESKTOP_WIDTH_MIN, MOBILE_WIDTH_MAX } from "../const";
 
-// hero swiper
 const heroSlider = document.querySelector('.hero__swiper');
 
 const heroSwiper = new Swiper(heroSlider, {
@@ -70,26 +69,28 @@ const updateLeftPosition = () => {
 
 // пересчет размера текстового блока активного слайда при переключении слайда
 const updateBottomPosition = () => {
-  heroSwiper.on('slideChange', () => {
-    let activeIndex = heroSwiper.realIndex;
-    const heroActiveSlide = document.querySelector(`[data-swiper-slide-index="${activeIndex}"]`)
-    const textContentHeight = getAllTextContentHeight(heroActiveSlide);
-    const heroPagination = document.querySelector('.hero__pagination.swiper-pagination-bullets.swiper-pagination-horizontal');
+  let activeIndex = heroSwiper.realIndex;
+  const heroActiveSlide = document.querySelector(`[data-swiper-slide-index="${activeIndex}"]`)
+  const textContentHeight = getAllTextContentHeight(heroActiveSlide);
+  const heroPagination = document.querySelector('.hero__pagination.swiper-pagination-bullets.swiper-pagination-horizontal');
 
-    if (window.innerWidth <= MOBILE_WIDTH_MAX) {
-      heroPagination.style.bottom = `${textContentHeight + 19}px`;
-    }
+  if (window.innerWidth <= MOBILE_WIDTH_MAX) {
+    heroPagination.style.bottom = `${textContentHeight + 19}px`;
+  }
 
-    if (window.innerWidth > MOBILE_WIDTH_MAX) {
-      heroPagination.style.bottom = `${textContentHeight + 35}px`;
-    }
-  });
-}
+  if (window.innerWidth > MOBILE_WIDTH_MAX) {
+    heroPagination.style.bottom = `${textContentHeight + 35}px`;
+  }
+};
 
 const initHeroSlider = () => {
   heroSwiper.init();
   updateBottomPosition();
   updateLeftPosition();
+
+  heroSwiper.on('slideChange', () => {
+    updateBottomPosition();
+  });
 
   window.addEventListener('resize', () => {
     updateLeftPosition();

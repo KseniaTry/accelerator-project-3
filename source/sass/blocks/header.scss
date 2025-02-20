@@ -33,8 +33,6 @@
   }
 }
 
-.header__logo-icon {}
-
 .header__nav {
   position: absolute;
   top: 58px;
@@ -116,8 +114,6 @@
   text-transform: capitalize;
 }
 
-.header__nav-sublist-item {}
-
 .header__nav-sublist-link {
   @include reset-link;
 
@@ -129,6 +125,7 @@
   font-size: 14px;
   line-height: 14px;
   letter-spacing: 0.28px;
+  transition: all 0.3s;
 
   @media (max-width: $mobile-width-max) {
     min-height: 54px;

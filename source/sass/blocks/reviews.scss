@@ -183,7 +183,8 @@
 
 .reviews__details {
   display: grid;
-  grid-template-columns: repeat(2, max-content);
+  // grid-template-columns: repeat(2, max-content);
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   column-gap: 25px;
   margin: 0;
 
