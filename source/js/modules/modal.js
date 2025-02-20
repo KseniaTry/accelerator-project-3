@@ -24,7 +24,6 @@ const closeModal = () => {
 
 const closeModalOnPageClick = () => {
   document.body.addEventListener('click', (evt) => {
-    evt.stopImmediatePropagation();
     if (evt.target.closest('.modal__form') == null) {
       modal.classList.add('modal__wrapper--closed');
     } else {

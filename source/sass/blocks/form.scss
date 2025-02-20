@@ -247,6 +247,8 @@
 
 // кнопка "отправить"
 .form__send {
+  padding-right: 60px;
+
   @media (max-width: $mobile-width-max) {
     width: 260px;
     padding-left: 74px;

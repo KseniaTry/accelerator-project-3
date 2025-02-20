@@ -68,7 +68,7 @@
   @media (max-width: $mobile-width-max) {
     order: 3;
     width: 205px;
-    padding: 15px 31px;
+    padding: 15px 50px 15px 31px;
   }
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
@@ -219,6 +219,8 @@
 .programs__slide-description-wrapper {
   @include flex(row, space-between, center);
   flex-wrap: wrap;
+  overflow-y: scroll;
+  overflow-x: hidden;
 
   background-color: $basic-light-color;
   border-top-right-radius: 12px;

@@ -9,10 +9,11 @@
   text-transform: uppercase;
   text-decoration: none;
   text-align: left;
+  word-break: break-all;
   cursor: pointer;
 
   @media (max-width: $mobile-width-max) {
-    padding: 16px 21px;
+    padding: 15px 50px 15px 21px;
     min-height: 44px;
     font-size: 12px;
     line-height: 12px;
@@ -20,7 +21,7 @@
   }
 
   @media (min-width: $tablet-width-min) {
-    padding: 20px 31px;
+    padding: 20px 55px 20px 31px;
     min-height: 56px;
     font-size: 14px;
     line-height: 14px;

@@ -111,6 +111,7 @@
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
     align-items: flex-start;
+    width: 250px;
   }
 
   @media (min-width: $desktop-width-min) {
@@ -130,6 +131,7 @@
   @media (max-width: $mobile-width-max) {
     font-size: 12px;
     line-height: 14px;
+    text-align: center;
   }
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
@@ -167,6 +169,7 @@
   @media (max-width: $mobile-width-max) {
     font-size: 12px;
     line-height: 14px;
+    text-align: center;
   }
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
