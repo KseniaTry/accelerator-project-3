@@ -91,7 +91,7 @@
   }
 
   @media (min-width: $desktop-width-min) {
-    margin-bottom: 60px;
+    margin-bottom: 55px;
     width: 498px;
   }
 
@@ -144,6 +144,8 @@
 }
 
 .about__details {
+  margin-bottom: 5px; // на случай переполнения
+
   @media (max-width: $mobile-width-max) {
     padding: 15px 20px;
     width: 223px;

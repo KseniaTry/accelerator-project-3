@@ -58,7 +58,7 @@
   border-radius: 13px;
   box-decoration-break: clone;
   filter: url(#gooey-filter);
-  overflow: scroll;
+  overflow-y: scroll;
   overflow-x: hidden;
 
   @media (max-width: $mobile-width-max) {
@@ -147,6 +147,8 @@
 
   @media (min-width: $tablet-width-min) {
     @include flex(row, space-between, flex-start);
+    flex-wrap: wrap;
+    gap: 10px;
 
     width: 593px;
     padding: 0 40px 35px 40px;

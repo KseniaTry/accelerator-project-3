@@ -78,21 +78,22 @@
   @include flex(row, flex-start, center);
   gap: 11px;
 
-  overflow-x: auto;
-  scrollbar-width: none;
-
   @media (max-width: $mobile-width-max) {
     gap: 11px;
     margin-bottom: 24px;
+    overflow-x: auto;
+    scrollbar-width: none;
   }
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
     gap: 10px;
+    flex-wrap: wrap;
     margin-bottom: 30px;
   }
 
   @media (min-width: $desktop-width-min) {
     gap: 30px;
+    flex-wrap: wrap;
     margin-bottom: 40px;
   }
 }
@@ -338,6 +339,7 @@
 .news__slide-description-wrapper {
   @include flex(row, space-between, center);
   flex-wrap: wrap;
+  gap: 10px;
 
   border-top-right-radius: 12px;
   background-color: $extra-light-color;

@@ -1,5 +1,6 @@
 .custom-checkbox {
   @include flex(row, flex-start, center);
+  flex-wrap: wrap;
 }
 
 .custom-checkbox__label {

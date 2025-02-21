@@ -37,6 +37,7 @@
 
   @media (max-width: $mobile-width-max) {
     margin-bottom: 35px;
+    margin-right: 60px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -132,6 +133,7 @@
 
 .reviews__author-wrapper {
   @include flex(row, flex-start, center);
+  flex-wrap: wrap;
 
   @media (max-width: $mobile-width-max) {
     gap: 10px;
@@ -139,6 +141,7 @@
   }
 
   @media (min-width: $tablet-width-min) {
+    width: 205px;
     gap: 15px;
   }
 }
@@ -301,6 +304,8 @@
 // скроллбар
 .reviews__scrollbar.swiper-horizontal>.swiper-scrollbar,
 .reviews__scrollbar.swiper-scrollbar.swiper-scrollbar-horizontal {
+  cursor: pointer;
+
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
     bottom: -51px;
   }

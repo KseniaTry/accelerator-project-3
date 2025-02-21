@@ -17,6 +17,8 @@
 .header__main-wrapper {
   position: relative; // для открытой навигации
   @include flex(row, space-between, center);
+  flex-wrap: wrap;
+  gap: 10px;
 
   margin: 0 auto;
 

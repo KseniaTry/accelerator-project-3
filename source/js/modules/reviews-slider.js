@@ -20,6 +20,7 @@ const reviewsSwiper = new Swiper(reviewsSlider, {
     320: {
       slidesPerView: 1,
       allowTouchMove: true,
+      spaceBetween: 10,
       scrollbar: {
         enabled: false,
       },
