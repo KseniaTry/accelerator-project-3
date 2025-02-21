@@ -183,13 +183,11 @@
   @media (min-width: $desktop-width-min) {
     font-size: 18px;
   }
-
 }
 
 .reviews__details {
   display: grid;
-  // grid-template-columns: repeat(2, max-content);
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(105px, auto));
   column-gap: 25px;
   margin: 0;
 
@@ -207,6 +205,7 @@
   @media (min-width: $desktop-width-min) {
     row-gap: 10px;
     align-self: center;
+    width: max-content;
   }
 }
 
