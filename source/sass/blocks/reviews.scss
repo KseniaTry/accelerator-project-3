@@ -302,15 +302,25 @@
 }
 
 // скроллбар
-.reviews__scrollbar.swiper-horizontal>.swiper-scrollbar,
+.reviews__scrollbar.swiper-horizontal>.reviews__scrollbar.swiper-scrollbar,
 .reviews__scrollbar.swiper-scrollbar.swiper-scrollbar-horizontal {
   cursor: pointer;
+  height: 2px;
+  background-color: rgba(49, 109, 194, 0.2);
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
-    bottom: -51px;
+    bottom: -52px;
+    left: 45px;
+    width: 562px;
   }
 
   @media (min-width: $desktop-width-min) {
     bottom: -53px;
+    width: 1136px;
   }
 }
+
+.reviews__scrollbar.swiper-scrollbar-drag {
+  background-color: $accent-color;
+}
+

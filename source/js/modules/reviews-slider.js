@@ -30,7 +30,7 @@ const reviewsSwiper = new Swiper(reviewsSlider, {
       spaceBetween: 30,
       allowTouchMove: true,
       scrollbar: {
-        dragSize: 326,
+        dragSize: 'auto',
       },
     },
     1440: {
@@ -38,7 +38,7 @@ const reviewsSwiper = new Swiper(reviewsSlider, {
       spaceBetween: 32,
       allowTouchMove: false,
       scrollbar: {
-        dragSize: 394,
+        dragSize: 'auto',
       },
     },
   },

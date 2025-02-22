@@ -7,6 +7,7 @@ import { initModal } from "./modules/modal";
 import { initReviewsSlider } from "./modules/reviews-slider";
 import { initProgramsSlider } from "./modules/programs-slider";
 import { initSwitchingFaqItems } from "./modules/faq";
+import './modules/platform-check';
 
 // меню
 initMenu();
@@ -34,14 +35,3 @@ initProgramsSlider();
 // блок FAQ
 initSwitchingFaqItems();
 
-// const citySelect = document.getElementById('city');
-
-// if (citySelect.value == '') {
-//   console.log('validate!');
-// }
-
-// citySelect.addEventListener('change', (evt) => {
-//   if (citySelect.value == '') {
-//     console.log('validate!');
-//   }
-// })

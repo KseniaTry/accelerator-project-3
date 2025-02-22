@@ -26,7 +26,7 @@ const newsSwiper = new Swiper(newsSlider, {
   breakpoints: {
     320: {
       slidesPerView: 1,
-      spaceBetween: 61,
+      spaceBetween: 60,
       grid: {
         rows: 2,
       },

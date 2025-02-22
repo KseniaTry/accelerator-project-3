@@ -85,7 +85,6 @@ row-gap: 30px;
   border-radius: 12px;
 
   @media (max-width: $mobile-width-max) {
-    // margin-bottom: 30px;
     width: 290px;
     height: 400px;
   }
@@ -274,14 +273,11 @@ row-gap: 30px;
 }
 
 // настройки скроллбара
-.programs__scrollbar {
-  cursor: pointer;
-}
-
-.swiper-horizontal>.swiper-scrollbar,
-.swiper-scrollbar.swiper-scrollbar-horizontal {
+.programs__scrollbar.swiper-horizontal>.programs__scrollbar.swiper-scrollbar,
+.programs__scrollbar.swiper-scrollbar.swiper-scrollbar-horizontal {
   height: 2px;
   background-color: rgba(49, 109, 194, 0.2);
+  cursor: pointer;
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
     bottom: 13px;
@@ -296,6 +292,6 @@ row-gap: 30px;
   }
 }
 
-.swiper-scrollbar-drag {
+.programs__scrollbar.swiper-scrollbar-drag {
   background-color: $accent-color;
 }

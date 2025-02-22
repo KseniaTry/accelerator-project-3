@@ -47,6 +47,7 @@
     }
 
     @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+      // margin-bottom:  -1px; // на винде
       font-size: 20px;
       line-height: 26px;
     }
@@ -71,7 +72,7 @@
   }
 
   @media (min-width: $tablet-width-min) {
-    margin-bottom: 30px;
+    margin-bottom: 30px; // 31 на винде
     font-size: 34px;
     line-height: 50px;
   }
