@@ -1281,7 +1281,6 @@
               required>
             <label class="form__label" for="city">Выберите город</label>
             <div class="form__custom-select custom-select__select">
-              <!-- <div class="form__custom-option custom-select__option"></div> -->
               <div class="form__custom-option custom-select__option">Москва</div>
               <div class="form__custom-option custom-select__option">Санкт-Петербург</div>
               <div class="form__custom-option custom-select__option">Казань</div>
@@ -1392,10 +1391,9 @@
 
         <div class="modal__input-wrapper modal__custom-select-wrapper custom-select custom-select--secondary">
           <input class="modal__input modal__input--city custom-select__input" type="text" id="city-modal"
-            name="city-modal" readonly required>
+            name="city-modal" autocomplete="off" required>
           <label class="modal__label custom-select__label" for="city-modal">Выберите город</label>
           <div class="modal__custom-select custom-select__select">
-            <div class="modal__custom-option custom-select__option"></div>
             <div class="modal__custom-option custom-select__option">Москва</div>
             <div class="modal__custom-option custom-select__option">Санкт-Петербург</div>
             <div class="modal__custom-option custom-select__option">Казань</div>
@@ -1406,7 +1404,7 @@
 
         <div class="modal__checkbox-wrapper custom-checkbox">
           <input class="modal__input-checkbox custom-checkbox__input custom-checkbox__input--secondary" type="checkbox" id="personal-data-modal"
-            name="personalData">
+            name="personalDataModal" required>
           <label class="modal__label modal__label--checkbox custom-checkbox__label" for="personal-data-modal">Я согласен
             на обработку моих
             персональных данных</label>

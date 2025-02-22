@@ -1,7 +1,3 @@
-// const mainForm = document.querySelector('.form__form');
-// const phoneInput = document.getElementById('phone');
-// const nameInput = document.getElementById('name');
-
 const REGEX_PHONE = /^[+]?[0-9\s\-()]*$/;
 const REGEX_TEXT = /^[А-Яа-яёA-Za-z]*$/;
 

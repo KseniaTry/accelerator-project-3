@@ -11,6 +11,7 @@ const modalPhoneInput = document.getElementById('phone-modal');
 const modalNameInput = document.getElementById('name-modal');
 
 const initModalFormSettings = () => {
+  modalCityInput.addEventListener('keydown', evt => evt.preventDefault());
   createCustomSelect(modalCityInput, modalCustomSelectWrapper, modalCustomSelect, modalCustomSelectWrapperClass);
   resetForm(modalForm);
   validateForm(modalNameInput, modalPhoneInput, modalCityInput);
