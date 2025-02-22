@@ -35,8 +35,6 @@
   }
 }
 
-.footer__logo-icon {}
-
 .footer__nav {
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
     width: 529px;
@@ -69,8 +67,6 @@
     row-gap: 15px;
   }
 }
-
-.footer__nav-item {}
 
 .footer__nav-link {
   display: inline-block;

@@ -70,8 +70,6 @@
   }
 }
 
-.news__nav {}
-
 .news__nav-list {
   @include reset-list;
 
@@ -152,8 +150,6 @@
 }
 
 // ТАБ КОНТЕНТ, СВАЙПЕР
-.news__tab-content {}
-
 // свайпер
 .news__swiper.swiper {
   @media (max-width: $mobile-width-max) {
@@ -391,8 +387,6 @@
     }
   }
 }
-
-.news__slide-detais {}
 
 // пагинация
 .news__pagination.swiper-pagination {

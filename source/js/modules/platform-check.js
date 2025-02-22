@@ -2,12 +2,12 @@
 // в этом файле осуществляется проверка системы пользователя, чтобы в зависимости от этого менять значения стилей.
 import { MOBILE_WIDTH_MAX, DESKTOP_WIDTH_MIN } from "../const";
 
-const aboutWrapper = document.querySelector('.about__about-wrapper'); // p tablet margin-bottom -1px , на маке нет этого значения
+const aboutWrapper = document.querySelector('.about__about-wrapper');
 const aboutWrapperText = aboutWrapper.querySelector('p');
-const aboutTitle = document.querySelector('.about__title'); // tablet magrin-bottom 31px, на маке 30px
+const aboutTitle = document.querySelector('.about__title');
 
-const newsSlideTitle = document.querySelector('.news__slide-title'); //   mobile  padding: 10px 18px 4px 0; mac // 10 18 5 0 на винде
-const newsSlideDecriptionWrapper = document.querySelector('.news__slide-description-wrapper'); // mobile      padding: 12px 10px 10px 0; mac // 12 10 9 0 на видне
+const newsSlideTitle = document.querySelector('.news__slide-title');
+const newsSlideDecriptionWrapper = document.querySelector('.news__slide-description-wrapper');
 
 const userDeviceArray = [
   { device: 'Android', platform: /Android/ },
