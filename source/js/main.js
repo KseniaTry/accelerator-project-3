@@ -1,5 +1,5 @@
 import { initMenu } from "./modules/menu";
-import { switchNewsTabs, initNewsSwiper } from "./modules/news";
+import { switchNewsTabs, initNewsSlider } from "./modules/news";
 import { initMainFormSettings } from "./modules/main-form";
 import { initModalFormSettings } from "./modules/modal-form";
 import { initHeroSlider } from "./modules/hero-slider";
@@ -17,7 +17,7 @@ initHeroSlider();
 
 // блок news
 switchNewsTabs();
-initNewsSwiper();
+initNewsSlider();
 
 // основная форма
 initMainFormSettings();

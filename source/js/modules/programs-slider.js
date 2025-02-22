@@ -36,7 +36,7 @@ const programsSwiper = new Swiper(programsSlider, {
   breakpoints: {
     320: {
       slidesPerView: 1,
-      allowTouchMove: true, // возможность переключения тачем
+      allowTouchMove: true,
       scrollbar: {
         enabled: false,
       },

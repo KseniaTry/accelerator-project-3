@@ -114,6 +114,7 @@
   text-transform: uppercase;
   display: block;
   color: rgba(49, 109, 194, 0.6);
+  border-radius: 20px;
 
   @media (max-width: $mobile-width-max) {
     padding: 10px 15px;

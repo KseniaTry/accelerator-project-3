@@ -55,15 +55,15 @@ const updateLeftPosition = () => {
   const heroPagination = document.querySelector('.hero__pagination.swiper-pagination-bullets.swiper-pagination-horizontal');
 
   if (window.innerWidth <= MOBILE_WIDTH_MAX) {
-    heroPagination.style.left = `${Math.floor(((window.innerWidth - 320) / 2) + 15)}px`;
+    heroPagination.style.left = `${((window.innerWidth - 320) / 2) + 15}px`;
   }
 
   if (window.innerWidth > MOBILE_WIDTH_MAX && window.innerWidth < DESKTOP_WIDTH_MIN) {
-    heroPagination.style.left = `${Math.floor(((window.innerWidth - 768) / 2) + 45)}px`;
+    heroPagination.style.left = `${((window.innerWidth - 768) / 2) + 45}px`;
   }
 
   if (window.innerWidth >= DESKTOP_WIDTH_MIN) {
-    heroPagination.style.left = `${Math.floor(((window.innerWidth - 1440) / 2) + 100)}px`;
+    heroPagination.style.left = `${((window.innerWidth - 1440) / 2) + 100}px`;
   }
 }
 

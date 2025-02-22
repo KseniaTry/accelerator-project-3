@@ -61,33 +61,62 @@ const switchNewsTabs = () => {
   })
 }
 
+// добавляем датасет с номером индекса, который начинается с 1
+const addDataset = () => {
+  newsSlides.forEach((slide, index) => {
+    slide.dataset.hash = index + 1;
+  })
+}
+
 // изменение раскладки swiper grid на tablet
 const changeSlidesPosition = () => {
   if (window.innerWidth > MOBILE_WIDTH_MAX && window.innerWidth < DESKTOP_WIDTH_MIN) {
-    newsSlides.forEach((slide, index) => {
-      switch (index) {
-        case 0:
-          slide.style.order = 1;
-          break;
-        case 1:
-          slide.style.order = 3;
-          slide.style.marginTop = '0';
-          break;
-        case 2:
-          slide.style.order = 2;
-          slide.style.marginTop = '30px';
-          break;
-        case 3:
-          slide.style.order = 4;
-          slide.style.marginRight = '30px';
-          break;
-        default:
-          slide.style.order = index + 1;
-          break;
+    const createSlidesIndexArray = () => {
+      let indexArray = [];
+      newsSlides.forEach((slide) => {
+        indexArray.push(slide.dataset.hash);
+      });
+
+      return indexArray;
+    }
+
+    // создаем массив, состоящий из массивов по 4 элемента (так как слайдов на странице должно быть 4)
+    const createDividedIndexArray = (indexArray) => {
+      let slidesPerPage = 4;
+      let subarray = [];
+      for (let i = 0; i < Math.ceil(indexArray.length / slidesPerPage); i++) {
+        subarray[i] = indexArray.slice((i * slidesPerPage), (i * slidesPerPage) + slidesPerPage);
       }
+      return subarray;
+    }
+
+    const slidesIndexArray = createSlidesIndexArray();
+    const dividedIndexArray = createDividedIndexArray(slidesIndexArray);
+
+    // меняем местами order в стилях в зависимости от индекса слайда
+    dividedIndexArray.forEach((subarray) => {
+      newsSlides.forEach((slide) => {
+        switch (slide.dataset.hash) {
+          case subarray[0]:
+            slide.style.order = subarray[0];
+            break;
+          case subarray[1]:
+            slide.style.order = subarray[2];
+            slide.style.marginTop = '0';
+            break;
+          case subarray[2]:
+            slide.style.order = subarray[1];
+            slide.style.marginTop = '30px';
+            break;
+          case subarray[3]:
+            slide.style.order = subarray[3];
+            slide.style.marginRight = '30px';
+            break;
+        }
+      });
     });
   };
-}
+};
 
 // кастомная пагинация
 const paginationBullets = document.querySelectorAll('.news__pagination-bullet');
@@ -157,8 +186,9 @@ const modifyPagination = () => {
   hideBullets(hiddenBullets);
 };
 
-const initNewsSwiper = () => {
+const initNewsSlider = () => {
   newsSwiper.init();
+  addDataset();
   changeSlidesPosition();
   hideBulletsOnInit();
   newsSwiper.on('slideChange', modifyPagination);
@@ -166,4 +196,4 @@ const initNewsSwiper = () => {
   window.addEventListener('resize', modifyPagination);
 }
 
-export { switchNewsTabs, initNewsSwiper }
+export { switchNewsTabs, initNewsSlider }
