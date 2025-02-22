@@ -13,7 +13,7 @@ const modalNameInput = document.getElementById('name-modal');
 const initModalFormSettings = () => {
   createCustomSelect(modalCityInput, modalCustomSelectWrapper, modalCustomSelect, modalCustomSelectWrapperClass);
   resetForm(modalForm);
-  validateForm(modalNameInput, modalPhoneInput);
+  validateForm(modalNameInput, modalPhoneInput, modalCityInput);
 }
 
 export { initModalFormSettings };

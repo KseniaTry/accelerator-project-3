@@ -51,8 +51,9 @@
 }
 
 .custom-checkbox__input {
-  display: none;
-  // position: absolute;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
 }
 
 // состояния чекбокса
@@ -67,7 +68,7 @@
   border-color: $basic-light-color;
 }
 
-.custom-checkbox__input:invalid+.custom-checkbox__label::before {
+.custom-checkbox__input:user-invalid+.custom-checkbox__label::before {
   background-color: rgba(255, 94, 102, 0.2);
   border-color: #FF5E66;
 }

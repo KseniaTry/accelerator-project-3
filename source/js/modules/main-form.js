@@ -11,9 +11,10 @@ const phoneInput = document.getElementById('phone');
 const nameInput = document.getElementById('name');
 
 const initMainFormSettings = () => {
+  cityInput.addEventListener('keydown', evt => evt.preventDefault());
   createCustomSelect(cityInput, customSelectWrapper, customSelect, customSelectWrapperClass);
   resetForm(mainForm);
-  validateForm(nameInput, phoneInput);
+  validateForm(nameInput, phoneInput, cityInput);
 }
 
 export { initMainFormSettings };

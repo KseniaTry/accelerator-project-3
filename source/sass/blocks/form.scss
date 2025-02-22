@@ -172,7 +172,7 @@
   }
 }
 
-.form__input:disabled ~.form__label {
+.form__input:disabled~.form__label {
   color: rgba(240, 239, 233, 0.6);
 }
 
@@ -203,14 +203,21 @@
   }
 
   @media (min-width: $tablet-width-min) {
-  top: 88px;
+    top: 88px;
   }
 }
 
 .form__input-wrapper::after {
   @media (max-width: $mobile-width-max) {
     top: 49px;
-    right: 21px;
+  }
+
+  @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
+    top: 54px;
+  }
+
+  @media (min-width: $desktop-width-min) {
+    top: 50px;
   }
 }
 

@@ -50,9 +50,21 @@ const validatePhone = (phoneInput) => {
   });
 }
 
-const validateForm = (nameInput, phoneInput) => {
+const validateCity = (cityInput) => {
+  cityInput.addEventListener('input', (evt) => {
+    const selectValue = evt.target.value;
+    if (selectValue.value == '') {
+      select.setCustomValidity('Выберите значение из списка');
+    } else {
+      select.setCustomValidity('');
+    }
+  })
+}
+
+const validateForm = (nameInput, phoneInput, cityInput) => {
   validateName(nameInput);
   validatePhone(phoneInput);
+  validateCity(cityInput);
 }
 
 export { resetForm, validateForm };

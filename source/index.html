@@ -1143,11 +1143,11 @@
           </div>
 
           <div class="form__input-wrapper form__custom-select-wrapper custom-select">
-            <input class="form__input form__input--city custom-select__input" type="text" id="city" name="city" readonly
+            <input class="form__input form__input--city custom-select__input" type="text" id="city" name="city" autocomplete="off"
               required>
             <label class="form__label" for="city">Выберите город</label>
             <div class="form__custom-select custom-select__select">
-              <div class="form__custom-option custom-select__option"></div>
+              <!-- <div class="form__custom-option custom-select__option"></div> -->
               <div class="form__custom-option custom-select__option">Москва</div>
               <div class="form__custom-option custom-select__option">Санкт-Петербург</div>
               <div class="form__custom-option custom-select__option">Казань</div>
@@ -1158,7 +1158,7 @@
 
           <div class="form__checkbox-wrapper custom-checkbox">
             <input class="form__input-checkbox custom-checkbox__input" type="checkbox" id="personal-data"
-              name="personalData">
+              name="personalData" required>
             <label class="form__label form__label--checkbox custom-checkbox__label" for="personal-data">Я согласен
               на обработку моих
               персональных<br> данных</label>
@@ -1234,7 +1234,6 @@
             rel="noopener noreferrer"><span class="visually-hidden">Мы в Reddit</span></a>
         </li>
       </ul>
-
     </div>
   </footer>
 

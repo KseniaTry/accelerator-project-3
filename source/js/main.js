@@ -33,3 +33,15 @@ initProgramsSlider();
 
 // блок FAQ
 initSwitchingFaqItems();
+
+// const citySelect = document.getElementById('city');
+
+// if (citySelect.value == '') {
+//   console.log('validate!');
+// }
+
+// citySelect.addEventListener('change', (evt) => {
+//   if (citySelect.value == '') {
+//     console.log('validate!');
+//   }
+// })
