@@ -4,8 +4,8 @@ const initSwitchingFaqItems = () => {
   faqItems.forEach((item) => {
     item.addEventListener('click', () => {
       item.classList.toggle('faq__accordion-item--active');
-    })
-  })
-}
+    });
+  });
+};
 
 export { initSwitchingFaqItems };

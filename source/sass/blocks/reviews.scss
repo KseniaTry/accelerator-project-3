@@ -8,7 +8,7 @@
   }
 
   @media (min-width: $desktop-width-min) {
-    padding: 65px 100px 60px 100px;
+    padding: 65px 100px 60px;
   }
 }
 
@@ -64,7 +64,7 @@
 
 .reviews__slide.swiper-slide {
   overflow-y: scroll;
-    overflow-x: hidden;
+  overflow-x: hidden;
 
   @media (max-width: $mobile-width-max) {
     height: 472px;
@@ -87,6 +87,7 @@
 
   @media (max-width: $mobile-width-max) {
     @include flex(row, space-between, center);
+
     flex-wrap: wrap;
     gap: 10px;
 
@@ -126,13 +127,14 @@
     }
 
     @media (min-width: $desktop-width-min) {
-      line-height: 26px
+      line-height: 26px;
     }
   }
 }
 
 .reviews__author-wrapper {
   @include flex(row, flex-start, center);
+
   flex-wrap: wrap;
 
   @media (max-width: $mobile-width-max) {
@@ -291,7 +293,7 @@
 
   @media (min-width: $desktop-width-min) {
     bottom: -64px;
-    right: 0px;
+    right: 0;
     width: 54px;
   }
 }
@@ -302,7 +304,7 @@
 }
 
 // скроллбар
-.reviews__scrollbar.swiper-horizontal>.reviews__scrollbar.swiper-scrollbar,
+.reviews__scrollbar.swiper-horizontal > .reviews__scrollbar.swiper-scrollbar,
 .reviews__scrollbar.swiper-scrollbar.swiper-scrollbar-horizontal {
   cursor: pointer;
   height: 2px;
@@ -323,4 +325,3 @@
 .reviews__scrollbar .swiper-scrollbar-drag {
   background-color: $accent-color;
 }
-

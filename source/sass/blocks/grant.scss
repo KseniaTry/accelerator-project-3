@@ -146,6 +146,7 @@
 
   @media (max-width: $mobile-width-max) {
     @include flex(row, center, center);
+
     flex-wrap: wrap;
     gap: 15px;
   }
@@ -160,6 +161,7 @@
 
   @media (min-width: $desktop-width-min) {
     @include flex(column, center, flex-start);
+
     flex-wrap: wrap;
     gap: 23px;
   }

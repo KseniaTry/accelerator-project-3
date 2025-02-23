@@ -18,13 +18,15 @@
 
   @media (max-width: $mobile-width-max) {
     @include flex(row, flex-start, flex-start);
+
     flex-wrap: wrap;
-row-gap: 30px;
+    row-gap: 30px;
     width: $mobile-content-width;
   }
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
     @include flex(row, space-between, center);
+
     flex-wrap: wrap;
     column-gap: 10px;
     row-gap: 40px;
@@ -35,6 +37,7 @@ row-gap: 30px;
 
   @media (min-width: $desktop-width-min) {
     @include flex(row, space-between, center);
+
     flex-wrap: wrap;
     gap: 42px;
     width: $desktop-content-width;
@@ -138,7 +141,7 @@ row-gap: 30px;
   position: absolute;
   border-radius: 12px;
   box-decoration-break: clone;
-  filter: url(#gooey-filter);
+  filter: url("#gooey-filter");
   overflow: scroll;
   overflow-x: hidden;
   z-index: 3;
@@ -192,21 +195,21 @@ row-gap: 30px;
   border-top-left-radius: 12px;
 
   @media (max-width: $mobile-width-max) {
-    padding: 18px 18px 6px 18px;
+    padding: 18px 18px 6px;
     width: 146px;
     font-size: 16px;
     line-height: 18px;
   }
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
-    padding: 18px 18px 6px 18px;
+    padding: 18px 18px 6px;
     width: 173px;
     font-size: 20px;
     line-height: 14px;
   }
 
   @media (min-width: $desktop-width-min) {
-    padding: 18px 18px 6px 18px;
+    padding: 18px 18px 6px;
     width: 194px;
     font-size: 24px;
     line-height: 17px;
@@ -215,6 +218,7 @@ row-gap: 30px;
 
 .programs__slide-description-wrapper {
   @include flex(row, space-between, center);
+
   flex-wrap: wrap;
   row-gap: 10px; // для переполнения
   overflow-y: scroll;
@@ -226,7 +230,7 @@ row-gap: 30px;
   border-bottom-right-radius: 12px;
 
   @media (max-width: $mobile-width-max) {
-    padding: 10px 18px 15px 18px;
+    padding: 10px 18px 15px;
     width: 270px;
     min-height: 69px;
   }
@@ -238,7 +242,7 @@ row-gap: 30px;
   }
 
   @media (min-width: $desktop-width-min) {
-    padding: 12px 18px 16px 18px;
+    padding: 12px 18px 16px;
     width: 321px;
     min-height: 82px;
   }
@@ -271,7 +275,7 @@ row-gap: 30px;
 }
 
 // настройки скроллбара
-.programs__scrollbar.swiper-horizontal>.programs__scrollbar.swiper-scrollbar,
+.programs__scrollbar.swiper-horizontal > .programs__scrollbar.swiper-scrollbar,
 .programs__scrollbar.swiper-scrollbar.swiper-scrollbar-horizontal {
   height: 2px;
   background-color: rgba(49, 109, 194, 0.2);
@@ -279,13 +283,13 @@ row-gap: 30px;
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
     bottom: 13px;
-    left: 0px;
+    left: 0;
     width: 562px;
   }
 
   @media (min-width: $desktop-width-min) {
     bottom: -2px;
-    left: 0px;
+    left: 0;
     width: 1136px;
   }
 }

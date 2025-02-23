@@ -57,7 +57,7 @@
   width: max-content;
   border-radius: 13px;
   box-decoration-break: clone;
-  filter: url(#gooey-filter);
+  filter: url("#gooey-filter");
   overflow-y: scroll;
   overflow-x: hidden;
 
@@ -84,7 +84,7 @@
     background-color: $basic-light-color;
 
     @media (max-width: $mobile-width-max) {
-      padding: 0 14px 15px 14px;
+      padding: 0 14px 15px;
       width: 267px;
     }
 
@@ -129,7 +129,7 @@
   }
 
   @media (min-width: $desktop-width-min) {
-    padding: 40px 50px 30px 50px;
+    padding: 40px 50px 30px;
     width: 968px;
     font-size: 54px;
     line-height: 62px;
@@ -142,16 +142,17 @@
   @media (max-width: $mobile-width-max) {
     border-radius: 13px;
     box-decoration-break: clone;
-    filter: url(#gooey-filter);
+    filter: url("#gooey-filter");
   }
 
   @media (min-width: $tablet-width-min) {
     @include flex(row, space-between, flex-start);
+
     flex-wrap: wrap;
     gap: 10px;
 
     width: 593px;
-    padding: 0 40px 35px 40px;
+    padding: 0 40px 35px;
     background-color: $basic-light-color;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
@@ -226,7 +227,7 @@
     display: block;
     width: 16px;
     height: 16px;
-    mask-image: url(/__spritemap#sprite-corner-16x16-view);
+    mask-image: url("/__spritemap#sprite-corner-16x16-view");
     mask-position: center;
     mask-repeat: no-repeat;
     mask-size: 16px 16px;
@@ -284,7 +285,7 @@
   }
 }
 
-.hero__pagination .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.hero__pagination .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   @media (max-width: $mobile-width-max) {
     margin: 0 6px;

@@ -8,7 +8,7 @@
   }
 
   @media (min-width: $desktop-width-min) {
-    padding: 71px 206px 60px 206px;
+    padding: 71px 206px 60px;
   }
 }
 
@@ -55,12 +55,14 @@
 
 .faq__accordion {
   @include flex(row, space-between, center);
+
   flex-wrap: wrap;
   gap: 10px;
 }
 
 .faq__accordion-item {
   @include flex(row, space-between, center);
+
   flex-wrap: wrap;
   gap: 20px;
 
@@ -251,7 +253,7 @@
 }
 
 .faq__accordion-item:active .faq__accordion-title {
-  color:$extra-dark-color;
+  color: $extra-dark-color;
 }
 
 .faq__accordion-item--active:active {

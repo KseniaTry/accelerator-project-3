@@ -20,7 +20,7 @@ const closeMenu = () => {
   headerButton.classList.remove('header__toggle--opened');
   pageBody.classList.remove('page-body--window-opened');
   pageBody.classList.remove('overlay');
-}
+};
 
 const closeMenuOnItemClick = () => {
   navItems.forEach((navItem) => {
@@ -35,14 +35,14 @@ const closeMenuOnItemClick = () => {
 const closeMenuOnSublistItemClick = () => {
   navSublistItems.forEach((sublistItem) => {
     sublistItem.addEventListener('click', () => {
-     closeMenu();
+      closeMenu();
     });
   });
-}
+};
 
 const closeMenuOnPageClick = () => {
   document.body.addEventListener('click', (evt) => {
-    if (evt.target.closest('.header__nav') == null) {
+    if (evt.target.closest('.header__nav') === null) {
       closeMenu();
     } else {
       closeMenuOnItemClick();
@@ -57,14 +57,14 @@ const openSublist = () => {
       item.classList.toggle('header__nav-item--sublist-opened');
       const sublist = item.querySelector('.header__nav-sublist');
       sublist.classList.toggle('header__nav-sublist--opened');
-    })
-  })
-}
+    });
+  });
+};
 
 const initMenu = () => {
   switchMenu();
   closeMenuOnPageClick();
   openSublist();
-}
+};
 
 export { initMenu };

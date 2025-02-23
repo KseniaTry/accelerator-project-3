@@ -1,12 +1,12 @@
-import { initMenu } from "./modules/menu";
-import { switchNewsTabs, initNewsSlider } from "./modules/news";
-import { initMainFormSettings } from "./modules/main-form";
-import { initModalFormSettings } from "./modules/modal-form";
-import { initHeroSlider } from "./modules/hero-slider";
-import { initModal } from "./modules/modal";
-import { initReviewsSlider } from "./modules/reviews-slider";
-import { initProgramsSlider } from "./modules/programs-slider";
-import { initSwitchingFaqItems } from "./modules/faq";
+import { initMenu } from './modules/menu';
+import { switchNewsTabs, initNewsSlider } from './modules/news';
+import { initMainFormSettings } from './modules/main-form';
+import { initModalFormSettings } from './modules/modal-form';
+import { initHeroSlider } from './modules/hero-slider';
+import { initModal } from './modules/modal';
+import { initReviewsSlider } from './modules/reviews-slider';
+import { initProgramsSlider } from './modules/programs-slider';
+import { initSwitchingFaqItems } from './modules/faq';
 import './modules/platform-check';
 
 // меню
@@ -34,4 +34,3 @@ initProgramsSlider();
 
 // блок FAQ
 initSwitchingFaqItems();
-

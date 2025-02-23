@@ -1,5 +1,5 @@
-import { createCustomSelect } from "./custom-select";
-import { resetForm, validateForm } from "./form-validation";
+import { createCustomSelect } from './custom-select';
+import { resetForm, validateForm } from './form-validation';
 
 // кастомный селект модального окна + валидация
 const modalCustomSelectWrapper = document.querySelector('.modal__custom-select-wrapper');
@@ -11,11 +11,10 @@ const modalPhoneInput = document.getElementById('phone-modal');
 const modalNameInput = document.getElementById('name-modal');
 
 const initModalFormSettings = () => {
-  modalCityInput.addEventListener('keydown', evt => evt.preventDefault());
+  modalCityInput.addEventListener('keydown', (evt) => evt.preventDefault());
   createCustomSelect(modalCityInput, modalCustomSelectWrapper, modalCustomSelect, modalCustomSelectWrapperClass);
   resetForm(modalForm);
   validateForm(modalNameInput, modalPhoneInput, modalCityInput);
-}
+};
 
 export { initModalFormSettings };
-

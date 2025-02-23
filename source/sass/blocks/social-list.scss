@@ -1,7 +1,7 @@
 .social-list {
-@include reset-list;
+  @include reset-list;
+  @include flex(row, space-between, center);
 
- @include flex(row, space-between, center);
   flex-wrap: wrap;
   gap: 10px;
 
@@ -15,13 +15,13 @@
   display: block;
   width: 26px;
   height: 26px;
-background-color: $accent-color;
-border-radius: 50%;
+  background-color: $accent-color;
+  border-radius: 50%;
 
-@media (min-width: $tablet-width-min) {
-  width: 36px;
-  height: 36px;
-}
+  @media (min-width: $tablet-width-min) {
+    width: 36px;
+    height: 36px;
+  }
 
   &::before {
     content: "";

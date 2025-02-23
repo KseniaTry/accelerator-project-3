@@ -1,7 +1,7 @@
-import Swiper from "swiper";
-import { Navigation, Scrollbar} from "swiper/modules";
+import Swiper from 'swiper';
+import { Navigation, Scrollbar} from 'swiper/modules';
 import 'swiper/css';
-import { DESKTOP_WIDTH_MIN } from "../const";
+import { DESKTOP_WIDTH_MIN } from '../const';
 
 const programsSlider = document.querySelector('.programs__swiper');
 const programsSwiperWrapper = document.querySelector('.programs__swiper-wrapper');
@@ -16,10 +16,10 @@ const cloneSlidesOnDesktop = () => {
         slide.classList.remove('swiper-slide-next');
         const slideClone = slide.cloneNode(true);
         programsSwiperWrapper.appendChild(slideClone);
-      })
+      });
     }
   }
-}
+};
 
 const programsSwiper = new Swiper(programsSlider, {
   slideClass: 'programs__slide',
@@ -63,6 +63,6 @@ const programsSwiper = new Swiper(programsSlider, {
 const initProgramsSlider = () => {
   cloneSlidesOnDesktop();
   programsSwiper.init();
-}
+};
 
 export { initProgramsSlider };

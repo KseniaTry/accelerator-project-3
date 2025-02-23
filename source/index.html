@@ -36,9 +36,9 @@
                 fill="#98B8E6" />
             </g>
             <defs>
-              <clipPath id="a">
+              <clippath id="a">
                 <path fill="#fff" transform="translate(11 11)" d="M0 0h30v30h-30z" />
-              </clipPath>
+              </clippath>
             </defs>
           </svg>
 
@@ -1025,10 +1025,12 @@
 
           <div class="news__pagination swiper-pagination"></div>
 
-          <button class="news__button news__button--prev arrow__button arrow__button--prev swiper-button-prev"
-            type="button" aria-label="Кнопка переключения предыдущего слайда"></button>
-          <button class="news__button news__button--next arrow__button arrow__button--next swiper-button-next"
-            type="button" aria-label="Кнопка переключения следующего слайда"></button>
+          <div class="news__buttons-wrapper arrow">
+            <button class="news__button news__button--prev arrow__button arrow__button--prev swiper-button-prev"
+              type="button" aria-label="Кнопка переключения предыдущего слайда"></button>
+            <button class="news__button news__button--next arrow__button arrow__button--next swiper-button-next"
+              type="button" aria-label="Кнопка переключения следующего слайда"></button>
+          </div>
         </div>
       </div>
     </section>
@@ -1277,8 +1279,8 @@
           </div>
 
           <div class="form__input-wrapper form__custom-select-wrapper custom-select">
-            <input class="form__input form__input--city custom-select__input" type="text" id="city" name="city" autocomplete="off"
-              required>
+            <input class="form__input form__input--city custom-select__input" type="text" id="city" name="city"
+              autocomplete="off" required>
             <label class="form__label" for="city">Выберите город</label>
             <div class="form__custom-select custom-select__select">
               <div class="form__custom-option custom-select__option">Москва</div>
@@ -1292,9 +1294,7 @@
           <div class="form__checkbox-wrapper custom-checkbox">
             <input class="form__input-checkbox custom-checkbox__input" type="checkbox" id="personal-data"
               name="personalData" required>
-            <label class="form__label form__label--checkbox custom-checkbox__label" for="personal-data">Я согласен
-              на обработку моих
-              персональных<br> данных</label>
+            <label class="form__label form__label--checkbox custom-checkbox__label" for="personal-data">Я согласен на обработку моих персональных<br> данных</label>
           </div>
 
           <button class="form__send button button--secondary-light" type="submit">Отправить</button>
@@ -1319,9 +1319,9 @@
             fill="#98B8E6" />
         </g>
         <defs>
-          <clipPath id="b">
+          <clippath id="b">
             <path fill="#fff" transform="translate(11 11)" d="M0 0h30v30h-30z" />
-          </clipPath>
+          </clippath>
         </defs>
       </svg>
 
@@ -1370,10 +1370,10 @@
     </div>
   </footer>
 
-  <div class="modal__wrapper modal__wrapper--closed">
-    <section class="modal">
+  <div class="modal modal--closed">
+    <section class="modal__wrapper">
       <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
-        <button class="modal__close"><span class="visually-hidden">Открыть меню</span></button>
+        <button class="modal__close" type="button"><span class="visually-hidden">Открыть меню</span></button>
 
         <h2 class="modal__title">Напишите нам</h2>
         <p class="modal__description">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
@@ -1403,8 +1403,8 @@
         </div>
 
         <div class="modal__checkbox-wrapper custom-checkbox">
-          <input class="modal__input-checkbox custom-checkbox__input custom-checkbox__input--secondary" type="checkbox" id="personal-data-modal"
-            name="personalDataModal" required>
+          <input class="modal__input-checkbox custom-checkbox__input custom-checkbox__input--secondary" type="checkbox"
+            id="personal-data-modal" name="personalDataModal" required>
           <label class="modal__label modal__label--checkbox custom-checkbox__label" for="personal-data-modal">Я согласен
             на обработку моих
             персональных данных</label>
@@ -1415,15 +1415,15 @@
     </section>
   </div>
 
-  <svg style="display: none">
+  <svg style="display: none" width="16" height="16">
     <defs>
       <filter id="gooey-filter">
-        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="7.5" />
-        <feColorMatrix in="blur" result="colormatrix" type="matrix" values="1 0 0 0 0
+        <fegaussianblur in="SourceGraphic" result="blur" stddeviation="7.5"></fegaussianblur>
+        <fecolormatrix in="blur" result="colormatrix" type="matrix" values="1 0 0 0 0
                   0 1 0 0 0
                   0 0 1 0 0
-                  0 0 0 18 -9" />
-        <feBlend in="SourceGraphic" in2="colormatrix" />
+                  0 0 0 18 -9"></fecolormatrix>
+        <feblend in="SourceGraphic" in2="colormatrix"></feblend>
       </filter>
     </defs>
   </svg>

@@ -1,14 +1,14 @@
 .news {
   @media (max-width: $mobile-width-max) {
-    padding: 50px 0px;
+    padding: 50px 0;
   }
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
-    padding: 50px 45px 83px 45px;
+    padding: 50px 45px 83px;
   }
 
   @media (min-width: $desktop-width-min) {
-    padding: 60px 100px 92px 100px;
+    padding: 60px 100px 92px;
   }
 }
 
@@ -72,8 +72,8 @@
 
 .news__nav-list {
   @include reset-list;
-
   @include flex(row, flex-start, center);
+
   gap: 11px;
 
   @media (max-width: $mobile-width-max) {
@@ -97,8 +97,8 @@
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
-  background: rgba(255, 255, 255, 0.0);
+  width: 0;
+  background: rgba(255, 255, 255, 0);
 }
 
 .news__nav-item {
@@ -131,7 +131,7 @@
   }
 
   @media (min-width: $desktop-width-min) {
-    padding: 14px 0px;
+    padding: 14px 0;
   }
 }
 
@@ -235,7 +235,7 @@
   left: 0;
 
   box-decoration-break: clone;
-  filter: url(#gooey-filter);
+  filter: url("#gooey-filter");
   overflow-y: scroll;
   overflow-x: hidden;
   z-index: 3;
@@ -305,7 +305,7 @@
   border-bottom-right-radius: 12px;
 
   @media (max-width: $mobile-width-max) {
-    padding: 10px 18px 4px 0; // 10 18 5 0 на винде
+    padding: 10px 18px 4px 0;
     width: 200px;
     font-size: 16px;
     line-height: 18px;
@@ -335,6 +335,7 @@
 
 .news__slide-description-wrapper {
   @include flex(row, space-between, center);
+
   flex-wrap: wrap;
   gap: 10px;
 
@@ -342,7 +343,7 @@
   background-color: $extra-light-color;
 
   @media (max-width: $mobile-width-max) {
-    padding: 12px 10px 10px 0; // 12 10 9 0 на видне
+    padding: 12px 10px 10px 0;
     width: 263px;
   }
 
@@ -392,6 +393,7 @@
 // пагинация
 .news__pagination.swiper-pagination {
   @include flex(row, flex-start, center);
+
   width: 200px;
 
   @media (max-width: $mobile-width-max) {

@@ -17,6 +17,7 @@
 
   @media (max-width: $mobile-width-max) {
     @include flex(column, center, center);
+
     flex-wrap: wrap;
     width: $mobile-content-width;
     gap: 20px;
@@ -24,6 +25,7 @@
 
   @media (min-width: $tablet-width-min) {
     @include flex(row, space-between, center);
+
     flex-wrap: wrap;
     row-gap: 25px;
     column-gap: 10px;
@@ -50,6 +52,7 @@
 .footer__nav-list {
   @include reset-list;
   @include flex(row, center, center);
+
   flex-wrap: wrap;
 
   @media (max-width: $mobile-width-max) {
@@ -103,6 +106,7 @@
 
 .footer__rights-wrapper {
   @include flex(column, center, center);
+
   flex-wrap: wrap;
   gap: 10px;
 
@@ -113,7 +117,9 @@
 
   @media (min-width: $desktop-width-min) {
     width: 100%;
+
     @include flex(row, space-between, center);
+
     order: 4;
   }
 }

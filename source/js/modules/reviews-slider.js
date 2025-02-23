@@ -1,5 +1,5 @@
-import Swiper from "swiper";
-import { Navigation, Scrollbar } from "swiper/modules";
+import Swiper from 'swiper';
+import { Navigation, Scrollbar } from 'swiper/modules';
 import 'swiper/css';
 
 const reviewsSlider = document.querySelector('.reviews__swiper');
@@ -46,6 +46,6 @@ const reviewsSwiper = new Swiper(reviewsSlider, {
 
 const initReviewsSlider = () => {
   reviewsSwiper.init();
-}
+};
 
 export { initReviewsSlider };

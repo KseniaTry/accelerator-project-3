@@ -1,6 +1,6 @@
 // примечание: в блоке about tablet и news mobile тесты проходили с разными значениями на windows и на macOS.
 // в этом файле осуществляется проверка системы пользователя, чтобы в зависимости от этого менять значения стилей.
-import { MOBILE_WIDTH_MAX, DESKTOP_WIDTH_MIN } from "../const";
+import { MOBILE_WIDTH_MAX, DESKTOP_WIDTH_MIN } from '../const';
 
 const aboutWrapper = document.querySelector('.about__about-wrapper');
 const aboutWrapperText = aboutWrapper.querySelector('p');

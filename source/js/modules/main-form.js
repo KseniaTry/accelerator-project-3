@@ -1,5 +1,5 @@
-import { createCustomSelect } from "./custom-select";
-import { resetForm, validateForm } from "./form-validation";
+import { createCustomSelect } from './custom-select';
+import { resetForm, validateForm } from './form-validation';
 
 // кастомный селект главной формы + валидация
 const customSelectWrapper = document.querySelector('.form__custom-select-wrapper');
@@ -11,10 +11,10 @@ const phoneInput = document.getElementById('phone');
 const nameInput = document.getElementById('name');
 
 const initMainFormSettings = () => {
-  cityInput.addEventListener('keydown', evt => evt.preventDefault());
+  cityInput.addEventListener('keydown', (evt) => evt.preventDefault());
   createCustomSelect(cityInput, customSelectWrapper, customSelect, customSelectWrapperClass);
   resetForm(mainForm);
   validateForm(nameInput, phoneInput, cityInput);
-}
+};
 
 export { initMainFormSettings };

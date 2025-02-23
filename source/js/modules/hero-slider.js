@@ -1,7 +1,7 @@
-import Swiper from "swiper";
-import { Pagination } from "swiper/modules";
+import Swiper from 'swiper';
+import { Pagination } from 'swiper/modules';
 import 'swiper/css';
-import { DESKTOP_WIDTH_MIN, MOBILE_WIDTH_MAX } from "../const";
+import { DESKTOP_WIDTH_MIN, MOBILE_WIDTH_MAX } from '../const';
 
 const heroSlider = document.querySelector('.hero__swiper');
 
@@ -31,14 +31,14 @@ const heroSwiper = new Swiper(heroSlider, {
 // расчет высоты тегов <p></p> на случай добавления еще таких же блоков
 const getSlideTextSummaryHeight = (activeSlide) => {
   const heroSlideTexts = activeSlide.querySelectorAll('p');
-  var slideTextSummaryHeight = 0;
+  let slideTextSummaryHeight = 0;
 
   heroSlideTexts.forEach((slideText) => {
     slideTextSummaryHeight += slideText.clientHeight;
-  })
+  });
 
   return slideTextSummaryHeight;
-}
+};
 
 // расчет высоты текстового блока слайда
 const getAllTextContentHeight = (activeSlide) => {
@@ -48,7 +48,7 @@ const getAllTextContentHeight = (activeSlide) => {
   const textSummatyHeight = getSlideTextSummaryHeight(activeSlide);
   const allTextContentHeight = heroSlideTitle.clientHeight + textSummatyHeight + heroDetailsButton.clientHeight;
   return allTextContentHeight;
-}
+};
 
 // пересчет расположения пагинации left
 const updateLeftPosition = () => {
@@ -65,12 +65,12 @@ const updateLeftPosition = () => {
   if (window.innerWidth >= DESKTOP_WIDTH_MIN) {
     heroPagination.style.left = `${((window.innerWidth - 1440) / 2) + 100}px`;
   }
-}
+};
 
 // пересчет размера текстового блока активного слайда при переключении слайда
 const updateBottomPosition = () => {
-  let activeIndex = heroSwiper.realIndex;
-  const heroActiveSlide = document.querySelector(`[data-swiper-slide-index="${activeIndex}"]`)
+  const activeIndex = heroSwiper.realIndex;
+  const heroActiveSlide = document.querySelector(`[data-swiper-slide-index="${activeIndex}"]`);
   const textContentHeight = getAllTextContentHeight(heroActiveSlide);
   const heroPagination = document.querySelector('.hero__pagination.swiper-pagination-bullets.swiper-pagination-horizontal');
 
@@ -95,6 +95,6 @@ const initHeroSlider = () => {
   window.addEventListener('resize', () => {
     updateLeftPosition();
   });
-}
+};
 
 export { initHeroSlider };

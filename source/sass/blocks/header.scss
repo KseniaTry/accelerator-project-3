@@ -16,7 +16,9 @@
 
 .header__main-wrapper {
   position: relative; // для открытой навигации
+
   @include flex(row, space-between, center);
+
   flex-wrap: wrap;
   gap: 10px;
 
@@ -61,6 +63,7 @@
 
 .header__nav--opened .header__nav-list {
   @include flex(column, center, flex-start);
+
   gap: 24px;
 
   @include reset-list;
@@ -70,6 +73,7 @@
 
 .header__nav-link {
   position: relative;
+
   @include reset-link;
 
   color: rgba(255, 255, 255, 0.7);
@@ -107,10 +111,11 @@
 
 .header__nav-sublist--opened {
   @include flex(column, center, flex-start);
+
   gap: 12px;
 
   color: rgba(255, 255, 255, 0.6);
-  padding: 16px 16px 0 16px;
+  padding: 16px 16px 0;
   text-transform: capitalize;
 }
 

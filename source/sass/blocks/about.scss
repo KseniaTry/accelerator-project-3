@@ -27,6 +27,7 @@
     width: $desktop-content-width;
 
     @include flex(row, space-between, flex-start);
+
     flex-wrap: wrap;
   }
 }
@@ -47,7 +48,6 @@
     }
 
     @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
-      // margin-bottom:  -1px; // на винде
       font-size: 20px;
       line-height: 26px;
     }
@@ -72,7 +72,7 @@
   }
 
   @media (min-width: $tablet-width-min) {
-    margin-bottom: 30px; // 31 на винде
+    margin-bottom: 30px;
     font-size: 34px;
     line-height: 50px;
   }
@@ -169,6 +169,7 @@
 
   @media (max-width: $mobile-width-max) {
     @include flex(column, center, center);
+
     gap: 22px;
 
     padding: 42px 20px 40px;
@@ -176,6 +177,7 @@
 
   @media (min-width: $tablet-width-min) {
     @include flex(row, space-between, center);
+
     flex-wrap: wrap;
     gap: 52px;
 
@@ -204,10 +206,11 @@
 
   @media (min-width: $desktop-width-min) {
     @include flex(row, space-between, center);
+
     flex-wrap: wrap;
     gap: 29px;
 
-    padding: 31px 41px 30px 41px;
+    padding: 31px 41px 30px;
     width: 484px;
     min-height: 162px;
   }
