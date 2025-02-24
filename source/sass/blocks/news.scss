@@ -1,6 +1,6 @@
 .news {
   @media (max-width: $mobile-width-max) {
-    padding: 50px 0;
+    padding: 50px 0 28px;
   }
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
@@ -412,7 +412,7 @@
 .news__pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
   @media (max-width: $mobile-width-max) {
     left: 24%;
-    bottom: 0;
+    bottom: 22px;
   }
 
   @media ((min-width: $tablet-width-min) and (max-width: $tablet-width-max)) {
@@ -481,7 +481,7 @@
   top: auto;
 
   @media (max-width: $mobile-width-max) {
-    bottom: 2px;
+    bottom: 24px;
   }
 
   @media (min-width: $tablet-width-min) {
