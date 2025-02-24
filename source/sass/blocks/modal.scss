@@ -50,10 +50,6 @@
 
 .modal__close {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 16px;
-  height: 16px;
   mask-image: url("/__spritemap#sprite-close-menu-view");
   background-color: $accent-color;
   cursor: pointer;
@@ -70,6 +66,15 @@
     right: 30px;
     width: 22px;
     height: 22px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $extra-dark-color;
+  }
+
+  &:disabled {
+    background-color: $disabled-color;
   }
 }
 
@@ -193,7 +198,7 @@
   }
 }
 
-.modal__input:disabled ~ .modal__label {
+.modal__input:disabled~.modal__label {
   color: rgba(169, 175, 183, 0.6);
 }
 
