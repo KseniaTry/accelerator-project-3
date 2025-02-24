@@ -198,7 +198,7 @@
   }
 }
 
-.modal__input:disabled~.modal__label {
+.modal__input:disabled ~ .modal__label {
   color: rgba(169, 175, 183, 0.6);
 }
 
